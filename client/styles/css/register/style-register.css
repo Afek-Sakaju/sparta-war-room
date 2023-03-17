@@ -2,43 +2,12 @@
   font-family: 100% "RobotoSlab";
   src: url(../../../assets/fonts/RobotoSlab-VariableFont_wght.ttf);
 }
-@keyframes orangeRotation {
-  50% {
-    color: #d77300;
-  }
-}
 @keyframes move {
   from {
-    left: 0px;
+    left: 0%;
   }
   to {
     left: 96.5%;
-  }
-}
-@keyframes comein-low-spacing {
-  0% {
-    letter-spacing: 50px;
-    color: #d77300;
-  }
-  70% {
-    letter-spacing: 1px;
-  }
-  100% {
-    letter-spacing: 6.5px;
-    color: white;
-  }
-}
-@keyframes comein-high-spacing {
-  0% {
-    letter-spacing: 70px;
-    color: #d77300;
-  }
-  70% {
-    letter-spacing: 1px;
-  }
-  100% {
-    letter-spacing: 6.5px;
-    color: white;
   }
 }
 body {
@@ -62,12 +31,6 @@ h1 {
   text-shadow: 0 2px 5px rgb(0, 0, 0);
   animation: orangeRotation 5s;
   animation-iteration-count: infinite;
-}
-h1.titleInitialAnimation {
-  animation: comein-low-spacing 1.8s ease-in-out;
-}
-h1 :not(.titleInitialAnimation) {
-  animation: orangeRotation 5s infinite;
 }
 
 .mainContainer {
