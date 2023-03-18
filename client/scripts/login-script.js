@@ -1,3 +1,5 @@
+let clickedLogoTimeout;
+
 async function loginUser() {
     const username = document.querySelector('input[name="username"]').value;
     const password = document.querySelector('input[name="password"]').value;
@@ -23,4 +25,15 @@ async function loginUser() {
 
 function soundEffect(name) {
     new Audio(`../assets/sounds/${name}-sound.mp3`).play();
+}
+
+function logoClickHandler() {
+    soundEffect('cartoon-click');
+    const logoElement = document.getElementById('logo-image');
+    logoElement.classList.add('clicked');
+
+    clearTimeout(clickedLogoTimeout);
+    clickedLogoTimeout = setTimeout(() => {
+        logoElement.classList.remove('clicked');
+    }, 800);
 }

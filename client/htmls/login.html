@@ -2,12 +2,12 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="../styles/css/login/style-login.css" />
-        <title>Afek's site</title>
+        <title>Knight's club</title>
     </head>
     <body>
         <div class="main-content-wrapper">
             <div class="title-container">
-                <h1 id="title">Welcome, please log-in:</h1>
+                <h1 id="title">Log-in to identify yourself as knight!</h1>
             </div>
             <form
                 class="form-container"
@@ -23,12 +23,11 @@
                     <span class="redirect-label">Don't have an account?</span>
                     <a class="redirect-button" href="/register">sign up now</a>
                 </d>
-                <img
-                    src="../assets/pictures/knight-offense.png"
+                <div
                     alt="logo"
-                    class="logo-image"
-                    onclick="soundEffect('cartoon-click')"
-                />
+                    id="logo-image"
+                    onclick="logoClickHandler()"
+                ></div>
             </form>
         </div>
     </body>

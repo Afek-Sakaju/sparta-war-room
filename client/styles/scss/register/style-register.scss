@@ -9,7 +9,6 @@ body {
     @include main-content-wrapper;
 }
 
-
 .title-container {
     @include title-container;
 }
@@ -30,10 +29,14 @@ input {
 }
 
 .redirect-label {
+    color: white;
+    font-weight: 500;
     padding: 0 8px;
 }
 
 .redirect-button {
+    color: rgb(8, 0, 255);
+    font-weight: 900;
     &:hover {
         opacity: 0.5;
     }

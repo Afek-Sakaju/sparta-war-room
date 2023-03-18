@@ -5,7 +5,7 @@
 
 @mixin body-primary-design {
     font-family: RobotoSlab;
-    background-image: url('../../../assets/pictures/white-bg.jpg');
+    background-image: url('../../../assets/pictures/war.jpg');
     background-size: 100%;
     display: flex;
     justify-content: center;
@@ -19,14 +19,16 @@
 
 @mixin title {
     font-size: $title-font-size;
-    color: black;
+    color: $title-color;
+    -webkit-text-stroke: black 0.5px;
+    text-shadow: white 0 0 7px;
 }
 
 @mixin main-content-wrapper {
     display: flex;
     flex-direction: column;
     width: 700px;
-    height: 900px;
+    height: 860px;
 }
 
 @mixin submit-button {
@@ -58,8 +60,8 @@
     flex-direction: column;
     margin: auto;
     padding: 20px 80px 20px 80px;
-    background-color: #ffffff08;
-    border: 2px solid $secondary-color;
+    background-color: #ffffff50;
+    border: 2px solid $primary-color;
     border-radius: 10px;
 }
 
@@ -73,6 +75,9 @@
 
 @mixin input-text {
     font: $input-font;
-    color: $primary-color;
+    font-size: 1.3em;
+    font-weight: 900;
+    color: black;
+    -webkit-text-stroke: white 0.1px;
     margin-bottom: 0;
 }
