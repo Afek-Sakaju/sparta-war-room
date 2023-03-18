@@ -1,4 +1,6 @@
 window.onload = () => {
+    soundEffect('medieval-success');
+
     const accessToken = localStorage.getItem('jwtAccessToken');
 
     if (!accessToken) window.location.href = '/login';

@@ -23,9 +23,7 @@ async function loginUser() {
         });
 }
 
-function soundEffect(name) {
-    new Audio(`../assets/sounds/${name}-sound.mp3`).play();
-}
+
 
 function logoClickHandler() {
     soundEffect('cartoon-click');

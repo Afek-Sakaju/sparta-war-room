@@ -25,3 +25,7 @@ async function getData(url) {
         throw Error(response.statusText);
     });
 }
+
+function soundEffect(name) {
+    new Audio(`../assets/sounds/${name}-sound.mp3`).play();
+}
