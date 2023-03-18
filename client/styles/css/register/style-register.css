@@ -54,11 +54,10 @@ input:hover {
 }
 
 .redirect-label {
-  color: black;
-  font-weight: 900;
-}
-.redirect-label:hover {
-  opacity: 0.5;
+  color: white;
+  font-weight: 500;
+  padding: 0 8px;
+  -webkit-text-stroke: black 0.8px;
 }
 
 .redirect-button {
