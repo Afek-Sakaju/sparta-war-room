@@ -2,13 +2,33 @@
 @import '../sass-tools/variables.scss';
 @import '../sass-tools/keyframes.scss';
 @import 'containers';
-@import 'texts';
 @import 'buttons';
+
+body {
+    @include body-primary-design;
+}
 
 #title {
     @include title;
 }
 
-body {
-    @include body-primary-design;
+input {
+    @include input-line;
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.input-label {
+    @include input-text;
+}
+
+.redirect-label {
+    padding: 0 8px;
+}
+
+.redirect-button {
+    &:hover {
+        opacity: 0.5;
+    }
 }

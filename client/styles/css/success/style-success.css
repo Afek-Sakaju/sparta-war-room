@@ -7,7 +7,7 @@
     left: 0%;
   }
   to {
-    left: 96.5%;
+    left: 90%;
   }
 }
 .buttonsContainer {
@@ -42,15 +42,6 @@
   opacity: 0.5;
 }
 
-.subTitle {
-  font-size: 30px;
-  text-align: center;
-  color: #d77300;
-  font-weight: bold;
-  size: 20px;
-  font-weight: normal;
-}
-
 #title {
   position: relative;
   text-align: center;
@@ -72,6 +63,15 @@ body {
   font-family: RobotoSlab;
   background-image: url("../../../assets/pictures/white-bg.jpg");
   background-size: 100%;
+}
+
+.sub-title {
+  font-size: 30px;
+  text-align: center;
+  color: #d77300;
+  font-weight: bold;
+  size: 20px;
+  font-weight: normal;
 }
 
 /*# sourceMappingURL=style-success.css.map */

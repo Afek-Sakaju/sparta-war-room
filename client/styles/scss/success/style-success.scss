@@ -3,7 +3,6 @@
 @import '../sass-tools/keyframes.scss';
 @import 'containers';
 @import 'buttons';
-@import 'texts';
 
 #title {
     @include title;
@@ -11,4 +10,13 @@
 
 body {
     @include body-primary-design;
+}
+
+.sub-title {
+    font-size: 30px;
+    text-align: center;
+    color: $primary-color;
+    font-weight: bold;
+    size: 20px;
+    font-weight: normal;
 }
