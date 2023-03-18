@@ -3,7 +3,13 @@
     src: url(../../../assets/fonts/RobotoSlab-VariableFont_wght.ttf);
 }
 
-@mixin big-title {
+@mixin body-primary-design {
+    font-family: RobotoSlab;
+    background-image: url('../../../assets/pictures/white-bg.jpg');
+    background-size: 100%;
+}
+
+@mixin title {
     position: relative;
     text-align: center;
     font-size: 60px;
@@ -20,12 +26,6 @@
     animation-iteration-count: infinite;
 }
 
-@mixin body-background-and-font {
-    font-family: RobotoSlab;
-    background-image: url('../../../assets/pictures/white-bg.jpg');
-    background-size: 100%;
-}
-
 @mixin orange-button-centered {
     display: flex;
     justify-content: center;
@@ -33,9 +33,9 @@
     cursor: pointer !important;
     padding: 14px 20px;
     width: 100%;
-    color: $fire-orange;
+    color: $primary-color;
     background-color: white;
-    border: 2px solid $fire-orange;
+    border: 2px solid $primary-color;
     font-size: medium;
     &:hover {
         opacity: 0.5;
@@ -57,7 +57,7 @@
     color: blue;
     font-weight: lighter;
     background-color: white;
-    border: 3px solid $primary-color;
+    border: 3px solid $secondary-color;
 }
 
 @mixin container-mini-link-bottom {
@@ -75,7 +75,7 @@
     width: 650px;
     padding: 20px 80px 20px 80px;
     background-color: #ffffff08;
-    border: 4px solid $primary-color;
+    border: 4px solid $secondary-color;
     border-radius: 10px;
     box-shadow: 0 3px 20px rgb(1, 1, 1);
 }
@@ -84,12 +84,12 @@
     width: 100%;
     padding: 12px 20px;
     margin: 5px 0 25px 0;
-    border: 3px solid $primary-color;
+    border: 3px solid $secondary-color;
     box-sizing: border-box;
 }
 
 @mixin input-text {
     font: 100% Courier new, monospace;
-    color: $fire-orange;
+    color: $primary-color;
     margin-bottom: 0;
 }

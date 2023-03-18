@@ -25,11 +25,3 @@ async function getData(url) {
         throw Error(response.statusText);
     });
 }
-
-function removeClass(waitBeforeAction = 2, elementId, className) {
-    const element = document.getElementById(elementId);
-
-    setTimeout(() => {
-        element.classList.remove(className);
-    }, waitBeforeAction * 1000);
-}
