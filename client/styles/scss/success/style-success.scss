@@ -1,8 +1,5 @@
 @import '../sass-tools/mixins.scss';
 @import '../sass-tools/variables.scss';
-@import '../sass-tools/keyframes.scss';
-@import 'containers';
-@import 'buttons';
 
 #title {
     @include title;
@@ -19,4 +16,16 @@ body {
     font-weight: bold;
     size: 20px;
     font-weight: normal;
+}
+
+.form-container {
+    @include medium-container-centered;
+    align-items: center;
+    height: 220px;
+}
+
+.submit {
+    @include orange-button-centered;
+    margin-top: 20px;
+    width: 50%;
 }
