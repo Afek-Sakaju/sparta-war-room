@@ -5,25 +5,33 @@
         <title>Afek's site</title>
     </head>
     <body>
-        <h1 id="title">Welcome, please log-in:</h1>
+        <div class="main-content-wrapper">
+            <div class="title-container">
+                <h1 id="title">Welcome, please log-in:</h1>
+            </div>
+            <form
+                class="form-container"
+                action="javascript:;"
+                onsubmit="loginUser()"
+            >
+                <p class="input-label"><strong>Username:</strong></p>
+                <input type="text" id="username" name="username" />
+                <p class="input-label"><strong>Password:</strong></p>
+                <input type="password" id="password" name="password" />
+                <button class="submit-button" type="submit">Login</button>
+                <d class="redirect-container">
+                    <span class="redirect-label">Don't have an account?</span>
+                    <a class="redirect-button" href="/register">sign up now</a>
+                </d>
+                <img
+                    src="../assets/pictures/knight-offense.png"
+                    alt="logo"
+                    class="logo-image"
+                    onclick="soundEffect('cartoon-click')"
+                />
+            </form>
+        </div>
     </body>
-    <form class="form-container" action="javascript:;" onsubmit="loginUser()">
-        <p class="input-label"><strong>Username:</strong></p>
-        <input type="text" id="username" name="username" />
-        <p class="input-label"><strong>Password:</strong></p>
-        <input type="password" id="password" name="password" />
-        <button class="submit-button" type="submit">Login</button>
-        <d class="redirect-container">
-            <span class="redirect-label">Don't have an account?</span>
-            <a class="redirect-button" href="/register">sign up now</a>
-        </d>
-        <img
-            src="../assets/pictures/knight-offense.png"
-            alt="logo"
-            class="logo-image"
-            onclick="soundEffect('cartoon-click')"
-        />
-    </form>
     <script src="../scripts/login-script.js"></script>
     <script src="../scripts/utils.js"></script>
 </html>

@@ -7,7 +7,7 @@
         "sass-compile": "sass styles/scss:styles/css",
         "sass-watch-folder": "sass --watch styles/scss:styles/css"
     },
-    "author": "",
+    "author": "afek-sakaju",
     "license": "ISC",
     "devDependencies": {
         "sass": "^1.56.1"

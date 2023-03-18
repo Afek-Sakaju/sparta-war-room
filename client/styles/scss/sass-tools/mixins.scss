@@ -7,26 +7,29 @@
     font-family: RobotoSlab;
     background-image: url('../../../assets/pictures/white-bg.jpg');
     background-size: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@mixin title-container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
 
 @mixin title {
-    position: relative;
-    text-align: center;
-    font-size: 60px;
-    height: 170px;
-    max-height: 170px;
-    margin-bottom: 50px;
-    white-space: nowrap;
-    overflow: hidden;
-    color: white;
-    letter-spacing: 6.5px;
-    -webkit-text-stroke: 1px rgb(0, 0, 0);
-    text-shadow: 0 2px 5px rgb(0, 0, 0);
-    animation: orangeRotation 5s;
-    animation-iteration-count: infinite;
+    font-size: $title-font-size;
+    color: black;
 }
 
-@mixin orange-button-centered {
+@mixin main-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    height: 900px;
+}
+
+@mixin submit-button {
     display: flex;
     justify-content: center;
     margin-top: 15px;
@@ -42,25 +45,7 @@
     }
 }
 
-@mixin button-link-tiny-top {
-    position: relative;
-    top: -130px;
-    cursor: pointer !important;
-    padding: 10px 20px;
-    width: 138px;
-    &:hover {
-        opacity: 0.5;
-    }
-}
-
-@mixin button-redirect-blue-design {
-    color: blue;
-    font-weight: lighter;
-    background-color: white;
-    border: 3px solid $secondary-color;
-}
-
-@mixin container-mini-link-bottom {
+@mixin redirect-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -68,16 +53,14 @@
     padding: 10px 8px;
 }
 
-@mixin medium-container-centered {
+@mixin form-container {
     display: flex;
     flex-direction: column;
     margin: auto;
-    width: 650px;
     padding: 20px 80px 20px 80px;
     background-color: #ffffff08;
-    border: 4px solid $secondary-color;
+    border: 2px solid $secondary-color;
     border-radius: 10px;
-    box-shadow: 0 3px 20px rgb(1, 1, 1);
 }
 
 @mixin input-line {
@@ -89,7 +72,7 @@
 }
 
 @mixin input-text {
-    font: 100% Courier new, monospace;
+    font: $input-font;
     color: $primary-color;
     margin-bottom: 0;
 }

@@ -8,21 +8,29 @@
         <title>Afek's site</title>
     </head>
     <body>
-        <h1 id="title">Join my site friend !</h1>
+        <div class="main-content-wrapper">
+            <div class="title-container">
+                <h1 id="title">Join my site friend !</h1>
+            </div>
+            <form
+                class="form-container"
+                action="javascript:;"
+                onsubmit="registerUser()"
+            >
+                <p class="input-label"><strong>Username:</strong></p>
+                <input type="text" id="username" name="username" />
+                <p class="input-label"><strong>Password:</strong></p>
+                <input type="password" id="password" name="password" />
+                <p class="input-label"><strong>Confirm password:</strong></p>
+                <input type="password" id="re-password" name="re-password" />
+                <button class="submit-button" type="submit">Register</button>
+                <d class="redirect-container">
+                    <span class="redirect-label">Already have an account?</span>
+                    <a class="redirect-button" href="/login">login here</a>
+                </d>
+            </form>
+        </div>
     </body>
-    <form class="form-container" action="javascript:;" onsubmit="registerUser()">
-        <p class="input-label"><strong>Username:</strong></p>
-        <input type="text" id="username" name="username" />
-        <p class="input-label"><strong>Password:</strong></p>
-        <input type="password" id="password" name="password" />
-        <p class="input-label"><strong>Confirm password:</strong></p>
-        <input type="password" id="re-password" name="re-password" />
-        <button class="submit-button" type="submit">Register</button>
-        <d class="redirect-container">
-            <span class="redirect-label">Already have an account?</span>
-            <a class="redirect-button" href="/login">login here</a>
-        </d>
-    </form>
     <script src="../scripts/register-script.js"></script>
     <script src="../scripts/utils.js"></script>
 </html>

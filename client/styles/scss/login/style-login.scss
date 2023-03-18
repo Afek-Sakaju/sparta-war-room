@@ -6,6 +6,14 @@ body {
     @include body-primary-design;
 }
 
+.main-content-wrapper {
+    @include main-content-wrapper;
+}
+
+.title-container {
+    @include title-container;
+}
+
 #title {
     @include title;
 }
@@ -33,7 +41,7 @@ input {
 
 .logo-image {
     position: relative;
-    animation: move 10s 0.2s infinite alternate linear;
+    animation: move-logo 10s 0.2s infinite alternate linear;
     margin-top: 8px;
     width: 67px;
     height: 67px;
@@ -41,18 +49,18 @@ input {
     border: black solid 2px;
     &:hover {
         cursor: pointer;
-        border-color: red;
+        border-color: $primary-color;
     }
 }
 
 .form-container {
-    @include medium-container-centered;
+    @include form-container;
 }
 
 .redirect-container {
-    @include container-mini-link-bottom;
+    @include redirect-container;
 }
 
 .submit-button {
-    @include orange-button-centered;
+    @include submit-button;
 }

@@ -5,6 +5,15 @@ body {
     @include body-primary-design;
 }
 
+.main-content-wrapper {
+    @include main-content-wrapper;
+}
+
+
+.title-container {
+    @include title-container;
+}
+
 #title {
     @include title;
 }
@@ -31,13 +40,13 @@ input {
 }
 
 .form-container {
-    @include medium-container-centered;
+    @include form-container;
 }
 
 .redirect-container {
-    @include container-mini-link-bottom;
+    @include redirect-container;
 }
 
 .submit-button {
-    @include orange-button-centered;
+    @include submit-button;
 }

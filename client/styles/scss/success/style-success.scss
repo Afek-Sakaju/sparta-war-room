@@ -1,12 +1,20 @@
 @import '../sass-tools/mixins.scss';
 @import '../sass-tools/variables.scss';
 
-#title {
-    @include title;
-}
-
 body {
     @include body-primary-design;
+}
+
+.main-content-wrapper {
+    @include main-content-wrapper;
+}
+
+.title-container {
+    @include title-container;
+}
+
+#title {
+    @include title;
 }
 
 .sub-title {
@@ -19,13 +27,13 @@ body {
 }
 
 .form-container {
-    @include medium-container-centered;
+    @include form-container;
     align-items: center;
     height: 220px;
 }
 
 .submit {
-    @include orange-button-centered;
+    @include submit-button;
     margin-top: 20px;
     width: 50%;
 }
