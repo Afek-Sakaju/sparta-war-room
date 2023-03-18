@@ -27,5 +27,5 @@ async function getData(url) {
 }
 
 function soundEffect(name) {
-    new Audio(`../assets/sounds/${name}-sound.mp3`).play();
+    new Audio(`../assets/sounds/${name}.mp3`).play();
 }

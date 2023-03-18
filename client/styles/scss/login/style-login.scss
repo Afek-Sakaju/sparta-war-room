@@ -30,23 +30,17 @@ input {
 }
 
 .redirect-label {
-    color: white;
-    font-weight: 500;
-    padding: 0 8px;
+    @include redirect-label;
 }
 
 .redirect-button {
-    color: rgb(8, 0, 255);
-    font-weight: 900;
-    &:hover {
-        opacity: 0.5;
-    }
+    @include redirect-button;
 }
 
 #logo-image {
     position: relative;
     animation: move-logo 10s 0.2s infinite alternate linear;
-    margin-top: 8px;
+    margin-top: 7px;
     width: 67px;
     height: 67px;
     border-radius: 100%;

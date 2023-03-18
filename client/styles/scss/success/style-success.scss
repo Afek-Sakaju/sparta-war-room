@@ -28,7 +28,8 @@ body {
 .form-container {
     @include form-container;
     align-items: center;
-    height: 220px;
+    padding-bottom: 50px;
+    width: 80%;
 }
 
 .submit {

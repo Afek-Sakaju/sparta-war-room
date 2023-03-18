@@ -23,15 +23,15 @@ async function loginUser() {
         });
 }
 
-
-
 function logoClickHandler() {
-    soundEffect('cartoon-click');
+    const soundName = clickedLogoTimeout ? 'shield-guard' : 'sword-swing';
+    soundEffect(soundName);
     const logoElement = document.getElementById('logo-image');
     logoElement.classList.add('clicked');
 
     clearTimeout(clickedLogoTimeout);
     clickedLogoTimeout = setTimeout(() => {
         logoElement.classList.remove('clicked');
+        clickedLogoTimeout = undefined;
     }, 800);
 }
