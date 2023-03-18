@@ -18,12 +18,11 @@ body {
 }
 
 .sub-title {
-    font-size: 30px;
+    font-size: 1.5em;
     text-align: center;
     color: $primary-color;
-    font-weight: bold;
-    size: 20px;
-    font-weight: normal;
+    font-weight: bolder;
+    -webkit-text-stroke: black 0.1px;
 }
 
 .form-container {

@@ -15,6 +15,7 @@
     display: flex;
     text-align: center;
     justify-content: center;
+    margin-bottom: 80px;
 }
 
 @mixin title {
@@ -27,6 +28,7 @@
 @mixin main-content-wrapper {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 700px;
     height: 860px;
 }
@@ -58,7 +60,6 @@
 @mixin form-container {
     display: flex;
     flex-direction: column;
-    margin: auto;
     padding: 20px 80px 20px 80px;
     background-color: #ffffff50;
     border: 2px solid $primary-color;
