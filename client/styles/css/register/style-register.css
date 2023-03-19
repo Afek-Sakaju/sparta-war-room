@@ -14,8 +14,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 700px;
-  height: 860px;
+  width: 600px;
 }
 
 .title-container {
@@ -30,7 +29,7 @@ body {
 
 #title {
   font-size: 2.7em;
-  color: #ff4800;
+  color: #cecece;
   -webkit-text-stroke: black 0.1px;
   text-shadow: white 0 0 7px;
 }
@@ -39,7 +38,8 @@ input {
   width: 100%;
   padding: 12px 20px;
   margin: 5px 0 25px 0;
-  border: 3px solid #ababab;
+  border: 3px solid #9d9d9d;
+  border-radius: 5px;
   box-sizing: border-box;
 }
 input:hover {
@@ -73,7 +73,7 @@ input:hover {
   flex-direction: column;
   padding: 20px 80px 20px 80px;
   background-color: rgba(255, 255, 255, 0.3137254902);
-  border: 2px solid #ff4800;
+  border: 2px solid #cecece;
   border-radius: 10px;
   width: 92%;
   box-shadow: 0px 0px 12px 1px;
@@ -87,15 +87,15 @@ input:hover {
 }
 
 .submit-button {
-  display: flex;
-  justify-content: center;
+  text-align: center;
+  font-size: 1em;
   margin-top: 15px;
   padding: 14px 20px;
   width: 100%;
-  color: #ff4800;
+  color: #cecece;
   background-color: white;
-  border: 2px solid #ff4800;
-  font-size: medium;
+  border: 2px solid #cecece;
+  border-radius: 5px;
 }
 .submit-button:hover {
   opacity: 0.5;
