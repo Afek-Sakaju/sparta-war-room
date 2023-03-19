@@ -1,6 +1,6 @@
-# Login-and-register <img src="./readme-resources/login-logo.png" width=100px height=100px align="right">
+# Login-and-register <img src="./readme-resources/login-logo.png" width=90px height=90px align="right">
 
-### This is a server side and web project which summarize some of my knowledge about (sass+css+html) and server side<br /> Iv'e designed it using specific theme of a "medieval clan members site" which make it more creative and unique.
+### This is a server side and web project which summarize some of my knowledge about (sass+css+html) and server side<br /> The theme designed and inspired as if it was site of a "medieval knights" clan, which make it more creative and unique.<img src="./readme-resources/knight-defense.png" width=100px height=100px align="right">
 
 ---
 
@@ -34,7 +34,7 @@ The project includes the following APIs :
 
 ### **Example of using the project's login/logout/register operations:**
 
-![Example-GIF](./readme-resources/web-gif.gif)
+![Example-GIF](./readme-resources/project-gif.gif)
 
 ---
 
