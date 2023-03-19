@@ -7,7 +7,7 @@ async function postData(url, data) {
         body: JSON.stringify(data),
     }).then((response) => {
         if (response.ok) return response;
-        throw Error(response.statusText);
+        throw response.status;
     });
 }
 
@@ -22,7 +22,7 @@ async function getData(url) {
         },
     }).then((response) => {
         if (response.ok) return response;
-        throw Error(response.statusText);
+        throw Error(response.status);
     });
 }
 

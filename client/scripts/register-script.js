@@ -19,7 +19,11 @@ async function registerUser() {
         .then(() => {
             window.location.href = '/login';
         })
-        .catch((err) => {
-            alert('Username already exists', err);
+        .catch((errorStatus) => {
+            const message =
+                errorStatus === 500
+                    ? 'Server error'
+                    : 'Username already exists';
+            alert(message);
         });
 }

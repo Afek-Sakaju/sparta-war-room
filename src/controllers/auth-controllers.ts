@@ -17,7 +17,7 @@ export async function registerUserCtrl(
 
         res.sendStatus(status);
     } catch (e: any) {
-        next(e); // can crash the server if username already exists
+        next(e);
     }
 }
 
@@ -27,15 +27,17 @@ export async function loginUserCtrl(
     next: NextFunction
 ) {
     try {
-        const { accessToken } = await loginUser(
+        const loginResult = await loginUser(
             req.body.username,
             req.body.password
         );
 
+        const accessToken = loginResult ? { loginResult } : undefined;
+
         if (accessToken) res.json({ accessToken });
-        else res.redirect('/login');
+        else res.sendStatus(401);
     } catch (e: any) {
-        next(e); // can crash the server if username already exists
+        next(e);
     }
 }
 

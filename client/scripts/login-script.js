@@ -18,8 +18,12 @@ async function loginUser() {
         .then(() => {
             window.location.href = '/success';
         })
-        .catch((e) => {
-            alert('Incorrect username or password', e);
+        .catch((errorStatus) => {
+            const message =
+                errorStatus === 500
+                    ? 'Server error'
+                    : 'Incorrect username or password';
+            alert(message);
         });
 }
 

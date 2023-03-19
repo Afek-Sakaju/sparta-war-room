@@ -14,11 +14,16 @@ export async function getUserByUsername(
 }
 
 export async function registerUser(user: IUser): Promise<number> {
+    const isExistingUser: any = await UserModel.findOne({
+        username: user.username,
+    }); // To make sure no duplications occurs
+    if (isExistingUser) return 409;
+
     const userDoc = new UserModel(user);
 
     const result: any = await userDoc.save();
 
-    return result ? 201 : 500;
+    return result ? 201 : 409;
 }
 
 export async function loginUser(

@@ -6,6 +6,7 @@ import {
     logoutUserCtrl,
 } from '../controllers/auth-controllers';
 import { isAuthMW } from '../middlewares/auth-middleware';
+import { isConnectedToDB } from '../middlewares/mongoDB-middleware';
 
 const router = express.Router();
 
@@ -14,11 +15,11 @@ router.use((req: Request, res: Response, next: NextFunction) => {
     next();
 });
 
-router.post('/register', registerUserCtrl);
+router.post('/register', isConnectedToDB, registerUserCtrl);
 
-router.post('/login', loginUserCtrl);
+router.post('/login', isConnectedToDB, loginUserCtrl);
 
-router.get('/logout', logoutUserCtrl);
+router.get('/logout', isConnectedToDB, logoutUserCtrl);
 
 router.get('/user-authenticated', isAuthMW, (req: Request, res: Response) => {
     res.sendStatus(200);

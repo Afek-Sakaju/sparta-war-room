@@ -7,13 +7,18 @@ import express, {
 import bodyParser from 'body-parser';
 import session from 'express-session';
 import path from 'path';
+import mongoose from 'mongoose';
 
 import { connectDB } from './DB/mongoose';
 import mainRouter from './routers/main-router';
 import authRouter from './routers/auth-router';
 
-connectDB('mongodb://127.0.0.1:27017/login-and-register');
+mongoose.set('bufferCommands', false);
+mongoose.set('bufferTimeoutMS', 5000);
 
+(async function () {
+    await connectDB('mongodb://127.0.0.1:27017/login-and-register');
+})();
 const app = express();
 const PORT = 3000;
 
