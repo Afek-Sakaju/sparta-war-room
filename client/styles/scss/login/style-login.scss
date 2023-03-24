@@ -45,8 +45,10 @@ input {
     height: 67px;
     border-radius: 100%;
     border: black solid 2px;
+    cursor: url('../../../assets/pictures/sword-cursor-green-border.png'),
+        pointer;
+
     &:hover {
-        cursor: pointer;
         border-color: $primary-color;
         &::before {
             background-image: url('../../../assets/pictures/knight-offense.png');
@@ -54,6 +56,8 @@ input {
     }
 
     &.clicked {
+        cursor: url('../../../assets/pictures/sword-cursor-red-border.png'),
+            pointer;
         &::before {
             background-image: url('../../../assets/pictures/knight-defense.png');
         }

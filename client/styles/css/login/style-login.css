@@ -16,6 +16,7 @@ body {
   background-size: 100%;
   display: flex;
   justify-content: center;
+  cursor: url("../../../assets/pictures/sword-cursor.png"), default;
 }
 
 .main-content-wrapper {
@@ -84,13 +85,16 @@ input:hover {
   height: 67px;
   border-radius: 100%;
   border: black solid 2px;
+  cursor: url("../../../assets/pictures/sword-cursor-green-border.png"), pointer;
 }
 #logo-image:hover {
-  cursor: pointer;
   border-color: #cecece;
 }
 #logo-image:hover::before {
   background-image: url("../../../assets/pictures/knight-offense.png");
+}
+#logo-image.clicked {
+  cursor: url("../../../assets/pictures/sword-cursor-red-border.png"), pointer;
 }
 #logo-image.clicked::before {
   background-image: url("../../../assets/pictures/knight-defense.png");
@@ -135,10 +139,10 @@ input:hover {
   background-color: white;
   border: 2px solid #cecece;
   border-radius: 5px;
+  cursor: pointer;
 }
 .submit-button:hover {
   opacity: 0.5;
-  cursor: pointer !important;
 }
 
 /*# sourceMappingURL=style-login.css.map */

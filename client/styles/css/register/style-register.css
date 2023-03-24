@@ -8,6 +8,7 @@ body {
   background-size: 100%;
   display: flex;
   justify-content: center;
+  cursor: url("../../../assets/pictures/sword-cursor.png"), default;
 }
 
 .main-content-wrapper {
@@ -96,10 +97,10 @@ input:hover {
   background-color: white;
   border: 2px solid #cecece;
   border-radius: 5px;
+  cursor: pointer;
 }
 .submit-button:hover {
   opacity: 0.5;
-  cursor: pointer !important;
 }
 
 /*# sourceMappingURL=style-register.css.map */
