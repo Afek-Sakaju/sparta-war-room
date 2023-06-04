@@ -27,6 +27,7 @@
     color: $title-color;
     -webkit-text-stroke: black 0.1px;
     text-shadow: white 0 0 7px;
+    user-select: none;
 }
 
 @mixin main-content-wrapper {
@@ -46,6 +47,7 @@
     background-color: white;
     border: 2px solid $primary-color;
     border-radius: 5px;
+    user-select: none;
     cursor: pointer;
 
     &:hover {
@@ -63,6 +65,7 @@
 @mixin redirect-button {
     color: black;
     font-weight: 900;
+    user-select: none;
     &:hover {
         opacity: 0.5;
     }
@@ -73,6 +76,7 @@
     font-weight: 500;
     padding: 0 8px;
     -webkit-text-stroke: black 0.8px;
+    user-select: none;
 }
 
 @mixin form-container {
@@ -100,4 +104,5 @@
     color: black;
     -webkit-text-stroke: white 0.1px;
     margin-bottom: 0;
+    user-select: none;
 }

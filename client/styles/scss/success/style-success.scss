@@ -23,6 +23,7 @@ body {
     color: $primary-color;
     font-weight: bolder;
     -webkit-text-stroke: black 0.1px;
+    user-select: none;
 }
 
 .form-container {

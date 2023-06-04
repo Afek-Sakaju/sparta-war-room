@@ -41,6 +41,7 @@ body {
   color: #cecece;
   -webkit-text-stroke: black 0.1px;
   text-shadow: white 0 0 7px;
+  user-select: none;
 }
 
 input {
@@ -60,6 +61,7 @@ input:hover {
   color: black;
   -webkit-text-stroke: white 0.1px;
   margin-bottom: 0;
+  user-select: none;
 }
 
 .redirect-label {
@@ -67,11 +69,13 @@ input:hover {
   font-weight: 500;
   padding: 0 8px;
   -webkit-text-stroke: black 0.8px;
+  user-select: none;
 }
 
 .redirect-button {
   color: black;
   font-weight: 900;
+  user-select: none;
 }
 .redirect-button:hover {
   opacity: 0.5;
@@ -139,6 +143,7 @@ input:hover {
   background-color: white;
   border: 2px solid #cecece;
   border-radius: 5px;
+  user-select: none;
   cursor: pointer;
 }
 .submit-button:hover {
