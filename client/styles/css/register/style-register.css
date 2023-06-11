@@ -41,7 +41,7 @@ input {
   width: 100%;
   padding: 12px 20px;
   margin: 5px 0 25px 0;
-  border: 3px solid #ae7d50;
+  border: 3px solid rgb(100, 100, 100);
   border-radius: 5px;
   box-sizing: border-box;
 }
@@ -79,7 +79,7 @@ input:hover {
   flex-direction: column;
   padding: 20px 80px 20px 80px;
   background-color: rgba(255, 255, 255, 0.3137254902);
-  border: 2px solid #ae7d50;
+  border: 2px solid rgb(100, 100, 100);
   border-radius: 10px;
   width: 92%;
   box-shadow: 0px 0px 12px 1px;
@@ -99,9 +99,9 @@ input:hover {
   margin-top: 15px;
   padding: 14px 20px;
   width: 100%;
-  color: #ae7d50;
+  color: rgb(100, 100, 100);
   background-color: white;
-  border: 2px solid #ae7d50;
+  border: 2px solid rgb(100, 100, 100);
   border-radius: 5px;
   user-select: none;
   cursor: pointer;
