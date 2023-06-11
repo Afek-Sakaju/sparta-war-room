@@ -44,7 +44,7 @@ The project incorporates the following APIs:
 
 -   [x] _**Nodejs**_ : the project is _javascript_ based.
 -   [x] _**Express**_ : used for the server side routers, middlewares, controllers, and services.
--   [x] _**Typescript**_ : the project has been implemented using _typescript_ interfaces, `<filenames>.d.ts` declarations files, etc..
+-   [x] _**Typescript**_ : the project has been implemented using _typescript_ interfaces.
 -   [x] _**jwt**_ : implementing authentication using JSON Web Tokens involves securely storing the token for the authenticated user.
 -   [x] _**MongoDB**_ : utilized with the _**mongoose**_ library for defining schemas and models, which are then utilized in the controllers and services.
 -   [x] _**Bcrypt**_ : user passwords are securely encrypted in accordance with best practices to ensure data security.
