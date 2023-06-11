@@ -14,7 +14,6 @@ export async function registerUserCtrl(
 
     try {
         const status = await registerUser(user);
-
         res.sendStatus(status);
     } catch (e: any) {
         next(e);
@@ -33,7 +32,6 @@ export async function loginUserCtrl(
         );
 
         const accessToken = loginResult ? { loginResult } : undefined;
-
         if (accessToken) res.json({ accessToken });
         else res.sendStatus(401);
     } catch (e: any) {
@@ -42,9 +40,9 @@ export async function loginUserCtrl(
 }
 
 export async function logoutUserCtrl(
-    req: Request,
+    _req: Request,
     res: Response,
-    next: NextFunction
+    _next: NextFunction
 ) {
     res.cookie('jwtAccessToken', '', { maxAge: 1 });
     res.redirect('/login');

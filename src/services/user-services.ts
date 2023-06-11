@@ -16,13 +16,11 @@ export async function getUserByUsername(
 export async function registerUser(user: IUser): Promise<number> {
     const isExistingUser: any = await UserModel.findOne({
         username: user.username,
-    }); // To make sure no duplications occurs
+    });
     if (isExistingUser) return 409;
 
     const userDoc = new UserModel(user);
-
     const result: any = await userDoc.save();
-
     return result ? 201 : 409;
 }
 
@@ -31,21 +29,13 @@ export async function loginUser(
     password: string
 ): Promise<any> {
     const user = (await getUserByUsername(username)) as IUser;
+    const isPasswordCorrect = await bcrypt.compare(password, user?.password ?? '');
 
-    switch (true) {
-        case user === null || user === undefined:
-            console.log('Username not found');
-            break;
-        case (await bcrypt.compare(password, user.password)) === false:
-            console.log("User's password incorrect");
-            break;
-        default:
-            console.log('User login successfully');
+    if (!!user && isPasswordCorrect) {
+        const accessToken = jwt.sign({ user }, accessPrivateKey, {
+            expiresIn: '15s',
+        });
 
-            const accessToken = jwt.sign({ user }, accessPrivateKey, {
-                expiresIn: '15s',
-            });
-
-            return { accessToken };
+        return { accessToken };
     }
 }

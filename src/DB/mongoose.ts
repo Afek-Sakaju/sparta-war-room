@@ -1,5 +1,8 @@
 import mongoose from 'mongoose';
-import { DB_STATUS } from '../utils/consts';
+
+export const DB_STATUS = {
+    connected: false,
+};
 
 export async function connectDB(url: string) {
     try {
