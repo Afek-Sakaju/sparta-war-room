@@ -1,17 +1,18 @@
-# Chivalry-Connect <img src="./readme-resources/login-logo.png" width=90px height=90px align="right">
+# Chivalry-Connect <img src="./readme-resources/knight-defense.png" width=110px height=110px align="right">
 
-### This is a server side and web project which summarize some of my knowledge about (sass+css+html) and server side<br /> The theme designed and inspired as if it was site of a "medieval knights" clan, which make it more creative and unique.<img src="./readme-resources/knight-defense.png" width=100px height=100px align="right">
+### This project utilizes Express and MongoDB for the server-side development.<br/> On the client side, JavaScript, HTML, and SCSS are used. <br/>The design is inspired by a medieval knights clan, contributing a creative and unique aspect to the project.<img src="./readme-resources/login-logo.png" width=40px height=40px align="right">
 
 ---
 
-This project stores data in the database and makes it accessible with **REST APIs**, that are written in _NodeJS_ & _typescript_ and with _express ts_ for the server. <br /> <br />
-The project includes the following APIs :
+This project utilizes a database to store data and provides access to it through **REST APIs**.<br/> The APIs are written in _NodeJS_ and _typescript_, using the _express_ framework with _typescript_.
 
-| Authentication of users  
+The project incorporates the following APIs:
+
+| User authentication
 | ----------------------------------- |
-| + Register user |
-| + Login user |
-| + Logout user |
+| + Register |
+| + Login |
+| + Logout |
 
 ---
 
@@ -19,53 +20,34 @@ The project includes the following APIs :
 
 **Requirements**
 
--   _NodeJS_ version 18.1+
+-   _NodeJS_ version 16.4+
 -   _MongoDB service_ version 6.0.1+
 
 **Command lines**
 
--   **The command to run the project**
-    -   `npm run start`<br /> (runs build of typescript, and runs the JS compiled project)
-    -   `npm run dev`<br /> (runs _typescript_ code for developement with _nodemon_)
-    -   For developing the _sass_ style its necessary to install _sass_ inside the "client" folder. Than to compile the scss files into css you should run this script :<br />
-        `"sass-compile": "sass styles/scss:styles/css"`
+-   `npm run start`<br /> Build the _TS_ code and execute the compiled _JS_ project.
+-   `npm run dev`<br /> Run _TS_ code with _nodemon_ for seamless development
+
+-   `cd-client`<br/> Access the client directory to initiate client-side development.
+    -   `npm run sass-compile`<br /> Compile all the _SCSS_ files to _CSS_ files.
+    -   `npm run sass-watch-folder`<br />Automatically compiles SCSS files into CSS files whenever changes are detected.
 
 ---
 
-### **Example of using the project's login/logout/register operations:**
+### **A practical example that exemplifies how the project can be utilized**
 
-![Example-GIF](./readme-resources/project-gif.gif)
+![Project-GIF](./readme-resources/project-gif.gif)
 
 ---
 
-### Technologies that I used for the project:
+### The technologies used in this project include:
 
--   [x] _**Nodejs**_ : the project based on JS.
--   [x] _**Express**_ : used for the server side routers, middlewares controllers, and services.
--   [x] _**Typescript**_ : the project have written in _typescript_ for interfaces, variables types, etc..
--   [x] _**jwt**_ : authentication with _json-web-token_ by saving token for the authenticated user.
--   [x] _**MongoDB**_ : _**mongoose**_ for _mongoDB_ with schemas and models that used in the controllers and services.
--   [x] _**Bcrypt**_ : crypted the users passwords for best data secure and by the guidance of best practice.
-
-### Extra technologies i been using for development tools:
-
--   [x] _**nodemon**_ : watch and compile any changes for _typescript_ files.
--   [x] _**prettier**_ : fix annotation and organized code by standard with _prettier_ watcher.
--   [x] _**sass**_ : using _sass_ allowed me to use mixins, variable, and generally write more organized, simple, and readable code.
--   [x] _**lite-server**_ : watch any real-time changes in the _sass_ & _html_ files.
-
-### Another features i been using in this project:
-
--   [x] **_jwt_ authentication** : authenticate user by compare crypted password with user plaintext password request by the bast practice guidance.
--   [x] **_mongoose_ schema hooks** : use pre save hook that crypt the user password before creating user (update user data not applied).
--   [x] **_postman_** : exported postman collection for _postman_ software :
-        `login_and_register_rest_api.postman_collection.json`
-
-### Visual features with _html_ and _sass & css_ that i used:
-
--   [x] **Scripting** : the use of _js_ script files inside the client pages allowed me to interact with the page when the user click on a button.
--   [x] **Hovering, animations and sound effects** : using effects while the user hover on some components & using _keyframes_ animations or sound effects inside the page makes the page more responsive and allow the user to feel better the interaction with the page.
--   [x] **Medieval-design** : This type of design allowed me to focus on a specific concept and implement it on this project, and it makes the project more creative and unique in its own way ...
+-   [x] _**Nodejs**_ : the project is _javascript_ based.
+-   [x] _**Express**_ : used for the server side routers, middlewares, controllers, and services.
+-   [x] _**Typescript**_ : the project has been implemented using _typescript_ interfaces, `<filenames>.d.ts` declarations files, etc..
+-   [x] _**jwt**_ : implementing authentication using JSON Web Tokens involves securely storing the token for the authenticated user.
+-   [x] _**MongoDB**_ : utilized with the _**mongoose**_ library for defining schemas and models, which are then utilized in the controllers and services.
+-   [x] _**Bcrypt**_ : user passwords are securely encrypted in accordance with best practices to ensure data security.
 
 ## Author
 
