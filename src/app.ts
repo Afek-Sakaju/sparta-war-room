@@ -17,7 +17,7 @@ mongoose.set('bufferCommands', false);
 mongoose.set('bufferTimeoutMS', 5000);
 
 (async function () {
-    await connectDB('mongodb://127.0.0.1:27017/login-and-register');
+    await connectDB('mongodb://127.0.0.1:27017/Chivalry-Connect');
 })();
 const app = express();
 const PORT = 3000;

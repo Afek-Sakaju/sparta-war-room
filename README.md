@@ -1,4 +1,4 @@
-# Login-and-register <img src="./readme-resources/login-logo.png" width=90px height=90px align="right">
+# Chivalry-Connect <img src="./readme-resources/login-logo.png" width=90px height=90px align="right">
 
 ### This is a server side and web project which summarize some of my knowledge about (sass+css+html) and server side<br /> The theme designed and inspired as if it was site of a "medieval knights" clan, which make it more creative and unique.<img src="./readme-resources/knight-defense.png" width=100px height=100px align="right">
 
