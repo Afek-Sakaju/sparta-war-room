@@ -68,6 +68,7 @@ input:hover {
 .redirect-label {
   color: white;
   font-weight: 500;
+  font-size: 0.9em;
   padding: 0 8px;
   -webkit-text-stroke: black 0.8px;
   user-select: none;
@@ -75,6 +76,7 @@ input:hover {
 
 .redirect-button {
   color: black;
+  font-size: 0.9em;
   font-weight: 900;
   user-select: none;
 }
