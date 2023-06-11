@@ -1,8 +1,8 @@
 let clickedLogoTimeout;
 
 async function loginUser() {
-    const username = document.querySelector('input[name="username"]').value;
-    const password = document.querySelector('input[name="password"]').value;
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
 
     await postData('/auth/login', {
         username: username,

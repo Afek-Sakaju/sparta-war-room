@@ -1,9 +1,7 @@
 async function registerUser() {
-    const username = document.querySelector('input[name="username"]').value;
-    const password = document.querySelector('input[name="password"]').value;
-    const retypePassword = document.querySelector(
-        'input[name="re-password"]'
-    ).value;
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const retypePassword = document.getElementById('re-password');
 
     if (password.length < 5) {
         return alert('Password must contain at least 5 characters');
