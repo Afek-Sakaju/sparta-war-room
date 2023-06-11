@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import { isConnected } from '../utils/functions';
+import { isConnected } from '../utils';
 
 export async function isConnectedToDB(
     req: Request,

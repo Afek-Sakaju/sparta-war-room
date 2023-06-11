@@ -10,8 +10,7 @@ import path from 'path';
 import mongoose from 'mongoose';
 
 import { connectDB } from './DB/mongoose';
-import mainRouter from './routers/main-router';
-import authRouter from './routers/auth-router';
+import { authRouter, mainRouter } from './routers';
 
 mongoose.set('bufferCommands', false);
 mongoose.set('bufferTimeoutMS', 5000);
@@ -55,5 +54,5 @@ app.listen(PORT, () => {
     console.log(`Server is up on port ${PORT}`);
 });
 
-export const accessPrivateKey = 'Its-a-secret-shhhh!';
+export const accessPrivateKey = 'Its-a-secret!';
 export default app;

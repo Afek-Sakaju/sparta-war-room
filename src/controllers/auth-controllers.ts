@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import { IUser } from '../interfaces/user-interface';
-import { registerUser, loginUser } from '../services/user-services';
+import { registerUser, loginUser } from '../services';
 
 export async function registerUserCtrl(
     req: Request,

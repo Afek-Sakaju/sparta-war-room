@@ -4,7 +4,7 @@ import {
     registerUserCtrl,
     loginUserCtrl,
     logoutUserCtrl,
-} from '../controllers/auth-controllers';
+} from '../controllers';
 import { isAuthMW } from '../middlewares/auth-middleware';
 import { isConnectedToDB } from '../middlewares/mongoDB-middleware';
 
