@@ -14,7 +14,7 @@ body {
     @include title-container;
 }
 
-#title {
+h1 {
     @include title;
 }
 

@@ -13,7 +13,7 @@ body {
     @include title-container;
 }
 
-#title {
+h1 {
     @include title;
 }
 
@@ -33,7 +33,7 @@ body {
     width: 80%;
 }
 
-.submit {
+.submit-button {
     @include submit-button;
     margin-top: 20px;
     width: 50%;

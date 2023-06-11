@@ -10,11 +10,10 @@ window.onload = () => {
         window.location.href = '/login';
     });
 
+    const username = localStorage.getItem('successLoginUsername');
     document.getElementById(
-        'bigTitle'
-    ).innerHTML = `Welcome ${localStorage.getItem(
-        'successLoginUsername'
-    )}</br> you are logged in`;
+        'title'
+    ).innerHTML = `Welcome ${username}</br> you have joined our clan!`;
 };
 
 async function logoutUser() {
