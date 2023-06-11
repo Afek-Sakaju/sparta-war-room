@@ -20,6 +20,7 @@
     margin-bottom: 80px;
     background-color: rgba(255, 255, 255, 0.45);
     box-shadow: -20px 20px rgba(0, 0, 0, 0.492);
+    padding: 0 15px;
 }
 
 @mixin title {
@@ -40,6 +41,7 @@
 @mixin submit-button {
     text-align: center;
     font-size: 1em;
+    font-weight: bold;
     margin-top: 15px;
     padding: 14px 20px;
     width: 100%;
@@ -94,7 +96,7 @@
     width: 100%;
     padding: 12px 20px;
     margin: 5px 0 25px 0;
-    border: 3px solid $secondary-color;
+    border: 3px solid $primary-color;
     border-radius: 5px;
     box-sizing: border-box;
 }
