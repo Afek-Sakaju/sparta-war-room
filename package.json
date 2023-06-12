@@ -1,8 +1,8 @@
 {
-    "name": "Chivalry-Connect",
+    "name": "chivalry-auth",
     "description": "This project is a web application that allows users to register and log in securely.",
     "author": "afek-sakaju",
-    "homepage": "https://github.com/afekTheMiniLearner/Chivalry-Connect#readme",
+    "homepage": "https://github.com/afekTheMiniLearner/chivalry-auth#readme",
     "keywords": [
         "authentication",
         "login",
@@ -19,11 +19,11 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/afekTheMiniLearner/Chivalry-Connect.git"
+        "url": "git+https://github.com/afekTheMiniLearner/chivalry-auth.git"
     },
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/afekTheMiniLearner/Chivalry-Connect/issues"
+        "url": "https://github.com/afekTheMiniLearner/chivalry-auth/issues"
     },
     "dependencies": {
         "bcrypt": "^5.1.0",
