@@ -16,8 +16,6 @@ The project incorporates the following APIs:
 
 ---
 
-### **Running the project :**
-
 **Requirements**
 
 - _NodeJS_ version 16.4+
