@@ -1,48 +1,57 @@
 {
-    "name": "chivalry-auth",
-    "description": "This project is a web application that allows users to register and log in securely.",
-    "author": "afek-sakaju",
-    "homepage": "https://github.com/afekTheMiniLearner/chivalry-auth#readme",
-    "keywords": [
-        "authentication",
-        "login",
-        "register"
-    ],
-    "version": "1.0.0",
-    "private": true,
-    "main": "index.js",
-    "scripts": {
-        "start": "npm run build && node dist/app.js",
-        "dev": "nodemon src/app.ts",
-        "build:watch": "tsc -w",
-        "build": "tsc"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/afekTheMiniLearner/chivalry-auth.git"
-    },
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/afekTheMiniLearner/chivalry-auth/issues"
-    },
-    "dependencies": {
-        "bcrypt": "^5.1.0",
-        "body-parser": "^1.20.1",
-        "express": "^4.18.2",
-        "express-session": "^1.17.3",
-        "jsonwebtoken": "^8.5.1",
-        "mongoose": "^6.7.2",
-        "path": "^0.12.7"
-    },
-    "devDependencies": {
-        "@types/bcrypt": "^5.0.0",
-        "@types/body-parser": "^1.19.2",
-        "@types/express": "^4.17.17",
-        "@types/express-session": "^1.17.5",
-        "@types/jsonwebtoken": "^8.5.9",
-        "nodemon": "^2.0.20",
-        "prettier": "^2.7.1",
-        "ts-node": "^10.9.1",
-        "typescript": "^4.9.3"
-    }
+  "name": "chivalry-auth",
+  "description": "This project is a web application that allows users to register and log in securely.",
+  "author": "afek-sakaju",
+  "homepage": "https://github.com/afekTheMiniLearner/chivalry-auth#readme",
+  "keywords": [
+    "authentication",
+    "login",
+    "register"
+  ],
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && node dist/app.js",
+    "dev": "nodemon src/app.ts",
+    "lint": "eslint .",
+    "build:watch": "tsc -w",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afekTheMiniLearner/chivalry-auth.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/afekTheMiniLearner/chivalry-auth/issues"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.7.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/body-parser": "^1.19.2",
+    "@types/express": "^4.17.17",
+    "@types/express-session": "^1.17.5",
+    "@types/jsonwebtoken": "^8.5.9",
+    "@typescript-eslint/eslint-plugin": "^5.60.0",
+    "eslint": "^8.43.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-standard-with-typescript": "^35.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.8",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.3"
+  }
 }

@@ -2,39 +2,39 @@
 @import '../sass-tools/variables.scss';
 
 body {
-    @include body-primary-design;
+  @include body-primary-design;
 }
 
 .main-content-wrapper {
-    @include main-content-wrapper;
+  @include main-content-wrapper;
 }
 
 .title-container {
-    @include title-container;
+  @include title-container;
 }
 
 h1 {
-    @include title;
+  @include title;
 }
 
 .sub-title {
-    font-size: 1.5em;
-    text-align: center;
-    color: $primary-color;
-    font-weight: bolder;
-    -webkit-text-stroke: black 0.1px;
-    user-select: none;
+  font-size: 1.5em;
+  text-align: center;
+  color: $primary-color;
+  font-weight: bolder;
+  -webkit-text-stroke: black 0.1px;
+  user-select: none;
 }
 
 .form-container {
-    @include form-container;
-    align-items: center;
-    padding-bottom: 50px;
-    width: 80%;
+  @include form-container;
+  align-items: center;
+  padding-bottom: 50px;
+  width: 80%;
 }
 
 .submit-button {
-    @include submit-button;
-    margin-top: 20px;
-    width: 50%;
+  @include submit-button;
+  margin-top: 20px;
+  width: 50%;
 }

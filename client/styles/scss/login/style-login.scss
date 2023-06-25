@@ -3,87 +3,85 @@
 @import '../sass-tools/keyframes.scss';
 
 body {
-    @include body-primary-design;
+  @include body-primary-design;
 }
 
 .main-content-wrapper {
-    @include main-content-wrapper;
+  @include main-content-wrapper;
 }
 
 .title-container {
-    @include title-container;
+  @include title-container;
 }
 
 h1 {
-    @include title;
+  @include title;
 }
 
 input {
-    @include input-line;
-    &:hover {
-        opacity: 0.7;
-    }
+  @include input-line;
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .input-label {
-    @include input-text;
+  @include input-text;
 }
 
 .redirect-label {
-    @include redirect-label;
+  @include redirect-label;
 }
 
 .redirect-button {
-    @include redirect-button;
+  @include redirect-button;
 }
 
 #logo-image {
-    position: relative;
-    animation: move-logo 10s 0.2s infinite alternate linear;
-    margin-top: 7px;
-    width: 67px;
-    height: 67px;
-    border-radius: 100%;
-    border: black solid 2px;
-    cursor: url('../../../assets/pictures/sword-cursor-green-border.png'),
-        pointer;
+  position: relative;
+  animation: move-logo 10s 0.2s infinite alternate linear;
+  margin-top: 7px;
+  width: 67px;
+  height: 67px;
+  border-radius: 100%;
+  border: black solid 2px;
+  cursor: url('../../../assets/pictures/sword-cursor-green-border.png'), pointer;
 
-    &:hover {
-        border-color: $primary-color;
-        &::before {
-            background-image: url('../../../assets/pictures/knight-offense.png');
-        }
-    }
-
-    &.clicked {
-        cursor: url('../../../assets/pictures/sword-cursor-red-border.png'),
-            pointer;
-        &::before {
-            background-image: url('../../../assets/pictures/knight-defense.png');
-        }
-    }
-
+  &:hover {
+    border-color: $primary-color;
     &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-image: url('../../../assets/pictures/knight-steady.png');
-        background-size: contain;
-        background-position: center;
+      background-image: url('../../../assets/pictures/knight-offense.png');
     }
+  }
+
+  &.clicked {
+    cursor: url('../../../assets/pictures/sword-cursor-red-border.png'), pointer;
+    &::before {
+      background-image: url('../../../assets/pictures/knight-defense.png');
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../../../assets/pictures/knight-steady.png');
+    background-size: contain;
+    background-position: center;
+  }
 }
 
 .form-container {
-    @include form-container;
+  @include form-container;
 }
 
 .redirect-container {
-    @include redirect-container;
+  @include redirect-container;
 }
 
 .submit-button {
-    @include submit-button;
+  @include submit-button;
 }

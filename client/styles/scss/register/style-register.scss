@@ -2,48 +2,48 @@
 @import '../sass-tools/variables.scss';
 
 body {
-    @include body-primary-design;
+  @include body-primary-design;
 }
 
 .main-content-wrapper {
-    @include main-content-wrapper;
+  @include main-content-wrapper;
 }
 
 .title-container {
-    @include title-container;
+  @include title-container;
 }
 
 h1 {
-    @include title;
+  @include title;
 }
 
 input {
-    @include input-line;
-    &:hover {
-        opacity: 0.7;
-    }
+  @include input-line;
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .input-label {
-    @include input-text;
+  @include input-text;
 }
 
 .redirect-label {
-    @include redirect-label;
+  @include redirect-label;
 }
 
 .redirect-button {
-    @include redirect-button;
+  @include redirect-button;
 }
 
 .form-container {
-    @include form-container;
+  @include form-container;
 }
 
 .redirect-container {
-    @include redirect-container;
+  @include redirect-container;
 }
 
 .submit-button {
-    @include submit-button;
+  @include submit-button;
 }

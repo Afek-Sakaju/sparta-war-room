@@ -1,49 +1,46 @@
-import { Request, Response, NextFunction } from 'express';
-import { IUser } from '../interfaces/user-interface';
+import type { Request, Response, NextFunction } from 'express';
+import type { IUser } from '../interfaces/user-interface';
 import { registerUser, loginUser } from '../services';
 
 export async function registerUserCtrl(
-    req: Request,
-    res: Response,
-    next: NextFunction
-) {
-    const user = {
-        username: req.body.username,
-        password: req.body.password,
-    } as unknown as IUser;
+  req: Request,
+  res: Response,
+  next: NextFunction
+): Promise<void> {
+  const user = {
+    username: req.body.username,
+    password: req.body.password,
+  } as unknown as IUser;
 
-    try {
-        const status = await registerUser(user);
-        res.sendStatus(status);
-    } catch (e: any) {
-        next(e);
-    }
+  try {
+    const status = await registerUser(user);
+    res.sendStatus(status);
+  } catch (e: any) {
+    next(e);
+  }
 }
 
 export async function loginUserCtrl(
-    req: Request,
-    res: Response,
-    next: NextFunction
-) {
-    try {
-        const loginResult = await loginUser(
-            req.body.username,
-            req.body.password
-        );
+  req: Request,
+  res: Response,
+  next: NextFunction
+): Promise<void> {
+  try {
+    const loginResult = await loginUser(req.body.username, req.body.password);
 
-        const accessToken = loginResult ? { loginResult } : undefined;
-        if (accessToken) res.json({ accessToken });
-        else res.sendStatus(401);
-    } catch (e: any) {
-        next(e);
-    }
+    const accessToken = loginResult ? { loginResult } : undefined;
+    if (accessToken) res.json({ accessToken });
+    else res.sendStatus(401);
+  } catch (e: any) {
+    next(e);
+  }
 }
 
 export async function logoutUserCtrl(
-    _req: Request,
-    res: Response,
-    _next: NextFunction
-) {
-    res.cookie('jwtAccessToken', '', { maxAge: 1 });
-    res.redirect('/login');
+  _req: Request,
+  res: Response,
+  _next: NextFunction
+): Promise<void> {
+  res.cookie('jwtAccessToken', '', { maxAge: 1 });
+  res.redirect('/login');
 }

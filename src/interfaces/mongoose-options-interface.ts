@@ -1,4 +1,4 @@
 export interface IOptions {
-    bufferCommands: boolean;
-    bufferTimeoutMS: number;
+  bufferCommands: boolean;
+  bufferTimeoutMS: number;
 }

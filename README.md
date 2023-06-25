@@ -20,17 +20,17 @@ The project incorporates the following APIs:
 
 **Requirements**
 
--   _NodeJS_ version 16.4+
--   _MongoDB service_ version 6.0.1+
+- _NodeJS_ version 16.4+
+- _MongoDB service_ version 6.0.1+
 
 **Command lines**
 
--   `npm run start`<br /> Build the _TS_ code and execute the compiled _JS_ project.
--   `npm run dev`<br /> Run _TS_ code with _nodemon_ for seamless development
+- `npm run start`<br /> Build the _TS_ code and execute the compiled _JS_ project.
+- `npm run dev`<br /> Run _TS_ code with _nodemon_ for seamless development
 
--   `cd-client`<br/> Access the client directory to initiate client-side development.
-    -   `npm run sass-compile`<br /> Compile all the _SCSS_ files to _CSS_ files.
-    -   `npm run sass-watch-folder`<br />Automatically compiles SCSS files into CSS files whenever changes are detected.
+- `cd-client`<br/> Access the client directory to initiate client-side development.
+  - `npm run sass-compile`<br /> Compile all the _SCSS_ files to _CSS_ files.
+  - `npm run sass-watch-folder`<br />Automatically compiles SCSS files into CSS files whenever changes are detected.
 
 ---
 
@@ -42,16 +42,16 @@ The project incorporates the following APIs:
 
 ### The technologies used in this project include:
 
--   [x] _**Nodejs**_ : the project is _javascript_ based.
--   [x] _**Express**_ : used for the server side routers, middlewares, controllers, and services.
--   [x] _**Typescript**_ : the project has been implemented using _typescript_ interfaces.
--   [x] _**jwt**_ : implementing authentication using JSON Web Tokens involves securely storing the token for the authenticated user.
--   [x] _**MongoDB**_ : utilized with the _**mongoose**_ library for defining schemas and models, which are then utilized in the controllers and services.
--   [x] _**Bcrypt**_ : user passwords are securely encrypted in accordance with best practices to ensure data security.
+- [x] _**Nodejs**_ : the project is _javascript_ based.
+- [x] _**Express**_ : used for the server side routers, middlewares, controllers, and services.
+- [x] _**Typescript**_ : the project has been implemented using _typescript_ interfaces.
+- [x] _**jwt**_ : implementing authentication using JSON Web Tokens involves securely storing the token for the authenticated user.
+- [x] _**MongoDB**_ : utilized with the _**mongoose**_ library for defining schemas and models, which are then utilized in the controllers and services.
+- [x] _**Bcrypt**_ : user passwords are securely encrypted in accordance with best practices to ensure data security.
 
 ## Author
 
 :octocat: **Afek Sakaju**
 
--   LinkedIn: [@afeksa](https://www.linkedin.com/in/afeksa/)
--   GitHub: [@afekTheMiniLearner](https://github.com/afekTheMiniLearner)
+- LinkedIn: [@afeksa](https://www.linkedin.com/in/afeksa/)
+- GitHub: [@afekTheMiniLearner](https://github.com/afekTheMiniLearner)

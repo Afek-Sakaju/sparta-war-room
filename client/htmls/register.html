@@ -1,39 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="icon" href="../assets/pictures/sword-cursor.png" />
-        <link
-            rel="stylesheet"
-            href="../styles/css/register/style-register.css"
-        />
-        <title>The knight's squad</title>
-    </head>
-    <body>
-        <div class="main-content-wrapper">
-            <div class="title-container">
-                <h1>Join the mighty <br />knights clan!</h1>
-            </div>
-            <form
-                class="form-container"
-                action="javascript:;"
-                onsubmit="registerUser()"
-            >
-                <p class="input-label"><strong>Username:</strong></p>
-                <input type="text" id="username" />
-                <p class="input-label"><strong>Password:</strong></p>
-                <input type="password" id="password" />
-                <p class="input-label"><strong>Confirm password:</strong></p>
-                <input type="password" id="re-password" />
-                <button class="submit-button" type="submit">Register</button>
-                <d class="redirect-container">
-                    <span class="redirect-label"
-                        >Already registered as a noble knight?</span
-                    >
-                    <a class="redirect-button" href="/login">Enter and login</a>
-                </d>
-            </form>
-        </div>
-    </body>
-    <script src="../scripts/register-script.js"></script>
-    <script src="../scripts/utils.js"></script>
+  <head>
+    <link rel="icon" href="../assets/pictures/sword-cursor.png" />
+    <link rel="stylesheet" href="../styles/css/register/style-register.css" />
+    <title>The knight's squad</title>
+  </head>
+  <body>
+    <div class="main-content-wrapper">
+      <div class="title-container">
+        <h1>Join the mighty <br />knights clan!</h1>
+      </div>
+      <form
+        class="form-container"
+        action="javascript:;"
+        onsubmit="registerUser()"
+      >
+        <p class="input-label"><strong>Username:</strong></p>
+        <input type="text" id="username" />
+        <p class="input-label"><strong>Password:</strong></p>
+        <input type="password" id="password" />
+        <p class="input-label"><strong>Confirm password:</strong></p>
+        <input type="password" id="re-password" />
+        <button class="submit-button" type="submit">Register</button>
+        <d class="redirect-container">
+          <span class="redirect-label"
+            >Already registered as a noble knight?</span
+          >
+          <a class="redirect-button" href="/login">Enter and login</a>
+        </d>
+      </form>
+    </div>
+  </body>
+  <script src="../scripts/register-script.js"></script>
+  <script src="../scripts/utils.js"></script>
 </html>

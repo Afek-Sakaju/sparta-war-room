@@ -1,20 +1,20 @@
 {
-    "ts-node": { "files": true },
-    "files": ["src/app.ts"],
-    "compilerOptions": {
-        "target": "es6",
-        "module": "commonjs",
-        "resolveJsonModule": true,
-        "sourceMap": true,
-        "outDir": "./dist",
-        "noEmit": false,
-        "esModuleInterop": true,
-        "forceConsistentCasingInFileNames": true,
-        "strict": true,
-        "noImplicitAny": false,
-        "skipLibCheck": true
-    },
-    "include": ["src/**/*"],
-    "exclude": ["node_modules"],
-    "compileOnSave": true
+  "ts-node": { "files": true },
+  "files": ["src/app.ts"],
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "noEmit": false,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"],
+  "compileOnSave": true
 }
