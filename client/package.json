@@ -5,11 +5,15 @@
   "main": "index.js",
   "scripts": {
     "sass-compile": "sass styles/scss:styles/css",
-    "sass-watch-folder": "sass --watch styles/scss:styles/css"
+    "sass-watch-folder": "sass --watch styles/scss:styles/css",
+		"lint": "eslint . --ext .js --no-error-on-unmatched-pattern"
   },
   "author": "afek-sakaju",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^8.43.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
     "sass": "^1.56.1"
   }
 }

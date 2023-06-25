@@ -1,7 +1,7 @@
 {
-  "ignorePatterns": ["node_modules", "styles"],
+  "ignorePatterns": ["node_modules", "client"],
   "env": {
-    "browser": true,
+    "node": true,
     "commonjs": true,
     "es2021": true
   },
@@ -12,13 +12,7 @@
     "project": "./tsconfig.json"
   },
   "plugins": ["prettier"],
-
   "rules": {
-    "linebreak-style": 0,
-    "no-unused-vars": 0,
-    "no-undef": 0,
-    "no-underscore-dangle": 0,
-    "no-plusplus": 0,
     "@typescript-eslint/strict-boolean-expressions": 0,
     "@typescript-eslint/restrict-template-expressions": 0,
     "@typescript-eslint/no-misused-promises": 0,
