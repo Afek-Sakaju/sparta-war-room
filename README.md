@@ -49,6 +49,11 @@ The project incorporates the following APIs:
 - [x] _**MongoDB**_ : utilized with the _**mongoose**_ library for defining schemas and models, which are then utilized in the controllers and services.
 - [x] _**Bcrypt**_ : user passwords are securely encrypted in accordance with best practices to ensure data security.
 
+### Additional technologies used as development tools include:
+
+- [x] _**ESLINT**_ : the project adheres to the _ESLint_ guidelines and follows the best practices recommended by _airbnb_.
+- [x] _**nodemon**_ : watches for _typescript_ file changes and compiles them in real-time.
+
 ## Author
 
 :octocat: **Afek Sakaju**
