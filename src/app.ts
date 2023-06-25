@@ -15,8 +15,9 @@ import { authRouter, mainRouter } from './routers';
 mongoose.set('bufferCommands', false);
 mongoose.set('bufferTimeoutMS', 5000);
 
-// @ts-expect-error already-have-catch
-await connectDB('mongodb://127.0.0.1:27017/chivalry-auth');
+void (async function () {
+  await connectDB('mongodb://127.0.0.1:27017/chivalry-auth');
+})();
 
 const app = express();
 const PORT = 3000;
