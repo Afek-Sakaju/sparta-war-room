@@ -25,10 +25,12 @@ The project incorporates the following APIs:
 
 **Command lines**
 
+- `npm install` <br /> Install all the necessary packages for running and developing the server-side.
 - `npm run start`<br /> Build the _TS_ code and execute the compiled _JS_ project.
 - `npm run dev`<br /> Run _TS_ code with _nodemon_ for seamless development
 
 - `cd-client`<br/> Access the client directory to initiate client-side development.
+  - `npm install` <br /> Install all the necessary packages for running and developing the client-side.
   - `npm run sass-compile`<br /> Compile all the _SCSS_ files to _CSS_ files.
   - `npm run sass-watch-folder`<br />Automatically compiles SCSS files into CSS files whenever changes are detected.
 
@@ -48,6 +50,9 @@ The project incorporates the following APIs:
 - [x] _**jwt**_ : implementing authentication using JSON Web Tokens involves securely storing the token for the authenticated user.
 - [x] _**MongoDB**_ : utilized with the _**mongoose**_ library for defining schemas and models, which are then utilized in the controllers and services.
 - [x] _**Bcrypt**_ : user passwords are securely encrypted in accordance with best practices to ensure data security.
+- [x] **JavaScript** : _javascript_ script files enable interactive behavior in web pages by handling user interactions on elements.
+- [x] _**HTML**_ : the project extensively relies on _HTML_ for constructing and defining its web page elements.
+- [x] _**SCSS**_ : the project's visual style is elegantly crafted and designed using _scss_.
 
 ### Additional technologies used as development tools include:
 
