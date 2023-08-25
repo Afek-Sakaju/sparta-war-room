@@ -14,7 +14,7 @@ body {
   @include main-content-wrapper;
 }
 
-#games-list-container {
+#announcements-list-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,6 +24,6 @@ body {
   width: 800px;
 }
 
-.game-container {
+.announcement-container {
   border: green 2px solid;
 }

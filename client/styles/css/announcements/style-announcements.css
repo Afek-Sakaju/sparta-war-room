@@ -39,7 +39,7 @@ body {
   width: 600px;
 }
 
-#games-list-container {
+#announcements-list-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,8 +49,8 @@ body {
   width: 800px;
 }
 
-.game-container {
+.announcement-container {
   border: green 2px solid;
 }
 
-/*# sourceMappingURL=style-games.css.map */
+/*# sourceMappingURL=style-announcements.css.map */

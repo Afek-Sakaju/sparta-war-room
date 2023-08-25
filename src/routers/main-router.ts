@@ -34,10 +34,13 @@ router.get('/success', (_req: Request, res: Response, _next: NextFunction) => {
   );
 });
 
-router.get('/games', (_req: Request, res: Response, _next: NextFunction) => {
-  res.sendFile(
-    path.resolve(__dirname, '../..', 'client', 'htmls', 'games.html')
-  );
-});
+router.get(
+  '/announcements',
+  (_req: Request, res: Response, _next: NextFunction) => {
+    res.sendFile(
+      path.resolve(__dirname, '../..', 'client', 'htmls', 'announcements.html')
+    );
+  }
+);
 
 export default router;
