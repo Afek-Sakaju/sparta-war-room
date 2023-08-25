@@ -3,17 +3,6 @@
   src: url(../../../assets/fonts/Rowdies-Regular.ttf);
 }
 
-@mixin body-primary-design {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-image: url('../../../assets/pictures/war.jpg');
-  background-size: 100%;
-  background-attachment: fixed;
-  display: flex;
-  justify-content: center;
-  cursor: url('../../../assets/pictures/sword-cursor.png'), default;
-  height: 98vh;
-}
-
 @mixin title-container {
   display: flex;
   text-align: center;
