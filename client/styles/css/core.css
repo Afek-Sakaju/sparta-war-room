@@ -1,7 +1,3 @@
-@font-face {
-  font-family: Rowdies;
-  src: url(../../../assets/fonts/Rowdies-Regular.ttf);
-}
 @keyframes move-logo {
   from {
     left: 0%;
@@ -9,6 +5,10 @@
   to {
     left: 90%;
   }
+}
+@font-face {
+  font-family: Rowdies;
+  src: url(../../../assets/fonts/Rowdies-Regular.ttf);
 }
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;

@@ -1,6 +1,10 @@
 @import 'variables';
-@import 'mixins';
 @import 'keyframes';
+
+@font-face {
+  font-family: Rowdies;
+  src: url(../../../assets/fonts/Rowdies-Regular.ttf);
+}
 
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
