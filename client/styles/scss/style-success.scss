@@ -1,5 +1,4 @@
-@import '../sass-tools/mixins.scss';
-@import '../sass-tools/variables.scss';
+@import 'core';
 
 body {
   @include body-primary-design;

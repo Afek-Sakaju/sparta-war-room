@@ -1,0 +1,14 @@
+@font-face {
+  font-family: Rowdies;
+  src: url(../../../assets/fonts/Rowdies-Regular.ttf);
+}
+@keyframes move-logo {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 90%;
+  }
+}
+
+/*# sourceMappingURL=core.css.map */

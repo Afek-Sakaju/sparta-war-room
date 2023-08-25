@@ -2,6 +2,14 @@
   font-family: Rowdies;
   src: url(../../../assets/fonts/Rowdies-Regular.ttf);
 }
+@keyframes move-logo {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 90%;
+  }
+}
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-image: url("../../../assets/pictures/war.jpg");
@@ -39,43 +47,13 @@ h1 {
   user-select: none;
 }
 
-input {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 5px 0 25px 0;
-  border: 3px solid rgb(100, 100, 100);
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-input:hover {
-  opacity: 0.7;
-}
-
-.input-label {
-  font-size: 1.2em;
-  color: black;
-  -webkit-text-stroke: white 0.1px;
-  margin-bottom: 0;
+.sub-title {
+  font-size: 1.5em;
+  text-align: center;
+  color: rgb(100, 100, 100);
+  font-weight: bolder;
+  -webkit-text-stroke: black 0.1px;
   user-select: none;
-}
-
-.redirect-label {
-  color: white;
-  font-weight: 500;
-  font-size: 0.9em;
-  padding: 0 8px;
-  -webkit-text-stroke: black 0.8px;
-  user-select: none;
-}
-
-.redirect-button {
-  color: black;
-  font-size: 0.9em;
-  font-weight: 900;
-  user-select: none;
-}
-.redirect-button:hover {
-  opacity: 0.5;
 }
 
 .form-container {
@@ -87,13 +65,9 @@ input:hover {
   border-radius: 10px;
   width: 92%;
   box-shadow: 0px 0px 12px 1px;
-}
-
-.redirect-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 10px 8px;
+  align-items: center;
+  padding-bottom: 50px;
+  width: 80%;
 }
 
 .submit-button {
@@ -109,9 +83,11 @@ input:hover {
   border-radius: 5px;
   user-select: none;
   cursor: pointer;
+  margin-top: 20px;
+  width: 50%;
 }
 .submit-button:hover {
   opacity: 0.5;
 }
 
-/*# sourceMappingURL=style-register.css.map */
+/*# sourceMappingURL=style-success.css.map */
