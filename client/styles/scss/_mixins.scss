@@ -38,6 +38,7 @@
   flex-direction: column;
   align-items: center;
   width: 600px;
+  align-self: center;
 }
 
 @mixin submit-button {
