@@ -1,41 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="icon" href="../assets/pictures/sword-cursor.png" />
-        <link rel="stylesheet" href="../styles/css/style-login.css" />
-        <title>The knight's squad</title>
-    </head>
-    <body>
-        <div class="main-content-wrapper">
-            <div class="title-container">
-                <h1>Log in and proclaim</br> as a true knight!</h1>
-            </div>
-            <form
-                class="form-container"
-                action="javascript:;"
-                onsubmit="loginUser()"
-            >
-                <p class="input-label"><strong>Username:</strong></p>
-                <input type="text" id="username" />
-                <p class="input-label"><strong>Password:</strong></p>
-                <input type="password" id="password" />
-                <button class="submit-button" type="submit">Login</button>
-                <d class="redirect-container">
-                    <span class="redirect-label"
-                        >Don't have an account as a knight?</span
-                    >
-                    <a class="redirect-button" href="/register"
-                        >Join our medieval clan</a
-                    >
-                </d>
-                <div
-                    alt="logo"
-                    id="logo-image"
-                    onclick="logoClickHandler()"
-                ></div>
-            </form>
+  <head>
+    <link rel="icon" href="../assets/pictures/sword-cursor.png" />
+    <link rel="stylesheet" href="../styles/css/style-login.css" />
+    <title>The knight's squad</title>
+  </head>
+  <body>
+    <div class="main-content-wrapper">
+      <nav class="top-navbar">
+        <div class="nav-left">
+          <a href="/home" class="nav-item">Home</a>
+          <a href="/announcements" class="nav-item">Announcements</a>
         </div>
-    </body>
-    <script src="../scripts/utils.js"></script>
-    <script src="../scripts/login-script.js"></script>
+        <h1 class="nav-title">Sparta's announcements page</h1>
+        <div class="nav-right">
+          <a href="/login" class="nav-item">Login</a>
+          <a href="/register" class="nav-item">Register</a>
+        </div>
+      </nav>
+      <div class="title-container">
+        <h1>Log in and proclaim </br> as a true knight!</h1>
+      </div>
+      <form class="form-container" action="javascript:;" onsubmit="loginUser()">
+        <p class="input-label"><strong>Username:</strong></p>
+        <input type="text" id="username" />
+        <p class="input-label"><strong>Password:</strong></p>
+        <input type="password" id="password" />
+        <button class="submit-button" type="submit">Login</button>
+        <d class="redirect-container">
+          <span class="redirect-label">Don't have an account as a knight?</span>
+          <a class="redirect-button" href="/register">Join our medieval clan</a>
+        </d>
+        <div alt="logo" id="logo-image" onclick="logoClickHandler()"></div>
+      </form>
+    </div>
+  </body>
+  <script src="../scripts/utils.js"></script>
+  <script src="../scripts/login-script.js"></script>
 </html>
