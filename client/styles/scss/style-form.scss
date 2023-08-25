@@ -8,14 +8,6 @@ body {
   @include main-container;
 }
 
-.title-container {
-  @include title-container;
-}
-
-h1 {
-  @include title;
-}
-
 input {
   @include input-line;
   &:hover {
