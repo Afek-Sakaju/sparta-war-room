@@ -43,44 +43,6 @@ input {
   }
 }
 
-#logo-image {
-  position: relative;
-  animation: move-logo 10s 0.2s infinite alternate linear;
-  margin-top: 7px;
-  width: 67px;
-  height: 67px;
-  border-radius: 100%;
-  border: 2px solid $whitish;
-  cursor: url('../../../assets/pictures/sword-cursor-green-border.png'), pointer;
-
-  &:hover {
-    border-color: rgba($whitish, 0.5);
-
-    &::before {
-      background-image: url('../../../assets/pictures/knight-offense.png');
-    }
-  }
-
-  &.clicked {
-    cursor: url('../../../assets/pictures/sword-cursor-red-border.png'), pointer;
-    &::before {
-      background-image: url('../../../assets/pictures/knight-defense.png');
-    }
-  }
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('../../../assets/pictures/knight-steady.png');
-    background-size: contain;
-    background-position: center;
-  }
-}
-
 form {
   display: flex;
   flex-direction: column;

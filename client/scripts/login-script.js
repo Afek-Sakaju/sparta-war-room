@@ -1,5 +1,3 @@
-let clickedLogoTimeout;
-
 async function loginUser() {
   const username = document.getElementById('username').value;
   const password = document.getElementById('password').value;
@@ -23,17 +21,4 @@ async function loginUser() {
         errorStatus === 500 ? 'Server error' : 'Incorrect username or password';
       alert(message);
     });
-}
-
-function logoClickHandler() {
-  const soundName = clickedLogoTimeout ? 'shield-guard' : 'sword-swing';
-  soundEffect(soundName);
-  const logoElement = document.getElementById('logo-image');
-  logoElement.classList.add('clicked');
-
-  clearTimeout(clickedLogoTimeout);
-  clickedLogoTimeout = setTimeout(() => {
-    logoElement.classList.remove('clicked');
-    clickedLogoTimeout = undefined;
-  }, 800);
 }
