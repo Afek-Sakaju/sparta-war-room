@@ -9,6 +9,24 @@ body {
   justify-content: center;
   cursor: url('../../../assets/pictures/sword-cursor.png'), default;
   height: 98vh;
+
+  ::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 20px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: grey;
+
+    &:hover {
+      background: $darker-greyish;
+    }
+  }
 }
 
 .top-navbar {
