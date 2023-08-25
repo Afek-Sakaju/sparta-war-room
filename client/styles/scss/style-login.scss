@@ -1,5 +1,9 @@
 @import 'core';
 
+body {
+  background-image: url('../../assets/pictures/bg-forms.jpg');
+}
+
 .main-content-wrapper {
   @include main-content-wrapper;
 }

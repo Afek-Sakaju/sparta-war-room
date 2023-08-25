@@ -12,7 +12,7 @@
 }
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-image: url("../../../assets/pictures/war.jpg");
+  background-image: url("../../../assets/pictures/bg-regular.jpg");
   background-attachment: fixed;
   background-size: cover;
   display: flex;

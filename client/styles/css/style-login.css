@@ -12,7 +12,7 @@
 }
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-image: url("../../../assets/pictures/war.jpg");
+  background-image: url("../../../assets/pictures/bg-regular.jpg");
   background-attachment: fixed;
   background-size: cover;
   display: flex;
@@ -62,6 +62,10 @@ body {
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   letter-spacing: 1px;
+}
+
+body {
+  background-image: url("../../assets/pictures/bg-forms.jpg");
 }
 
 .main-content-wrapper {
