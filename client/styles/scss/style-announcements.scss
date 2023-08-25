@@ -1,9 +1,5 @@
 @import 'core';
 
-body {
-  @include body-primary-design;
-}
-
 #announcements-list-wrapper {
   display: flex;
   flex-direction: column;

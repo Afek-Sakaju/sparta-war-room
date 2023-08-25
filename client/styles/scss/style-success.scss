@@ -1,9 +1,5 @@
 @import 'core';
 
-body {
-  @include body-primary-design;
-}
-
 .main-content-wrapper {
   @include main-content-wrapper;
 }

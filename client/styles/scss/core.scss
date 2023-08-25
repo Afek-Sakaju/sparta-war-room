@@ -1,3 +1,7 @@
 @import 'variables';
 @import 'mixins';
 @import 'keyframes';
+
+body {
+  @include body-primary-design;
+}
