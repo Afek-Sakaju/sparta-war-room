@@ -25,21 +25,21 @@ body {
   top: 0;
   width: 100%;
   padding: 10px;
-  background-color: #333;
+  background-color: #343434;
 }
 
 .nav-item {
   padding: 10px 15px;
   margin: 0 5px;
   border-radius: 5px;
-  background-color: dimgray;
+  background-color: rgb(105, 105, 105);
   color: #f2f2f2;
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .nav-item:hover {
-  background-color: #333;
+  background-color: #232323;
 }
 
 .nav-left {

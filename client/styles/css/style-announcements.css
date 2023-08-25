@@ -25,21 +25,21 @@ body {
   top: 0;
   width: 100%;
   padding: 10px;
-  background-color: #333;
+  background-color: #343434;
 }
 
 .nav-item {
   padding: 10px 15px;
   margin: 0 5px;
   border-radius: 5px;
-  background-color: dimgray;
+  background-color: rgb(105, 105, 105);
   color: #f2f2f2;
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .nav-item:hover {
-  background-color: #333;
+  background-color: #232323;
 }
 
 .nav-left {
@@ -70,7 +70,7 @@ body {
   width: 850px;
   height: max-content;
   box-sizing: border-box;
-  background-color: #333;
+  background-color: #343434;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -80,8 +80,8 @@ body {
   padding: 1em;
   width: 100%;
   box-sizing: border-box;
-  background-color: dimgray;
-  border: 2px solid dimgray;
+  background-color: rgb(105, 105, 105);
+  border: 2px solid rgb(105, 105, 105);
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

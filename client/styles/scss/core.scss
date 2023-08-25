@@ -27,14 +27,14 @@ body {
   padding: 10px 15px;
   margin: 0 5px;
   border-radius: 5px;
-  background-color: dimgray;
+  background-color: $darker-greyish;
   color: $whitish;
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .nav-item:hover {
-  background-color: $dark-charcoal;
+  background-color: $on-hover-darker;
 }
 
 .nav-left {
