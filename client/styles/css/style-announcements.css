@@ -37,7 +37,7 @@ body {
   margin: 0 5px;
   border-radius: 5px;
   background-color: dimgray;
-  color: white;
+  color: #f2f2f2;
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -59,7 +59,7 @@ body {
 .nav-title {
   margin: 0;
   font-size: 1.5rem;
-  color: white;
+  color: #f2f2f2;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   letter-spacing: 1px;
 }
@@ -92,7 +92,7 @@ body {
 
 .announcement-title {
   margin-top: 0;
-  color: white;
+  color: #f2f2f2;
   font-size: 1.2rem;
   font-weight: bold;
 }
