@@ -28,12 +28,6 @@ router.get('/register', (_req: Request, res: Response, _next: NextFunction) => {
   );
 });
 
-router.get('/success', (_req: Request, res: Response, _next: NextFunction) => {
-  res.sendFile(
-    path.resolve(__dirname, '../..', 'client', 'htmls', 'success.html')
-  );
-});
-
 router.get(
   '/announcements',
   (_req: Request, res: Response, _next: NextFunction) => {

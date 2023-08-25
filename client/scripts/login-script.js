@@ -14,7 +14,7 @@ async function loginUser() {
       localStorage.setItem('jwtAccessToken', data.accessToken);
     })
     .then(() => {
-      window.location.href = '/success';
+      window.location.href = '/';
     })
     .catch((errorStatus) => {
       const message =
