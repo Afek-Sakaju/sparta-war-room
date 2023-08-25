@@ -7,7 +7,7 @@ body {
 input {
   width: 100%;
   padding: 12px 20px;
-  margin: 5px 0 25px 0;
+  margin: 0;
   border: 3px solid $dark-charcoal;
   border-radius: 5px;
   box-sizing: border-box;
@@ -20,8 +20,14 @@ input {
 .input-label {
   font-size: 1.2em;
   color: $whitish;
-  margin-bottom: 0;
+  margin: 0;
   user-select: none;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .form-bottom-text {
@@ -47,7 +53,8 @@ form {
   display: flex;
   flex-direction: column;
   align-self: center;
-  width: 550px;
+  gap: 20px;
+  width: 500px;
   padding: 20px 80px;
   background-color: $dark-charcoal;
   border: 2px solid #444;
@@ -61,11 +68,16 @@ form {
   padding: 10px 8px;
 }
 
+.form-bottom-buttons-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
 .submit-button {
   text-align: center;
   font-size: 1em;
   font-weight: bold;
-  margin-top: 15px;
   padding: 14px 20px;
   width: 100%;
   color: $dark-charcoal;

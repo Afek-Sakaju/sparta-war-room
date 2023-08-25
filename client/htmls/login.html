@@ -18,19 +18,25 @@
       </div>
     </nav>
     <form action="javascript:;" onsubmit="loginUser()">
-      <p class="input-label"><strong>Username:</strong></p>
-      <input type="text" id="username" />
-      <p class="input-label"><strong>Password:</strong></p>
-      <input type="password" id="password" />
-      <button class="submit-button" type="submit">Login</button>
-      <d class="form-bottom-text-wrapper">
-        <span class="form-bottom-text"
-          >Haven't joined the Spartan army yet?</span
-        >
-        <a class="form-bottom-redirect-link" href="/register"
-          >Register and join us!</a
-        >
-      </d>
+      <div class="input-wrapper">
+        <p class="input-label"><strong>Username:</strong></p>
+        <input type="text" id="username" />
+      </div>
+      <div class="input-wrapper">
+        <p class="input-label"><strong>Password:</strong></p>
+        <input type="password" id="password" />
+      </div>
+      <div class="form-bottom-buttons-container">
+        <button class="submit-button" type="submit">Login</button>
+        <d class="form-bottom-text-wrapper">
+          <span class="form-bottom-text"
+            >Haven't joined the Spartan army yet?</span
+          >
+          <a class="form-bottom-redirect-link" href="/register"
+            >Register and join us!</a
+          >
+        </d>
+      </div>
     </form>
   </body>
   <script src="../scripts/utils.js"></script>
