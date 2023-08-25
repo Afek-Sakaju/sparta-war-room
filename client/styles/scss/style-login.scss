@@ -4,8 +4,8 @@ body {
   background-image: url('../../assets/pictures/bg-forms.jpg');
 }
 
-.main-content-wrapper {
-  @include main-content-wrapper;
+.main-container {
+  @include main-container;
 }
 
 .title-container {

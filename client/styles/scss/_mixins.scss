@@ -3,7 +3,7 @@
   src: url(../../../assets/fonts/Rowdies-Regular.ttf);
 }
 
-@mixin main-content-wrapper {
+@mixin main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
