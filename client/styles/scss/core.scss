@@ -25,7 +25,7 @@ body {
   top: 0;
   width: 100%;
   padding: 10px;
-  background-color: #383838;
+  background-color: $dark-charcoal;
 }
 
 .nav-item {
@@ -39,7 +39,7 @@ body {
 }
 
 .nav-item:hover {
-  background-color: #383838;
+  background-color: $dark-charcoal;
 }
 
 .nav-left {
