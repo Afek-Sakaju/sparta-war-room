@@ -1,0 +1,29 @@
+@import '../sass-tools/mixins.scss';
+@import '../sass-tools/variables.scss';
+@import '../sass-tools/keyframes.scss';
+
+body {
+  @include body-primary-design;
+}
+
+.title-container {
+  @include title-container;
+}
+
+.main-content-wrapper {
+  @include main-content-wrapper;
+}
+
+#games-list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: black 1px solid;
+  padding: 2em;
+  width: 800px;
+}
+
+.game-container {
+  border: green 2px solid;
+}

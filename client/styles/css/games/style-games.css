@@ -1,0 +1,56 @@
+@font-face {
+  font-family: Rowdies;
+  src: url(../../../assets/fonts/Rowdies-Regular.ttf);
+}
+@keyframes move-logo {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 90%;
+  }
+}
+body {
+  font-family: Rowdies;
+  background-image: url("../../../assets/pictures/war.jpg");
+  background-size: 100%;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  cursor: url("../../../assets/pictures/sword-cursor.png"), default;
+  height: 98vh;
+}
+
+.title-container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 80px;
+  background-color: rgba(255, 255, 255, 0.45);
+  box-shadow: -20px 20px rgba(0, 0, 0, 0.492);
+  padding: 0 15px;
+}
+
+.main-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 600px;
+}
+
+#games-list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: black 1px solid;
+  padding: 2em;
+  width: 800px;
+}
+
+.game-container {
+  border: green 2px solid;
+}
+
+/*# sourceMappingURL=style-games.css.map */
