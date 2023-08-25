@@ -84,6 +84,9 @@ body ::-webkit-scrollbar-thumb:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   user-select: none;
 }
+#announcements-list-container.hidden {
+  visibility: hidden;
+}
 
 .announcement-container {
   margin: 1em 0;
