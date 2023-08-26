@@ -13,7 +13,9 @@ router.use((req: Request, res: Response, next: NextFunction) => {
 });
 
 router.get('/', (_req: Request, res: Response, _next: NextFunction) => {
-  res.redirect('/login');
+  res.sendFile(
+    path.resolve(__dirname, '../..', 'client', 'htmls', 'home.html')
+  );
 });
 
 router.get('/login', (_req: Request, res: Response, _next: NextFunction) => {
