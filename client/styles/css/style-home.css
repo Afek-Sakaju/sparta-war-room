@@ -72,13 +72,14 @@ body ::-webkit-scrollbar-thumb:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 53%;
+  width: 48%;
   padding: 1em 2em;
   margin-bottom: 50px;
-  background-color: rgba(35, 35, 35, 0.2);
   border: 1px solid rgb(105, 105, 105);
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  background-color: #343434;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  user-select: none;
 }
 
 .inner-description-container {
@@ -87,9 +88,10 @@ body ::-webkit-scrollbar-thumb:hover {
   align-items: center;
   justify-content: space-between;
   padding: 1em 2em;
-  background-color: rgba(52, 52, 52, 0.2);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: rgb(105, 105, 105);
+  border: 2px solid rgb(105, 105, 105);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .description-text {

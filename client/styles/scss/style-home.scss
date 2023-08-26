@@ -4,13 +4,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 53%;
+  width: 48%;
   padding: 1em 2em;
   margin-bottom: 50px;
-  background-color: rgba($on-hover-darker, 0.2);
   border: 1px solid $darker-greyish;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  background-color: $dark-charcoal;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  user-select: none;
 }
 
 .inner-description-container {
@@ -19,9 +20,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 1em 2em;
-  background-color: rgba($dark-charcoal, 0.2);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: $darker-greyish;
+  border: 2px solid $darker-greyish;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .description-text {
