@@ -2,15 +2,17 @@ window.onload = () => {
   const accessToken = localStorage.getItem('jwtAccessToken');
   if (!accessToken) window.location.href = '/login';
 
-  getData('/auth/user-authenticated').catch(() => {
-    localStorage.removeItem('jwtAccessToken');
-    alert('Not authorized');
-    window.location.href = '/login';
-  });
-
-  document
-    .getElementById('announcements-list-container')
-    .classList.remove('hidden');
+  getData('/auth/user-authenticated')
+    .then(() =>
+      document
+        .getElementById('announcements-list-container')
+        .classList.remove('hidden')
+    )
+    .catch(() => {
+      localStorage.removeItem('jwtAccessToken');
+      alert('Not authorized');
+      window.location.href = '/login';
+    });
 
   //const username = localStorage.getItem('successLoginUsername');
   //document.getElementById(
