@@ -1,10 +1,11 @@
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-image: url("../../../assets/pictures/bg-regular.jpg");
   background-attachment: fixed;
   background-size: cover;
-  display: flex;
-  justify-content: center;
   cursor: url("../../../assets/pictures/sword-cursor.png"), default;
   height: 98vh;
 }
@@ -117,7 +118,6 @@ input:hover {
 form {
   display: flex;
   flex-direction: column;
-  align-self: center;
   gap: 20px;
   width: 500px;
   padding: 20px 80px;

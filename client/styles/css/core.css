@@ -1,10 +1,11 @@
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-image: url("../../../assets/pictures/bg-regular.jpg");
   background-attachment: fixed;
   background-size: cover;
-  display: flex;
-  justify-content: center;
   cursor: url("../../../assets/pictures/sword-cursor.png"), default;
   height: 98vh;
 }
