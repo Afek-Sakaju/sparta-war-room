@@ -72,6 +72,7 @@ body ::-webkit-scrollbar-thumb:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 110px;
   width: 48%;
   padding: 1em 2em;
   margin-bottom: 50px;
@@ -85,8 +86,8 @@ body ::-webkit-scrollbar-thumb:hover {
 .inner-description-container {
   display: flex;
   flex-direction: column;
+  gap: 50px;
   align-items: center;
-  justify-content: space-between;
   padding: 1em 2em;
   background-color: rgb(105, 105, 105);
   border: 2px solid rgb(105, 105, 105);
@@ -94,16 +95,25 @@ body ::-webkit-scrollbar-thumb:hover {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.description-text {
-  color: #f2f2f2;
-  text-align: center;
-  text-shadow: 0 2px 4px rgb(0, 0, 0);
-  font-size: 1.1rem;
+.description-paragraph {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-h3.description-text {
+.description-text {
+  color: #f2f2f2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 1.2rem;
+  margin: 0;
+}
+.description-text.description-title {
+  text-align: center;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
+}
+.description-text.description-sub-title {
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style-home.css.map */
