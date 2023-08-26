@@ -10,7 +10,7 @@ import path from 'path';
 import mongoose from 'mongoose';
 
 import { connectDB } from './DB/mongoose';
-import { authRouter, mainRouter } from './routers';
+import { authRouter, mainRouter, announcementRouter } from './routers';
 
 mongoose.set('bufferCommands', false);
 mongoose.set('bufferTimeoutMS', 5000);
@@ -38,6 +38,7 @@ app.use(express.static(path.join(__dirname, '..', 'client')));
 
 app.use('/', mainRouter);
 app.use('/auth', authRouter);
+app.use('/announcement', announcementRouter);
 
 app.use(
   (
