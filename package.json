@@ -13,10 +13,14 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build && node dist/app.js",
+    "dev-with-migrations": "npm run migrateDB && nodemon src/app.ts",
     "dev": "nodemon src/app.ts",
     "lint": "eslint .",
     "build:watch": "tsc -w",
-    "build": "tsc"
+    "build": "tsc",
+    "migrateDB": "npm run migrate-mongo:up",
+    "migrate-mongo:up": "migrate-mongo up",
+    "migrate-mongo:down": "migrate-mongo down"
   },
   "repository": {
     "type": "git",
@@ -32,6 +36,7 @@
     "express": "^4.18.2",
     "express-session": "^1.17.3",
     "jsonwebtoken": "^8.5.1",
+    "migrate-mongo": "^10.0.0",
     "mongoose": "^6.7.2",
     "path": "^0.12.7"
   },
