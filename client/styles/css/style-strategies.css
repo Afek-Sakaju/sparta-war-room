@@ -1,0 +1,81 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-attachment: fixed;
+  background-size: cover;
+  cursor: url("../../../assets/pictures/sword-cursor.png"), default;
+  height: 98vh;
+}
+body ::-webkit-scrollbar {
+  width: 15px;
+}
+body ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 20px;
+}
+body ::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: grey;
+}
+body ::-webkit-scrollbar-thumb:hover {
+  background: rgb(105, 105, 105);
+}
+
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: #343434;
+  user-select: none;
+}
+
+.nav-item {
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 5px;
+  background-color: rgb(105, 105, 105);
+  color: #f2f2f2;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-item:hover {
+  background-color: #232323;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-mid {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: -1;
+}
+
+.nav-title {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #f2f2f2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+}
+
+body {
+  background-image: url("../../../assets/pictures/bg-temple.jpg");
+}
+
+/*# sourceMappingURL=style-strategies.css.map */

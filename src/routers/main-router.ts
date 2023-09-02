@@ -40,16 +40,10 @@ router.get(
 );
 
 router.get(
-  '/spartan-strategies',
+  '/strategies',
   (_req: Request, res: Response, _next: NextFunction) => {
     res.sendFile(
-      path.resolve(
-        __dirname,
-        '../..',
-        'client',
-        'htmls',
-        'spartan-strategies.html'
-      )
+      path.resolve(__dirname, '../..', 'client', 'htmls', 'strategies.html')
     );
   }
 );
