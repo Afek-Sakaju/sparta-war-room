@@ -13,8 +13,9 @@ export async function getAllAnnouncements(): Promise<
   IAnnouncement[] | undefined
 > {
   try {
-    const announcements =
-      (await AnnouncementModel.find().exec()) as unknown as IAnnouncement[];
+    const announcements = (await AnnouncementModel.find()
+      .lean()
+      .exec()) as unknown as IAnnouncement[];
 
     if (!announcements) throw new Error('Announcements not found');
     else return announcements;

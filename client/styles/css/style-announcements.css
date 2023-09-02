@@ -69,6 +69,7 @@ body ::-webkit-scrollbar-thumb:hover {
 }
 
 #announcements-list-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -110,6 +111,9 @@ body ::-webkit-scrollbar-thumb:hover {
   margin: 0.5em 0;
   color: #ccc;
   font-size: 1rem;
+}
+.announcement-text.announcer-text {
+  font-weight: bolder;
 }
 
 /*# sourceMappingURL=style-announcements.css.map */
