@@ -5,7 +5,7 @@ module.exports = {
   async up(db, client) {
     await db.collection('announcements').insertMany([
       {
-        title: 'New Spears at The Main Blacksmith of Athens!',
+        title: 'New Spears at The Main Blacksmith of Athens !',
         description:
           'The venerable blacksmith hath completed the forging of three hundred spears, a token of gratitude unto the valiant Spartan army, in recognition of their stalwart defense of Greece.',
         announcer: 'Xenophon',
