@@ -39,4 +39,19 @@ router.get(
   }
 );
 
+router.get(
+  '/spartan-strategies',
+  (_req: Request, res: Response, _next: NextFunction) => {
+    res.sendFile(
+      path.resolve(
+        __dirname,
+        '../..',
+        'client',
+        'htmls',
+        'spartan-strategies.html'
+      )
+    );
+  }
+);
+
 export default router;
