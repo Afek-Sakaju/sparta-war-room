@@ -3,7 +3,6 @@ body {
   justify-content: center;
   align-items: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-image: url("../../../assets/pictures/bg-regular.jpg");
   background-attachment: fixed;
   background-size: cover;
   cursor: url("../../../assets/pictures/sword-cursor.png"), default;
@@ -73,6 +72,10 @@ body ::-webkit-scrollbar-thumb:hover {
   color: #f2f2f2;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   letter-spacing: 1px;
+}
+
+body {
+  background-image: url("../../../assets/pictures/bg-sea-view.jpg");
 }
 
 .description-container {

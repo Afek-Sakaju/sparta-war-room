@@ -1,5 +1,9 @@
 @import 'core';
 
+body {
+  background-image: url('../../../assets/pictures/bg-field-view.jpg');
+}
+
 #announcements-list-container {
   position: relative;
   display: flex;

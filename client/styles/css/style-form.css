@@ -3,7 +3,6 @@ body {
   justify-content: center;
   align-items: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-image: url("../../../assets/pictures/bg-regular.jpg");
   background-attachment: fixed;
   background-size: cover;
   cursor: url("../../../assets/pictures/sword-cursor.png"), default;
@@ -76,7 +75,7 @@ body ::-webkit-scrollbar-thumb:hover {
 }
 
 body {
-  background-image: url("../../assets/pictures/bg-forms.jpg");
+  background-image: url("../../assets/pictures/bg-naval-war.jpg");
 }
 
 input {
