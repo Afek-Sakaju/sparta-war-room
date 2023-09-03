@@ -10,7 +10,12 @@ import path from 'path';
 import mongoose from 'mongoose';
 
 import { connectDB } from './DB/mongoose';
-import { authRouter, mainRouter, announcementRouter } from './routers';
+import {
+  authRouter,
+  mainRouter,
+  announcementRouter,
+  strategyRouter,
+} from './routers';
 
 mongoose.set('bufferCommands', false);
 mongoose.set('bufferTimeoutMS', 5000);
@@ -39,6 +44,7 @@ app.use(express.static(path.join(__dirname, '..', 'client')));
 app.use('/', mainRouter);
 app.use('/auth', authRouter);
 app.use('/announcement', announcementRouter);
+app.use('/strategy', strategyRouter);
 
 app.use(
   (
@@ -47,7 +53,7 @@ app.use(
     res: Response,
     next: NextFunction
   ) => {
-    console.log(`Error occured: \n${err}`);
+    console.log(`Error occurred: \n${err}`);
     next(err);
   }
 );
