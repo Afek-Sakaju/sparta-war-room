@@ -22,7 +22,7 @@ window.onload = async () => {
     'tactics-list-container'
   );
 
-  tacticsData?.forEach(({ title, information }) => {
+  tacticsData?.forEach(({ title, information, image }) => {
     const tacticWrapper = document.createElement('div');
     tacticWrapper.classList.add('tactic-container');
 
@@ -30,6 +30,12 @@ window.onload = async () => {
     tacticTitle.classList.add('tactic-title');
     tacticTitle.textContent = title;
     tacticWrapper.appendChild(tacticTitle);
+
+    const tacticImage = document.createElement('img');
+    tacticImage.classList.add('tactic-image');
+    tacticImage.src = `data:image/jpeg;base64,${image}`;
+    tacticImage.alt = title;
+    tacticWrapper.appendChild(tacticImage);
 
     const tacticDescription = document.createElement('p');
     tacticDescription.classList.add('tactic-text');
