@@ -1,6 +1,7 @@
 window.onload = async () => {
   const accessToken = localStorage.getItem('jwtAccessToken');
   if (!accessToken) {
+    alert('Not authorized');
     window.location.href = '/login';
     return;
   }
