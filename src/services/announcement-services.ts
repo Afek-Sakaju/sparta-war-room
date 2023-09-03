@@ -1,4 +1,4 @@
-import { AnnouncementModel } from '../models/announcement-model';
+import { AnnouncementModel } from '../models';
 import type { IAnnouncement } from '../interfaces/announcement-interface';
 
 export async function createAnnouncement(

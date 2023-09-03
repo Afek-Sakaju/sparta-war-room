@@ -2,7 +2,7 @@ import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
 
 import { accessPrivateKey } from '../app';
-import { UserModel } from '../models/user-model';
+import { UserModel } from '../models';
 import type { IUser } from '../interfaces/user-interface';
 
 export async function getUserByUsername(
