@@ -24,15 +24,15 @@ window.onload = async () => {
 
   tacticsData?.forEach(({ title, information }) => {
     const tacticWrapper = document.createElement('div');
-    tacticWrapper.classList.add('tactics-container');
+    tacticWrapper.classList.add('tactic-container');
 
     const tacticTitle = document.createElement('h3');
-    tacticTitle.classList.add('tactics-title');
+    tacticTitle.classList.add('tactic-title');
     tacticTitle.textContent = title;
     tacticWrapper.appendChild(tacticTitle);
 
     const tacticDescription = document.createElement('p');
-    tacticDescription.classList.add('tactics-text');
+    tacticDescription.classList.add('tactic-text');
     tacticDescription.textContent = information;
     tacticWrapper.appendChild(tacticDescription);
 
