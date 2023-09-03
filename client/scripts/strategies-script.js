@@ -18,7 +18,6 @@ window.onload = async () => {
     .then((d) => d.json())
     .catch((e) => console.error(e));
 
-  debugger;
   const strategiesListContainer = document.getElementById(
     'strategies-list-container'
   );
