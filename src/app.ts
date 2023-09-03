@@ -13,7 +13,7 @@ import { connectDB } from './DB/mongoose';
 import {
   authRouter,
   mainRouter,
-  announcementRouter,
+  announcementsRouter,
   tacticsRouter,
 } from './routers';
 
@@ -43,7 +43,7 @@ app.use(express.static(path.join(__dirname, '..', 'client')));
 
 app.use('/', mainRouter);
 app.use('/auth', authRouter);
-app.use('/announcement', announcementRouter);
+app.use('/announcements', announcementsRouter);
 app.use('/tactics', tacticsRouter);
 
 app.use(
