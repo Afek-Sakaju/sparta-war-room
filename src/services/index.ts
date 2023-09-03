@@ -1,3 +1,3 @@
-export * from './user-services';
+export * from './users-services';
 export * from './announcements-services';
 export * from './tactics-services';
