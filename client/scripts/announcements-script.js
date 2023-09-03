@@ -14,7 +14,7 @@ window.onload = async () => {
       window.location.href = '/login';
     });
 
-  const annData = await getData('/announcement/all')
+  const annData = await getData('/announcements/all')
     .then((d) => d.json())
     .catch((e) => console.error(e));
 
