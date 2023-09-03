@@ -5,7 +5,7 @@ import express, {
 } from 'express';
 
 import { getAllTacticsCtrl } from '../controllers';
-import { isConnectedToDB } from '../middlewares/mongoDB-middleware';
+import { isConnectedToDB } from '../middlewares';
 
 const router = express.Router();
 

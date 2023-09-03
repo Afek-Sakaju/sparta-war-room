@@ -8,8 +8,7 @@ import {
   createAnnouncementCtrl,
   getAllAnnouncementsCtrl,
 } from '../controllers';
-import { isAuthMW } from '../middlewares/auth-middleware';
-import { isConnectedToDB } from '../middlewares/mongoDB-middleware';
+import { isAuthMW, isConnectedToDB } from '../middlewares';
 
 const router = express.Router();
 
