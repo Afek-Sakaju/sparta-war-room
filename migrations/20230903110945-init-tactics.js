@@ -23,7 +23,7 @@ module.exports = {
       {
         title: 'Terrain Exploitation (The Spartan Advantage)',
         information:
-          'Know this, young warrior, that we Spartans are masters of terrain. We do not engage the enemy on their terms; we choose the battleground that favors us most. In narrow mountain passes, treacherous ravines, and chokepoints, our smaller numbers become a shield, holding back foes many times our size. The land itself becomes our ally, and we use it to our advantage.',
+          'Know this, young warrior, that we Spartans are masters of terrain. We do not engage the enemy on their terms, we choose the battleground that favors us most. In narrow mountain passes, treacherous ravines, and chokepoints, our smaller numbers become a shield, holding back foes many times our size. The land itself becomes our ally, and we use it to our advantage.',
         createdAt: ISODate('2023-08-21T14:15:10.456+0000'),
         updatedAt: ISODate('2023-08-21T14:15:10.456+0000'),
         __v: NumberInt(0),
