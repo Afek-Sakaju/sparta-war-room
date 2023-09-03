@@ -14,7 +14,7 @@ import {
   authRouter,
   mainRouter,
   announcementRouter,
-  strategyRouter,
+  tacticsRouter,
 } from './routers';
 
 mongoose.set('bufferCommands', false);
@@ -44,7 +44,7 @@ app.use(express.static(path.join(__dirname, '..', 'client')));
 app.use('/', mainRouter);
 app.use('/auth', authRouter);
 app.use('/announcement', announcementRouter);
-app.use('/strategy', strategyRouter);
+app.use('/tactics', tacticsRouter);
 
 app.use(
   (

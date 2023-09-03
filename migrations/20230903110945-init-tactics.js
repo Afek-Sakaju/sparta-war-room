@@ -3,7 +3,7 @@ const NumberInt = (num) => num;
 
 module.exports = {
   async up(db, client) {
-    await db.collection('strategies').insertMany([
+    await db.collection('tactics').insertMany([
       {
         title: 'Phalanx Formation (Solid as a Spartan Wall)',
         information:
@@ -40,6 +40,6 @@ module.exports = {
   },
 
   async down(db, client) {
-    await db.collection('strategies').deleteMany({});
+    await db.collection('tactics').deleteMany({});
   },
 };

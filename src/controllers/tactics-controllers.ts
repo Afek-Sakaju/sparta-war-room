@@ -1,14 +1,14 @@
 import type { Request, Response, NextFunction } from 'express';
-import { getAllStrategies } from '../services';
+import { getAllTactics } from '../services';
 
-export async function getAllStrategiesCtrl(
+export async function getAllTacticsCtrl(
   req: Request,
   res: Response,
   next: NextFunction
 ): Promise<void> {
   try {
-    const strategies = await getAllStrategies();
-    res.json(strategies);
+    const tactics = await getAllTactics();
+    res.json(tactics);
   } catch (e: any) {
     next(e);
   }

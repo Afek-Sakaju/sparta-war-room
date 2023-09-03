@@ -4,8 +4,7 @@ import express, {
   type NextFunction,
 } from 'express';
 
-import { getAllStrategiesCtrl } from '../controllers';
-import { isAuthMW } from '../middlewares/auth-middleware';
+import { getAllTacticsCtrl } from '../controllers';
 import { isConnectedToDB } from '../middlewares/mongoDB-middleware';
 
 const router = express.Router();
@@ -15,6 +14,6 @@ router.use((req: Request, _res: Response, next: NextFunction) => {
   next();
 });
 
-router.get('/all', isConnectedToDB, isAuthMW, getAllStrategiesCtrl);
+router.get('/all', isConnectedToDB, getAllTacticsCtrl);
 
 export default router;

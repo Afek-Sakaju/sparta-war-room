@@ -39,13 +39,10 @@ router.get(
   }
 );
 
-router.get(
-  '/strategies',
-  (_req: Request, res: Response, _next: NextFunction) => {
-    res.sendFile(
-      path.resolve(__dirname, '../..', 'client', 'htmls', 'strategies.html')
-    );
-  }
-);
+router.get('/tactics', (_req: Request, res: Response, _next: NextFunction) => {
+  res.sendFile(
+    path.resolve(__dirname, '../..', 'client', 'htmls', 'tactics.html')
+  );
+});
 
 export default router;
