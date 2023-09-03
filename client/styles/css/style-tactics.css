@@ -83,6 +83,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1.3em;
   margin-top: 50px;
   border: 1px solid rgb(105, 105, 105);
   padding: 1em 2em;
@@ -100,14 +101,15 @@ body {
 }
 
 .tactic-container {
-  margin: 1em 0;
-  padding: 1em;
+  padding: 0.7em 1em;
   width: 100%;
   box-sizing: border-box;
   background-color: rgb(105, 105, 105);
   border: 2px solid rgb(105, 105, 105);
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  white-space: pre-line;
+  line-height: 1.2;
 }
 
 .tactic-title {
@@ -118,7 +120,8 @@ body {
 }
 
 .tactic-text {
-  margin: 1em 0;
+  margin: 0;
+  margin-top: 0.5em;
   color: #ccc;
   font-size: 1.1rem;
 }

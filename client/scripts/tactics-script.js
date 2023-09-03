@@ -39,7 +39,11 @@ window.onload = async () => {
 
     const tacticDescription = document.createElement('p');
     tacticDescription.classList.add('tactic-text');
-    tacticDescription.textContent = information;
+
+    // Match all periods except the last one
+    const regex = /\.(?=.*\.)/g;
+    const replacedInformation = information.replace(regex, '.\n\n');
+    tacticDescription.textContent = replacedInformation;
     tacticWrapper.appendChild(tacticDescription);
 
     tacticsListContainer.appendChild(tacticWrapper);
