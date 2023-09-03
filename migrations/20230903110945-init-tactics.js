@@ -37,21 +37,21 @@ module.exports = {
         __v: NumberInt(0),
       },
       {
-        title: 'Terrain Exploitation (The Spartan Advantage)',
-        information:
-          'Know this, young warrior, that we Spartans are masters of terrain. We do not engage the enemy on their terms, we choose the battleground that favors us most. In narrow mountain passes, treacherous ravines, and chokepoints, our smaller numbers become a shield, holding back foes many times our size. The land itself becomes our ally, and we use it to our advantage.',
-        image: imagePathToBuffer('valley.jpg'),
-        createdAt: ISODate('2023-08-21T14:15:10.456+0000'),
-        updatedAt: ISODate('2023-08-21T14:15:10.456+0000'),
-        __v: NumberInt(0),
-      },
-      {
         title: 'Psychological Warfare (The Spartan Visage)',
         information:
           'As you don your crimson cloak and bear the Lambda symbol on your shield, remember the power of appearance. We Spartans project an image of invincibility, an aura of dread that unnerves our adversaries. With our reputation for fearlessness and our unyielding spirit, we are a force to be reckoned with. Let our enemies tremble at the sight of the crimson tide, for it signals their impending doom.',
         image: imagePathToBuffer('war-cry.jpg'),
         createdAt: ISODate('2023-08-30T18:45:55.890+0000'),
         updatedAt: ISODate('2023-08-30T18:45:55.890+0000'),
+        __v: NumberInt(0),
+      },
+      {
+        title: 'Terrain Exploitation (The Spartan Advantage)',
+        information:
+          'Know this, young warrior, that we Spartans are masters of terrain. We do not engage the enemy on their terms, we choose the battleground that favors us most. In narrow mountain passes, treacherous ravines, and chokepoints, our smaller numbers become a shield, holding back foes many times our size. The land itself becomes our ally, and we use it to our advantage.',
+        image: imagePathToBuffer('valley.jpg'),
+        createdAt: ISODate('2023-08-21T14:15:10.456+0000'),
+        updatedAt: ISODate('2023-08-21T14:15:10.456+0000'),
         __v: NumberInt(0),
       },
     ]);
