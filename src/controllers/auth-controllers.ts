@@ -1,5 +1,5 @@
 import type { Request, Response, NextFunction } from 'express';
-import type { IUser } from '../interfaces/user-interface';
+import type { IUser } from '../interfaces';
 import { registerUser, loginUser } from '../services';
 
 export async function registerUserCtrl(

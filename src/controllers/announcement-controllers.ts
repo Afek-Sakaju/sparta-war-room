@@ -1,5 +1,5 @@
 import type { Request, Response, NextFunction } from 'express';
-import type { IAnnouncement } from '../interfaces/announcement-interface';
+import type { IAnnouncement } from '../interfaces';
 import { createAnnouncement, getAllAnnouncements } from '../services';
 
 export async function createAnnouncementCtrl(

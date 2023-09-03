@@ -1,5 +1,5 @@
 import { TacticModel } from '../models';
-import type { ITactic } from '../interfaces/tactics-interface';
+import type { ITactic } from '../interfaces';
 
 export async function getAllTactics(): Promise<ITactic[] | undefined> {
   try {

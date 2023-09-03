@@ -3,7 +3,7 @@ import bcrypt from 'bcrypt';
 
 import { accessPrivateKey } from '../app';
 import { UserModel } from '../models';
-import type { IUser } from '../interfaces/user-interface';
+import type { IUser } from '../interfaces';
 
 export async function getUserByUsername(
   username: string
