@@ -9,10 +9,8 @@ export async function isAuthMW(
   next: NextFunction
 ): Promise<void> {
   try {
-    const accessToken = req.headers.authorization?.replace(
-      'Bearer ',
-      ''
-    ) as string;
+    const accessToken: string =
+      req.headers?.authorization?.replace('Bearer ', '') ?? '';
 
     jwt.verify(accessToken, JWT_ACCESS_PRIVATE_KEY, {
       expireIn: '24h',

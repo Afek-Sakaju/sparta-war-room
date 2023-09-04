@@ -1,3 +1,3 @@
-export type { User } from './users-interface';
-export type { Tactic } from './tactics-interface';
-export type { Announcement } from './announcements-interface';
+export type * from './users-interface';
+export type * from './tactics-interface';
+export type * from './announcements-interface';

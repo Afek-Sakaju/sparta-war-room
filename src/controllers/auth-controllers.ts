@@ -9,9 +9,9 @@ export async function registerUserCtrl(
   next: NextFunction
 ): Promise<void> {
   const user = {
-    username: req.body.username,
-    password: req.body.password,
-  } as unknown as User;
+    username: req.body?.username,
+    password: req.body?.password,
+  } as User;
 
   try {
     const status = await registerUser(user);

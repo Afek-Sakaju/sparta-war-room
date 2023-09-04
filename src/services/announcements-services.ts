@@ -1,5 +1,5 @@
 import { AnnouncementModel } from '../models';
-import type { Announcement } from '../interfaces';
+import type { Announcement, AnnouncementsListDoc } from '../interfaces';
 
 export async function createAnnouncement(
   announcement: Announcement
@@ -9,13 +9,11 @@ export async function createAnnouncement(
   return result ? 201 : 400;
 }
 
-export async function getAllAnnouncements(): Promise<
-  Announcement[] | undefined
-> {
+export async function getAllAnnouncements(): Promise<AnnouncementsListDoc> {
   try {
     const announcements = (await AnnouncementModel.find()
       .lean()
-      .exec()) as unknown as Announcement[];
+      .exec()) as AnnouncementsListDoc;
 
     if (!announcements) throw new Error('Announcements not found');
     else return announcements;

@@ -3,18 +3,16 @@ import bcrypt from 'bcrypt';
 
 import { JWT_ACCESS_PRIVATE_KEY } from '../utils';
 import { UserModel } from '../models';
-import type { User } from '../interfaces';
+import type { User, UserDoc } from '../interfaces';
 
-export async function getUserByUsername(
-  username: string
-): Promise<User | undefined> {
-  const userDoc: any = await UserModel.findOne({ username });
+export async function getUserByUsername(username: string): Promise<UserDoc> {
+  const userDoc: UserDoc = await UserModel.findOne({ username });
 
-  return userDoc as unknown as User | undefined;
+  return userDoc;
 }
 
 export async function registerUser(user: User): Promise<number> {
-  const isExistingUser: User | undefined | null = await UserModel.findOne({
+  const isExistingUser: UserDoc = await UserModel.findOne({
     username: user.username,
   });
   if (isExistingUser) return 409;
@@ -27,8 +25,8 @@ export async function registerUser(user: User): Promise<number> {
 export async function loginUser(
   username: string,
   password: string
-): Promise<any> {
-  const user = (await getUserByUsername(username)) as User;
+): Promise<string | undefined> {
+  const user: UserDoc = await getUserByUsername(username);
   const isPasswordCorrect = await bcrypt.compare(
     password,
     user?.password ?? ''

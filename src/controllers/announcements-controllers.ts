@@ -12,7 +12,7 @@ export async function createAnnouncementCtrl(
     title: req.body?.title,
     description: req.body?.description,
     announcer: req.body?.announcer,
-  } as unknown as Announcement;
+  } as Announcement;
 
   try {
     const status = await createAnnouncement(announcement);
