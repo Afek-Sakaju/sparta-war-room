@@ -7,6 +7,6 @@ export async function isConnectedToDB(
   res: Response,
   next: NextFunction
 ): Promise<void> {
-  if (!isConnected()) res.sendStatus(500);
-  else next();
+  if (isConnected()) next();
+  else res.sendStatus(500);
 }

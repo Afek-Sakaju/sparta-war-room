@@ -5,13 +5,11 @@ const Schema = mongoose.Schema;
 const tacticSchema = new Schema({
   title: {
     type: String,
-    required: true,
-    unique: false,
+    required: [true, 'Please provide a title.'],
   },
   information: {
     type: String,
-    required: true,
-    unique: false,
+    required: [true, 'Please provide the required information.'],
   },
 });
 

@@ -36,7 +36,7 @@ export async function loginUser(
 
   if (!!user && isPasswordCorrect) {
     const accessToken = jwt.sign({ user }, accessPrivateKey, {
-      expiresIn: '15s',
+      expiresIn: '24h',
     });
 
     return accessToken;
