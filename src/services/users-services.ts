@@ -3,18 +3,18 @@ import bcrypt from 'bcrypt';
 
 import { accessPrivateKey } from '../app';
 import { UserModel } from '../models';
-import type { IUser } from '../interfaces';
+import type { User } from '../interfaces';
 
 export async function getUserByUsername(
   username: string
-): Promise<IUser | undefined> {
+): Promise<User | undefined> {
   const userDoc: any = await UserModel.findOne({ username });
 
-  return userDoc as unknown as IUser | undefined;
+  return userDoc as unknown as User | undefined;
 }
 
-export async function registerUser(user: IUser): Promise<number> {
-  const isExistingUser: IUser | undefined | null = await UserModel.findOne({
+export async function registerUser(user: User): Promise<number> {
+  const isExistingUser: User | undefined | null = await UserModel.findOne({
     username: user.username,
   });
   if (isExistingUser) return 409;
@@ -28,7 +28,7 @@ export async function loginUser(
   username: string,
   password: string
 ): Promise<any> {
-  const user = (await getUserByUsername(username)) as IUser;
+  const user = (await getUserByUsername(username)) as User;
   const isPasswordCorrect = await bcrypt.compare(
     password,
     user?.password ?? ''

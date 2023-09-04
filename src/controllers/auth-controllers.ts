@@ -1,5 +1,5 @@
 import type { Request, Response, NextFunction } from 'express';
-import type { IUser } from '../interfaces';
+import type { User } from '../interfaces';
 import { registerUser, loginUser } from '../services';
 
 export async function registerUserCtrl(
@@ -10,7 +10,7 @@ export async function registerUserCtrl(
   const user = {
     username: req.body.username,
     password: req.body.password,
-  } as unknown as IUser;
+  } as unknown as User;
 
   try {
     const status = await registerUser(user);

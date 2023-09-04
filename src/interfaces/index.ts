@@ -1,4 +1,4 @@
-export type { IUser } from './users-interface';
-export type { ITactic } from './tactics-interface';
-export type { IAnnouncement } from './announcements-interface';
+export type { User } from './users-interface';
+export type { Tactic } from './tactics-interface';
+export type { Announcement } from './announcements-interface';
 export type { IOptions } from './mongoose-options-interface';

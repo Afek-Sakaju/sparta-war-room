@@ -1,11 +1,11 @@
 import { TacticModel } from '../models';
-import type { ITactic } from '../interfaces';
+import type { Tactic } from '../interfaces';
 
-export async function getAllTactics(): Promise<ITactic[] | undefined> {
+export async function getAllTactics(): Promise<Tactic[] | undefined> {
   try {
     const tactics = (await TacticModel.find()
       .lean()
-      .exec()) as unknown as ITactic[];
+      .exec()) as unknown as Tactic[];
 
     if (!tactics) throw new Error('Tactics not found');
     else return tactics;

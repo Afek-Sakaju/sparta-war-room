@@ -1,5 +1,5 @@
 import type { Request, Response, NextFunction } from 'express';
-import type { IAnnouncement } from '../interfaces';
+import type { Announcement } from '../interfaces';
 import { createAnnouncement, getAllAnnouncements } from '../services';
 
 export async function createAnnouncementCtrl(
@@ -11,7 +11,7 @@ export async function createAnnouncementCtrl(
     title: req.body?.title,
     description: req.body?.description,
     announcer: req.body?.announcer,
-  } as unknown as IAnnouncement;
+  } as unknown as Announcement;
 
   try {
     const status = await createAnnouncement(announcement);
