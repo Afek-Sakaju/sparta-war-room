@@ -1,5 +1,3 @@
 import { DB_STATUS } from '../DB/mongoose';
 
-export function isConnected(): boolean {
-  return DB_STATUS.connected;
-}
+export const isConnected = (): boolean => DB_STATUS.connected;
