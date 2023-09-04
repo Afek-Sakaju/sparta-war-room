@@ -10,6 +10,7 @@ import path from 'path';
 import mongoose from 'mongoose';
 
 import { connectDB } from './DB/mongoose';
+import { APP_PORT, MONGO_URL, SESSION_SECRET } from './utils';
 import {
   authRouter,
   mainRouter,
@@ -21,18 +22,17 @@ mongoose.set('bufferCommands', false);
 mongoose.set('bufferTimeoutMS', 5000);
 
 void (async function () {
-  await connectDB('mongodb://127.0.0.1:27017/chivalry-auth');
+  await connectDB(MONGO_URL);
 })();
 
 const app = express();
-const PORT = 3000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(
   session({
-    secret: '@uthent1c@teY0ur$elf',
+    secret: SESSION_SECRET,
     resave: false,
     saveUninitialized: true,
     cookie: { secure: false },
@@ -58,9 +58,8 @@ app.use(
   }
 );
 
-app.listen(PORT, () => {
-  console.log(`Server is up on port ${PORT}`);
+app.listen(APP_PORT, () => {
+  console.log(`Server is up on port ${APP_PORT}`);
 });
 
-export const accessPrivateKey = 'Its-a-secret!';
 export default app;

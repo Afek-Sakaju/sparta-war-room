@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
 
-import { accessPrivateKey } from '../app';
+import { JWT_ACCESS_PRIVATE_KEY } from '../utils';
 import { UserModel } from '../models';
 import type { User } from '../interfaces';
 
@@ -35,7 +35,7 @@ export async function loginUser(
   );
 
   if (!!user && isPasswordCorrect) {
-    const accessToken = jwt.sign({ user }, accessPrivateKey, {
+    const accessToken = jwt.sign({ user }, JWT_ACCESS_PRIVATE_KEY, {
       expiresIn: '24h',
     });
 

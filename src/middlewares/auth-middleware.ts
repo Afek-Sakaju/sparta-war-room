@@ -1,7 +1,7 @@
 import type { Request, Response, NextFunction } from 'express';
 import jwt, { type VerifyOptions } from 'jsonwebtoken';
 
-import { accessPrivateKey } from '../app';
+import { JWT_ACCESS_PRIVATE_KEY } from '../utils';
 
 export async function isAuthMW(
   req: Request,
@@ -14,7 +14,7 @@ export async function isAuthMW(
       ''
     ) as string;
 
-    jwt.verify(accessToken, accessPrivateKey, {
+    jwt.verify(accessToken, JWT_ACCESS_PRIVATE_KEY, {
       expireIn: '24h',
     } as const as VerifyOptions);
     next();
