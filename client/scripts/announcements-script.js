@@ -1,5 +1,5 @@
 window.onload = async () => {
-  const isAuthenticated = isAuthenticatedUser();
+  const isAuthenticated = await isAuthenticatedUser();
   if (!isAuthenticated) {
     alert('Entrance permitted only to Spartans who have logged in.');
     window.location.href = '/login';

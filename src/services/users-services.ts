@@ -39,6 +39,6 @@ export async function loginUser(
       expiresIn: '15s',
     });
 
-    return { accessToken };
+    return accessToken;
   }
 }

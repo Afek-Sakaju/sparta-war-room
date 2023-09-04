@@ -5,38 +5,49 @@ async function postData(url, data) {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(data),
-  }).then((response) => {
-    if (response.ok) return response;
-    throw response.status;
-  });
+  })
+    .then((response) => {
+      if (!response.ok) throw Error(response.status);
+      return response;
+    })
+    .catch((e) => console.error(e));
 }
 
 async function getData(url) {
   const accessToken = localStorage.getItem('jwtAccessToken');
 
-  return await fetch(url, {
+  const headers = {
+    'Content-Type': 'application/json',
+    Authorization: `Bearer ${accessToken}`,
+  };
+
+  const fetchedData = await fetch(url, {
     method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      ...(accessToken && { Authorization: 'Bearer ' + accessToken }),
-    },
-  }).then((response) => {
-    if (response.ok) return response;
-    throw Error(response.status);
-  });
+    headers,
+  })
+    .then((response) => {
+      if (!response.ok) throw Error(response.status);
+      return response;
+    })
+    .catch((e) => console.error(e));
+
+  return fetchedData;
 }
 
 function soundEffect(name) {
   new Audio(`../assets/sounds/${name}.mp3`).play();
 }
 
-function isAuthenticatedUser() {
+async function isAuthenticatedUser() {
   const accessToken = localStorage.getItem('jwtAccessToken');
 
   let isAuth = false;
   if (accessToken) {
-    isAuth = getData('/auth/user-authenticated')
-      .then(() => true)
+    isAuth = await getData('/auth/user-authenticated')
+      .then((d) => {
+        if (!d) throw Error('Token is not verified/it is expired');
+        return true;
+      })
       .catch(() => false);
   }
 

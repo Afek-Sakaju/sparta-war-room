@@ -26,9 +26,8 @@ export async function loginUserCtrl(
   next: NextFunction
 ): Promise<void> {
   try {
-    const loginResult = await loginUser(req.body.username, req.body.password);
+    const accessToken = await loginUser(req.body.username, req.body.password);
 
-    const accessToken = loginResult ? { loginResult } : undefined;
     if (accessToken) res.json({ accessToken });
     else res.sendStatus(401);
   } catch (e: any) {

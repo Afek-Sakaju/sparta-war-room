@@ -19,6 +19,6 @@ export async function isAuthMW(
     } as const as VerifyOptions);
     next();
   } catch (e) {
-    res.redirect('/login');
+    res.sendStatus(401);
   }
 }

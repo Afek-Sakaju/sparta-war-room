@@ -10,6 +10,7 @@ async function loginUser() {
       return res.json();
     })
     .then((data) => {
+		debugger
       localStorage.setItem('successLoginUsername', username);
       localStorage.setItem('jwtAccessToken', data.accessToken);
     })
