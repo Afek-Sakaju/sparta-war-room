@@ -5,7 +5,7 @@ import express, {
 } from 'express';
 
 import { getAllTacticsCtrl } from '../controllers';
-import { isConnectedToDB } from '../middlewares';
+import { isConnectedToDB, isAuthMW } from '../middlewares';
 
 const router = express.Router();
 
@@ -14,6 +14,6 @@ router.use((req: Request, _res: Response, next: NextFunction) => {
   next();
 });
 
-router.get('/all', isConnectedToDB, getAllTacticsCtrl);
+router.get('/all', isConnectedToDB, isAuthMW, getAllTacticsCtrl);
 
 export default router;

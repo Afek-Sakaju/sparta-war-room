@@ -19,6 +19,6 @@ router.use((req: Request, _res: Response, next: NextFunction) => {
 
 router.post('/', isConnectedToDB, isAuthMW, createAnnouncementCtrl);
 
-router.get('/all', isConnectedToDB, getAllAnnouncementsCtrl);
+router.get('/all', isConnectedToDB, isAuthMW, getAllAnnouncementsCtrl);
 
 export default router;
