@@ -22,7 +22,7 @@ router.post('/register', isConnectedToDB, registerUserCtrl);
 
 router.post('/login', isConnectedToDB, loginUserCtrl);
 
-router.get('/logout', isConnectedToDB, logoutUserCtrl);
+router.get('/logout', isConnectedToDB, isAuthMW, logoutUserCtrl);
 
 router.get('/user-authenticated', isAuthMW, (_req: Request, res: Response) => {
   res.sendStatus(200);
