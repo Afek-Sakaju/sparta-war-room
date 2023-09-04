@@ -1,4 +1,5 @@
 import type { Request, Response, NextFunction } from 'express';
+
 import type { Announcement } from '../interfaces';
 import { createAnnouncement, getAllAnnouncements } from '../services';
 

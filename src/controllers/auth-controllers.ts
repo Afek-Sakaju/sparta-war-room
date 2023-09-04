@@ -1,4 +1,5 @@
 import type { Request, Response, NextFunction } from 'express';
+
 import type { User } from '../interfaces';
 import { registerUser, loginUser } from '../services';
 

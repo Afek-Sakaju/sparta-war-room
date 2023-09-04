@@ -1,6 +1,6 @@
+import type { Request, Response, NextFunction } from 'express';
 import jwt, { type VerifyOptions } from 'jsonwebtoken';
 
-import type { Request, Response, NextFunction } from 'express';
 import { accessPrivateKey } from '../app';
 
 export async function isAuthMW(

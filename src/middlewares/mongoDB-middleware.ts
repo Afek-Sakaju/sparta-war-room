@@ -1,4 +1,5 @@
 import type { Request, Response, NextFunction } from 'express';
+
 import { isConnected } from '../utils';
 
 export async function isConnectedToDB(
