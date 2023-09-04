@@ -1,18 +1,11 @@
 window.onload = async () => {
-  const accessToken = localStorage.getItem('jwtAccessToken');
-  if (!accessToken) {
-    alert('Not authorized');
+  const isAuthenticated = isAuthenticatedUser();
+  if (!isAuthenticated) {
+    alert('Entrance permitted only to Spartans who have logged in.');
     window.location.href = '/login';
+    localStorage.removeItem('jwtAccessToken');
     return;
   }
-
-  getData('/auth/user-authenticated')
-    .then(() => {})
-    .catch(() => {
-      localStorage.removeItem('jwtAccessToken');
-      alert('Not authorized');
-      window.location.href = '/login';
-    });
 
   const annData = await getData('/announcements/all')
     .then((d) => d.json())

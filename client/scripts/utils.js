@@ -29,3 +29,16 @@ async function getData(url) {
 function soundEffect(name) {
   new Audio(`../assets/sounds/${name}.mp3`).play();
 }
+
+function isAuthenticatedUser() {
+  const accessToken = localStorage.getItem('jwtAccessToken');
+
+  let isAuth = false;
+  if (accessToken) {
+    isAuth = getData('/auth/user-authenticated')
+      .then(() => true)
+      .catch(() => false);
+  }
+
+  return isAuth;
+}
