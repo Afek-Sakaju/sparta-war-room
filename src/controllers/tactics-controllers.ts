@@ -3,7 +3,7 @@ import type { Request, Response, NextFunction } from 'express';
 import { getAllTactics } from '../services';
 
 export async function getAllTacticsCtrl(
-  req: Request,
+  _req: Request,
   res: Response,
   next: NextFunction
 ): Promise<void> {

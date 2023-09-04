@@ -23,7 +23,7 @@ export async function createAnnouncementCtrl(
 }
 
 export async function getAllAnnouncementsCtrl(
-  req: Request,
+  _req: Request,
   res: Response,
   next: NextFunction
 ): Promise<void> {
