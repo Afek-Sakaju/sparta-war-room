@@ -7,4 +7,6 @@ export interface Announcement {
   announcer?: string;
 }
 
-export type AnnouncementsListDoc = Announcement[] | undefined | null;
+export type AnnouncementDoc = Announcement | undefined | null;
+
+export type AnnouncementsListDoc = AnnouncementDoc[] | undefined | null;

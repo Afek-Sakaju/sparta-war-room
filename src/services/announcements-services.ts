@@ -1,12 +1,17 @@
 import { AnnouncementModel } from '../models';
-import type { Announcement, AnnouncementsListDoc } from '../interfaces';
+import type {
+  Announcement,
+  AnnouncementDoc,
+  AnnouncementsListDoc,
+} from '../interfaces';
 
 export async function createAnnouncement(
   announcement: Announcement
-): Promise<number> {
+): Promise<AnnouncementDoc> {
   const announcementDoc = new AnnouncementModel(announcement);
-  const result: any = await announcementDoc.save();
-  return result ? 201 : 400;
+
+  const result = (await announcementDoc.save()) as AnnouncementDoc;
+  return result;
 }
 
 export async function getAllAnnouncements(): Promise<AnnouncementsListDoc> {

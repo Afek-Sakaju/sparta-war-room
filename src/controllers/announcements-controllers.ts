@@ -15,8 +15,8 @@ export async function createAnnouncementCtrl(
   } as Announcement;
 
   try {
-    const status = await createAnnouncement(announcement);
-    res.sendStatus(status);
+    const announcementDoc = await createAnnouncement(announcement);
+    res.status(201).json(announcementDoc);
   } catch (e: any) {
     next(e);
   }
