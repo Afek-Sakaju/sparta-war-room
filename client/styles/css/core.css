@@ -44,7 +44,10 @@ body ::-webkit-scrollbar-thumb:hover {
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
 }
-
+.nav-item.home-button {
+  padding: 4px 20px;
+  font-size: 23px;
+}
 .nav-item:hover {
   background-color: #232323;
 }
