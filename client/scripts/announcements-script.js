@@ -27,11 +27,7 @@ window.onload = async () => {
     const annDescription = document.createElement('p');
     annDescription.classList.add('announcement-text');
 
-    const allPeriodsExceptLast = /\.(?=.*\.)/g;
-    const replacedAnnDescription = description.replace(
-      allPeriodsExceptLast,
-      '.\n\n'
-    );
+    const replacedAnnDescription = addLineBreaksToText(description);
     annDescription.textContent = replacedAnnDescription;
     annWrapper.appendChild(annDescription);
 

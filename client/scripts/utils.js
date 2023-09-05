@@ -53,3 +53,15 @@ async function isAuthenticatedUser() {
 
   return isAuth;
 }
+
+function addLineBreaksToText(text) {
+  const textWithLineBreaks = text?.replaceAll('.', '. \n\n');
+  let result = textWithLineBreaks;
+
+  const isEndsWithLineBreaks = textWithLineBreaks?.endsWith('\n\n');
+  if (isEndsWithLineBreaks) {
+    result = textWithLineBreaks.substring(0, textWithLineBreaks.length - 3);
+  }
+
+  return result;
+}
