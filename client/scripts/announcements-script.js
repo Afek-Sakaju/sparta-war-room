@@ -26,7 +26,13 @@ window.onload = async () => {
 
     const annDescription = document.createElement('p');
     annDescription.classList.add('announcement-text');
-    annDescription.textContent = description;
+
+    const allPeriodsExceptLast = /\.(?=.*\.)/g;
+    const replacedAnnDescription = annDescription.replace(
+      allPeriodsExceptLast,
+      '.\n\n'
+    );
+    annDescription.textContent = replacedAnnDescription;
     annWrapper.appendChild(annDescription);
 
     const annAnnouncer = document.createElement('p');
