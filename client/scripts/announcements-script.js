@@ -28,7 +28,7 @@ window.onload = async () => {
     annDescription.classList.add('announcement-text');
 
     const allPeriodsExceptLast = /\.(?=.*\.)/g;
-    const replacedAnnDescription = annDescription.replace(
+    const replacedAnnDescription = description.replace(
       allPeriodsExceptLast,
       '.\n\n'
     );
