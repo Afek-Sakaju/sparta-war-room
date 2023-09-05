@@ -1,5 +1,12 @@
-window.onload = async () => updateNavbarAuthState();
+window.onload = async () => {
+  const isAuthenticated = await isAuthenticatedUser();
+  if (isAuthenticated) {
+    window.location.href = '/';
+    return;
+  }
 
+  updateNavbarAuthState(false);
+};
 async function registerUser() {
   const username = document.getElementById('username').value;
   const password = document.getElementById('password').value;

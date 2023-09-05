@@ -1,4 +1,12 @@
-window.onload = async () => updateNavbarAuthState();
+window.onload = async () => {
+  const isAuthenticated = await isAuthenticatedUser();
+  if (isAuthenticated) {
+    window.location.href = '/';
+    return;
+  }
+
+  updateNavbarAuthState(false);
+};
 
 async function loginUser() {
   const username = document.getElementById('username').value;

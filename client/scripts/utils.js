@@ -90,7 +90,8 @@ function unhideElements(elementsIds) {
 /* 'isAlreadyAuth' variable is used to call this function and avoid re-executing 
 of the 'isAuthenticatedUser' logic once the authentication status is already known. */
 function updateNavbarAuthState(isAlreadyAuth) {
-  const isAuth = isAlreadyAuth ? true : isAuthenticatedUser();
+  const isAuth =
+    isAlreadyAuth !== undefined ? isAlreadyAuth : isAuthenticatedUser();
 
   const authElementsToUnhide = ['logout-button'];
   const notAuthElementsToUnhide = ['login-button', 'register-button'];
