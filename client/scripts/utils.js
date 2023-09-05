@@ -105,7 +105,7 @@ async function logoutUser() {
     .then(() => {
       localStorage.removeItem('successLoginUsername');
       localStorage.removeItem('jwtAccessToken');
-      window.location.href = '/login';
+      window.location.href = '/';
     })
     .catch((e) => {
       console.error(e);
