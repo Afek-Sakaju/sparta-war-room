@@ -68,3 +68,21 @@ function addLineBreaksToText(text, lineBreaksCount = 1) {
 
   return result;
 }
+
+function hideElements(elementsIds) {
+  if (!elementsIds instanceof Array) elementsIds = [elementsIds];
+
+  elementsIds?.forEach((id) => {
+    const element = document.getElementById(id);
+    element.classList.add('hidden');
+  });
+}
+
+function unhideElements(elementsIds) {
+  if (!elementsIds instanceof Array) elementsIds = [elementsIds];
+
+  elementsIds?.forEach((id) => {
+    const element = document.getElementById(id);
+    element.classList.remove('hidden');
+  });
+}
