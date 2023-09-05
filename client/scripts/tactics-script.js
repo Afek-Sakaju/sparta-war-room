@@ -7,7 +7,7 @@ window.onload = async () => {
     return;
   }
 
-  updateNavbarAuthState(true);
+  await updateNavbarAuthState(true);
   unhideElements('tactics-list-container');
 
   const tacticsData = await getData('/tactics/all')

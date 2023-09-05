@@ -1,1 +1,1 @@
-window.onload = async () => updateNavbarAuthState();
+window.onload = async () => await updateNavbarAuthState();

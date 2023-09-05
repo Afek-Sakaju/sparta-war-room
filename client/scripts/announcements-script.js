@@ -7,7 +7,7 @@ window.onload = async () => {
     return;
   }
 
-  updateNavbarAuthState(true);
+  await updateNavbarAuthState(true);
   unhideElements('announcements-list-container');
 
   const annData = await getData('/announcements/all')

@@ -5,7 +5,7 @@ window.onload = async () => {
     return;
   }
 
-  updateNavbarAuthState(false);
+  await updateNavbarAuthState(false);
 };
 
 async function loginUser() {
