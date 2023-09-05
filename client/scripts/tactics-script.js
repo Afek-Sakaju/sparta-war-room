@@ -7,6 +7,9 @@ window.onload = async () => {
     return;
   }
 
+  const elementsToUnhide = ['tactics-list-container', 'logout-button'];
+  unhideElements(elementsToUnhide);
+
   const tacticsData = await getData('/tactics/all')
     .then((d) => d.json())
     .catch((e) => console.error(e));
@@ -33,12 +36,10 @@ window.onload = async () => {
     const tacticDescription = document.createElement('p');
     tacticDescription.classList.add('tactic-text');
 
-    const replacedInformation = addLineBreaksToText(information, 2);
-    tacticDescription.textContent = replacedInformation;
+    const replacedTacticInformation = addLineBreaksToText(information, 2);
+    tacticDescription.textContent = replacedTacticInformation;
     tacticWrapper.appendChild(tacticDescription);
 
     tacticsListContainer.appendChild(tacticWrapper);
   });
-
-  tacticsListContainer.classList.remove('hidden');
 };
