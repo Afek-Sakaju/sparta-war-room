@@ -25,18 +25,19 @@ export async function registerUser(user: User): Promise<UserDoc> {
 export async function loginUser(
   username: string,
   password: string
-): Promise<string | undefined> {
+): Promise<string> {
   const user: UserDoc = await getUserByUsername(username);
   const isPasswordCorrect = await bcrypt.compare(
     password,
     user?.password ?? ''
   );
 
+  let accessToken = '';
   if (!!user && isPasswordCorrect) {
-    const accessToken = jwt.sign({ user }, JWT_ACCESS_PRIVATE_KEY, {
+    accessToken = jwt.sign({ user }, JWT_ACCESS_PRIVATE_KEY, {
       expiresIn: '24h',
     });
-
-    return accessToken;
   }
+
+  return accessToken;
 }

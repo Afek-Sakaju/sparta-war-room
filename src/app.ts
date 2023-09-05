@@ -49,8 +49,8 @@ app.use('/tactics', tacticsRouter);
 app.use(
   (
     err: ErrorRequestHandler,
-    req: Request,
-    res: Response,
+    _req: Request,
+    _res: Response,
     next: NextFunction
   ) => {
     console.log(`Error occurred: \n${err}`);
