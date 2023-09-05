@@ -55,12 +55,13 @@ async function isAuthenticatedUser() {
 }
 
 function addLineBreaksToText(text) {
-  const textWithLineBreaks = text?.replaceAll('.', '. \n\n');
+  const allPunctuations = /[.!?]/g;
+  const textWithLineBreaks = text?.replaceAll(allPunctuations, '$& \n');
   let result = textWithLineBreaks;
 
-  const isEndsWithLineBreaks = textWithLineBreaks?.endsWith('\n\n');
+  const isEndsWithLineBreaks = textWithLineBreaks?.endsWith('\n');
   if (isEndsWithLineBreaks) {
-    result = textWithLineBreaks.substring(0, textWithLineBreaks.length - 3);
+    result = textWithLineBreaks.substring(0, textWithLineBreaks.length - 2);
   }
 
   return result;
