@@ -8,7 +8,7 @@
   <body>
     <nav class="top-navbar">
       <div class="nav-left">
-        <a href="/" class="nav-item home-button">&#127962;&#65039;</a>
+        <a href="/" class="nav-item">Home</a>
         <a href="/announcements" class="nav-item">Announcements</a>
         <a href="/tactics" class="nav-item">Spartan-Tactics</a>
       </div>
@@ -16,7 +16,9 @@
         <h1 class="nav-title">Sparta's Announcements Page</h1>
       </div>
       <div class="nav-right">
-        <a id="logout-button" href="/logout" class="nav-item hidden">Logout</a>
+        <a id="logout-button" onclick="logoutUser()" class="nav-item hidden">
+          Logout
+        </a>
       </div>
     </nav>
     <div id="announcements-list-container" class="hidden"></div>

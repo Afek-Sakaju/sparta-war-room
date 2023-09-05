@@ -99,3 +99,16 @@ function updateNavbarAuthState(isAlreadyAuth) {
   if (isAuth) unhideElements(authElementsToUnhide);
   else unhideElements(notAuthElementsToUnhide);
 }
+
+async function logoutUser() {
+  await postData('/auth/logout')
+    .then(() => {
+      localStorage.removeItem('successLoginUsername');
+      localStorage.removeItem('jwtAccessToken');
+      window.location.href = '/login';
+    })
+    .catch((e) => {
+      console.error(e);
+      alert('The logout process has encountered an error.');
+    });
+}
