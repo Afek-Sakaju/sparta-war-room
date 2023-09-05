@@ -7,8 +7,8 @@ window.onload = async () => {
     return;
   }
 
-  const elementsToUnhide = ['logout-button', 'announcements-list-container'];
-  unhideElements(elementsToUnhide);
+  updateNavbarAuthState(true);
+  unhideElements('announcements-list-container');
 
   const annData = await getData('/announcements/all')
     .then((d) => d.json())

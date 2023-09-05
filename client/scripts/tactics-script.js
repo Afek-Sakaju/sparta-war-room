@@ -7,8 +7,8 @@ window.onload = async () => {
     return;
   }
 
-  const elementsToUnhide = ['tactics-list-container', 'logout-button'];
-  unhideElements(elementsToUnhide);
+  updateNavbarAuthState(true);
+  unhideElements('tactics-list-container');
 
   const tacticsData = await getData('/tactics/all')
     .then((d) => d.json())

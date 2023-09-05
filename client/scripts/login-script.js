@@ -1,3 +1,5 @@
+window.onload = async () => updateNavbarAuthState();
+
 async function loginUser() {
   const username = document.getElementById('username').value;
   const password = document.getElementById('password').value;
