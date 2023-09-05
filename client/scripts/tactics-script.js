@@ -33,7 +33,7 @@ window.onload = async () => {
     const tacticDescription = document.createElement('p');
     tacticDescription.classList.add('tactic-text');
 
-    const replacedInformation = addLineBreaksToText(information);
+    const replacedInformation = addLineBreaksToText(information, 2);
     tacticDescription.textContent = replacedInformation;
     tacticWrapper.appendChild(tacticDescription);
 
