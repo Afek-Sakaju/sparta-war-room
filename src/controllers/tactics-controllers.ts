@@ -9,6 +9,8 @@ export async function getAllTacticsCtrl(
 ): Promise<void> {
   try {
     const tactics = await getAllTactics();
+
+    if (!tactics) throw Error('Tactics data not found');
     res.json(tactics);
   } catch (e: any) {
     next(e);
