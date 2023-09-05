@@ -15,14 +15,9 @@ export async function createAnnouncement(
 }
 
 export async function getAllAnnouncements(): Promise<AnnouncementsListDoc> {
-  try {
-    const announcements = (await AnnouncementModel.find()
-      .lean()
-      .exec()) as AnnouncementsListDoc;
+  const announcements = (await AnnouncementModel.find()
+    .lean()
+    .exec()) as AnnouncementsListDoc;
 
-    if (!announcements) throw new Error('Announcements not found');
-    else return announcements;
-  } catch (error) {
-    console.error('Error fetching announcements:', error);
-  }
+  return announcements;
 }
