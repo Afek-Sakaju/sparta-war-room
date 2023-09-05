@@ -7,6 +7,11 @@ window.onload = async () => {
     return;
   }
 
+  document.getElementById('logout-button').classList.remove('hidden');
+  document
+    .getElementById('announcements-list-container')
+    .classList.remove('hidden');
+		
   const annData = await getData('/announcements/all')
     .then((d) => d.json())
     .catch((e) => console.error(e));
@@ -38,10 +43,6 @@ window.onload = async () => {
 
     annListContainer.appendChild(annWrapper);
   });
-
-  document
-    .getElementById('announcements-list-container')
-    .classList.remove('hidden');
 };
 
 //const username = localStorage.getItem('successLoginUsername');

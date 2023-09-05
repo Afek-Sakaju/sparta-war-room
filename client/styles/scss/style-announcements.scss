@@ -22,10 +22,6 @@ body {
   user-select: none;
   white-space: pre-line;
   line-height: 1.28;
-
-  &.hidden {
-    visibility: hidden;
-  }
 }
 
 .announcement-container {

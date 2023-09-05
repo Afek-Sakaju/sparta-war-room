@@ -74,6 +74,10 @@ body ::-webkit-scrollbar-thumb:hover {
   letter-spacing: 1px;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 body {
   background-image: url("../../assets/pictures/bg-temple.jpg");
 }
