@@ -14,8 +14,8 @@ export async function registerUserCtrl(
   } as User;
 
   try {
-    const status = await registerUser(user);
-    res.sendStatus(status);
+    const userDoc = await registerUser(user);
+    res.status(201).json(userDoc);
   } catch (e: any) {
     next(e);
   }

@@ -11,15 +11,15 @@ export async function getUserByUsername(username: string): Promise<UserDoc> {
   return userDoc;
 }
 
-export async function registerUser(user: User): Promise<number> {
+export async function registerUser(user: User): Promise<UserDoc> {
   const isExistingUser: UserDoc = await UserModel.findOne({
     username: user.username,
   });
-  if (isExistingUser) return 409;
+  if (isExistingUser) return;
 
-  const userDoc = new UserModel(user);
-  const result: any = await userDoc.save();
-  return result ? 201 : 409;
+  const userData = new UserModel(user);
+  const userDoc = (await userData.save()) as UserDoc;
+  return userDoc;
 }
 
 export async function loginUser(
