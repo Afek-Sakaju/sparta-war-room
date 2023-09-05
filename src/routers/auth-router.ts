@@ -20,7 +20,7 @@ router.use((req: Request, _res: Response, next: NextFunction) => {
 
 router.post('/login', isConnectedToDB, loginUserCtrl);
 
-router.get('/logout', isConnectedToDB, isAuthMW, logoutUserCtrl);
+router.post('/logout', isConnectedToDB, isAuthMW, logoutUserCtrl);
 
 router.post('/register', isConnectedToDB, registerUserCtrl);
 

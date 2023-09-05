@@ -52,5 +52,4 @@ export async function logoutUserCtrl(
   _next: NextFunction
 ): Promise<void> {
   res.cookie('jwtAccessToken', '', { maxAge: 1 });
-  res.redirect('/login');
 }
