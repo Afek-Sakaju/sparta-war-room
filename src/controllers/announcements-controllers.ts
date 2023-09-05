@@ -1,6 +1,6 @@
 import type { Request, Response, NextFunction } from 'express';
 
-import type { Announcement } from '../interfaces';
+import type { Announcement, ErrorWithStatus } from '../interfaces';
 import { createAnnouncement, getAllAnnouncements } from '../services';
 
 export async function createAnnouncementCtrl(
@@ -16,7 +16,12 @@ export async function createAnnouncementCtrl(
     } as Announcement;
 
     const announcementDoc = await createAnnouncement(announcement);
-    if (!announcementDoc) throw new Error('Announcement creation failed');
+    if (!announcementDoc) {
+      const err: ErrorWithStatus = new Error('Announcement creation failed');
+      err.status = 400;
+      throw err;
+    }
+
     res.status(201).json(announcementDoc);
   } catch (e: any) {
     next(e);
@@ -30,7 +35,11 @@ export async function getAllAnnouncementsCtrl(
 ): Promise<void> {
   try {
     const announcements = await getAllAnnouncements();
-    if (!announcements) throw new Error('Announcements not found');
+    if (!announcements) {
+      const err: ErrorWithStatus = new Error('Announcements not found');
+      err.status = 404;
+      throw err;
+    }
 
     res.json(announcements);
   } catch (e: any) {

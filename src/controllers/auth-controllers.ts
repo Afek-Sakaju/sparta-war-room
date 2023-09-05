@@ -1,6 +1,6 @@
 import type { Request, Response, NextFunction } from 'express';
 
-import type { User } from '../interfaces';
+import type { ErrorWithStatus, User } from '../interfaces';
 import { registerUser, loginUser } from '../services';
 
 export async function registerUserCtrl(
@@ -15,7 +15,12 @@ export async function registerUserCtrl(
     } as User;
 
     const userDoc = await registerUser(user);
-    if (!userDoc) throw Error('User creation failed');
+
+    if (!userDoc) {
+      const err: ErrorWithStatus = new Error('Username already taken');
+      err.status = 409;
+      throw err;
+    }
     res.status(201).json(userDoc);
   } catch (e: any) {
     next(e);
@@ -30,7 +35,11 @@ export async function loginUserCtrl(
   try {
     const accessToken = await loginUser(req.body.username, req.body.password);
 
-    if (!accessToken) throw Error('Access token is expired or invalid');
+    if (!accessToken) {
+      const err: ErrorWithStatus = new Error('Invalid username or password');
+      err.status = 401;
+      throw err;
+    }
     res.json({ accessToken });
   } catch (e: any) {
     next(e);

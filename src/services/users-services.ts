@@ -7,7 +7,6 @@ import type { User, UserDoc } from '../interfaces';
 
 export async function getUserByUsername(username: string): Promise<UserDoc> {
   const userDoc: UserDoc = await UserModel.findOne({ username });
-
   return userDoc;
 }
 
