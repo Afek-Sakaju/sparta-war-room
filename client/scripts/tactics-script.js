@@ -2,7 +2,7 @@ window.onload = async () => {
   const isAuthenticated = await isAuthenticatedUser();
   if (!isAuthenticated) {
     // Avoids showing an alert to the user before the background image fully loads.
-    wait(0.5);
+    await wait(0.15);
     alert('Entrance permitted only to Spartans who have logged in.');
     window.location.href = '/login';
     localStorage.removeItem('jwtAccessToken');
