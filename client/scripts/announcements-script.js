@@ -4,7 +4,7 @@ window.onload = async () => {
     await wait(0.1);
     showAlert();
     await wait(2);
-    //window.location.href = '/login';
+    window.location.href = '/login';
     localStorage.removeItem('jwtAccessToken');
     return;
   }
