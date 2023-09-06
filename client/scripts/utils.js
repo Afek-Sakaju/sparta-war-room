@@ -120,3 +120,13 @@ async function wait(seconds) {
     }, seconds * 1000);
   });
 }
+
+function showAlert() {
+  const customAlert = document.getElementById('alert-container');
+  customAlert?.classList?.remove('hidden');
+}
+
+function hideAlert() {
+  const customAlert = document.getElementById('alert-container');
+  customAlert?.classList?.add('hidden');
+}
