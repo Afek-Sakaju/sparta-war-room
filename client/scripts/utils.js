@@ -112,3 +112,11 @@ async function logoutUser() {
       alert('The logout process has encountered an error.');
     });
 }
+
+async function wait(seconds) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve();
+    }, seconds * 1000);
+  });
+}
