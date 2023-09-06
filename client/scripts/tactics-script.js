@@ -3,6 +3,7 @@ window.onload = async () => {
   if (!isAuthenticated) {
     await wait(0.1);
     showAlert();
+    await updateNavbarAuthState(false);
     await wait(2);
     window.location.href = '/login';
     localStorage.removeItem('jwtAccessToken');
