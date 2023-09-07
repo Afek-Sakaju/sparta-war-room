@@ -51,8 +51,20 @@ body {
   transition: background-color 0.3s, color 0.3s;
 
   &.home-button {
-    padding: 4px 20px;
-    font-size: 23px;
+    display: flex;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 4.5px 18px;
+
+    .home-icon {
+      height: 100%;
+      width: 100%;
+      background-image: url('../../assets/pictures/home-icon.png');
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
 
   &:hover {
