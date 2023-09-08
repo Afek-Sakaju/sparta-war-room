@@ -47,7 +47,7 @@ async function showAlert({
   onClose,
   onOpen,
 }) {
-  const alertContainer = document.getElementById('alert-container');
+  const alertContainer = document.getElementById('page-alert');
   if (isAlertActive || !alertContainer) return;
 
   if (delayDisplayDuration) await wait(delayDisplayDuration);
@@ -82,7 +82,7 @@ async function showAlert({
 }
 
 function hideAlert() {
-  const alertContainer = document.getElementById('alert-container');
+  const alertContainer = document.getElementById('page-alert');
   alertContainer?.classList?.add('hidden');
   alertContainer.innerHTML = '';
   isAlertActive = false;

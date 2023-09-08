@@ -88,7 +88,7 @@ body ::-webkit-scrollbar-thumb:hover {
   letter-spacing: 1px;
 }
 
-#alert-container {
+.alert-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -107,7 +107,7 @@ body ::-webkit-scrollbar-thumb:hover {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   user-select: none;
 }
-#alert-container.access-denied-alert {
+.alert-container.access-denied-alert {
   top: 25%;
   background-color: rgba(255, 0, 0, 0.193);
 }
