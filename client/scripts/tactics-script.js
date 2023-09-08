@@ -6,6 +6,7 @@ window.onload = async () => {
       alertButtonProperties: { text: 'Understood', href: '/login' },
       isAccessDeniedAlert: true,
       displayDuration: 2,
+      delayDisplayDuration: 0.1,
       onClose: () => {
         window.location.href = '/login';
       },
