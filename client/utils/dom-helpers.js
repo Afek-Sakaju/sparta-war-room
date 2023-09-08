@@ -27,11 +27,11 @@ async function updateNavbarAuthState(isAlreadyAuth) {
     isAlreadyAuth === undefined ? await isAuthenticatedUser() : isAlreadyAuth;
 
   const authElementsToUnhide = [
-    'logout-button',
+    'logout-btn',
     'tactics-btn',
     'announcements-btn',
   ];
-  const notAuthElementsToUnhide = ['login-button', 'register-button'];
+  const notAuthElementsToUnhide = ['login-btn', 'register-btn'];
 
   if (isAuth) unhideElements(authElementsToUnhide);
   else unhideElements(notAuthElementsToUnhide);
