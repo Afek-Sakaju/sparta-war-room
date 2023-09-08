@@ -250,12 +250,39 @@ body {
     top: 25%;
     background-color: rgba(255, 0, 0, 0.193);
   }
+
+  @media screen and (max-width: 800px) {
+    width: 50%;
+    padding: 0.8em;
+  }
+
+  @media screen and (max-width: 450px) {
+    width: 60%;
+    padding: 0.65em;
+  }
+
+  @media screen and (max-width: 320px) {
+    width: 65%;
+    padding: 0.55em;
+  }
 }
 
 .alert-text {
   font-size: 1.3rem;
   color: $whitish;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+  @media screen and (max-width: 800px) {
+    font-size: 1.05rem;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 0.8rem;
+  }
+
+  @media screen and (max-width: 320px) {
+    font-size: 0.75rem;
+  }
 }
 
 .alert-button {
@@ -274,6 +301,16 @@ body {
     color: rgba(255, 0, 0, 0.7);
     background-color: rgba(255, 255, 255, 0.8);
     border-color: rgba(255, 0, 0, 0.7);
+  }
+
+  @media screen and (max-width: 800px) {
+    padding: 7px 9px;
+    font-size: 0.8em;
+  }
+
+  @media screen and (max-width: 450px) {
+    padding: 6px 4px;
+    font-size: 0.65em;
   }
 }
 

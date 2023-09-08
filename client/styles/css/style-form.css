@@ -244,11 +244,44 @@ body ::-webkit-scrollbar-thumb:hover {
   top: 25%;
   background-color: rgba(255, 0, 0, 0.193);
 }
+@media screen and (max-width: 800px) {
+  .alert-container {
+    width: 50%;
+    padding: 0.8em;
+  }
+}
+@media screen and (max-width: 450px) {
+  .alert-container {
+    width: 60%;
+    padding: 0.65em;
+  }
+}
+@media screen and (max-width: 320px) {
+  .alert-container {
+    width: 65%;
+    padding: 0.55em;
+  }
+}
 
 .alert-text {
   font-size: 1.3rem;
   color: #f2f2f2;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width: 800px) {
+  .alert-text {
+    font-size: 1.05rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .alert-text {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .alert-text {
+    font-size: 0.75rem;
+  }
 }
 
 .alert-button {
@@ -267,6 +300,18 @@ body ::-webkit-scrollbar-thumb:hover {
   color: rgba(255, 0, 0, 0.7);
   background-color: rgba(255, 255, 255, 0.8);
   border-color: rgba(255, 0, 0, 0.7);
+}
+@media screen and (max-width: 800px) {
+  .alert-button {
+    padding: 7px 9px;
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 450px) {
+  .alert-button {
+    padding: 6px 4px;
+    font-size: 0.65em;
+  }
 }
 
 .hidden {
