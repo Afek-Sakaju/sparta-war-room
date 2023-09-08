@@ -294,25 +294,25 @@ body {
 }
 @media screen and (max-width: 1600px) {
   .description-container {
-    width: 880px;
+    width: 63%;
     padding: 1.85em 2.1em;
   }
 }
 @media screen and (max-width: 1235px) {
   .description-container {
-    width: 730px;
+    width: 73%;
     padding: 1.75em 2em;
   }
 }
 @media screen and (max-width: 1000px) {
   .description-container {
-    width: 600px;
+    width: 77%;
     padding: 1.6em 1.8em;
   }
 }
 @media screen and (max-width: 700px) {
   .description-container {
-    width: 450px;
+    width: 88%;
     padding: 1.4em 1.6em;
   }
 }
