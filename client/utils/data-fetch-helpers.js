@@ -57,9 +57,9 @@ async function logoutUser() {
       localStorage.removeItem('jwtAccessToken');
       window.location.href = '/';
     })
-    .catch((e) => {
+    .catch(async (e) => {
       console.error(e);
-      showAlert({
+      await showAlert({
         message: 'The logout process has encountered an error',
         isFormAlert: true,
       });

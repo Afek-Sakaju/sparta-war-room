@@ -26,10 +26,10 @@ async function loginUser() {
     .then(() => {
       window.location.href = '/';
     })
-    .catch((errorStatus) => {
+    .catch(async (errorStatus) => {
       const message =
         errorStatus === 500 ? 'Server error' : 'Incorrect username or password';
-      showAlert({
+      await showAlert({
         message,
         isFormAlert: true,
       });

@@ -14,21 +14,21 @@ async function registerUser() {
   const retypePassword = document.getElementById('re-password').value;
 
   if (username.length < 5) {
-    return showAlert({
+    return await showAlert({
       message: 'Username must contain at least 5 characters',
       isFormAlert: true,
     });
   }
 
   if (password.length < 5) {
-    return showAlert({
+    return await showAlert({
       message: 'Password must contain at least 5 characters',
       isFormAlert: true,
     });
   }
 
   if (password !== retypePassword) {
-    return showAlert({
+    return await showAlert({
       message: 'Password fields does not match',
       isFormAlert: true,
     });
@@ -41,10 +41,10 @@ async function registerUser() {
     .then(() => {
       window.location.href = '/login';
     })
-    .catch((errorStatus) => {
+    .catch(async (errorStatus) => {
       const message =
         errorStatus === 500 ? 'Server error' : 'Username already exists';
-      showAlert({
+      await showAlert({
         message,
         isFormAlert: true,
       });

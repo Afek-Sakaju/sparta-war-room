@@ -43,11 +43,12 @@ async function showAlert({
   alertButtonProperties,
   displayDuration = 4,
   displayPermanent,
+  delayDisplayDuration = 0.1,
 }) {
-  if (isAlertActive) return;
-
   const alertContainer = document.getElementById('alert-container');
-  if (!alertContainer) return;
+  if (isAlertActive || !alertContainer) return;
+
+  if (delayDisplayDuration) await wait(delayDisplayDuration);
 
   alertContainer.classList.toggle('form-alert', !!isFormAlert);
 
