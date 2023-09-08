@@ -39,7 +39,7 @@ async function updateNavbarAuthState(isAlreadyAuth) {
 
 async function showAlert({
   message,
-  isFormAlert,
+  isAccessDeniedAlert,
   alertButtonProperties,
   displayDuration = 4,
   displayPermanent,
@@ -50,14 +50,14 @@ async function showAlert({
 
   if (delayDisplayDuration) await wait(delayDisplayDuration);
 
-  alertContainer.classList.toggle('form-alert', !!isFormAlert);
+  alertContainer.classList.toggle('access-denied-alert', !!isAccessDeniedAlert);
 
   const alertText = document.createElement('span');
   alertText.classList.add('alert-text');
   alertText.textContent = message;
   alertContainer.appendChild(alertText);
 
-  if (!isFormAlert && alertButtonProperties) {
+  if (alertButtonProperties) {
     const { text = 'Understood', href = '/' } = alertButtonProperties;
     const alertButton = document.createElement('a');
 

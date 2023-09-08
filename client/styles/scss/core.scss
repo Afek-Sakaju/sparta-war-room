@@ -106,21 +106,22 @@ body {
   gap: 25px;
   width: 400px;
   position: fixed;
-  top: 25%;
+  top: 85%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 1em;
   z-index: 5;
 
-  background-color: rgba(255, 0, 0, 0.193);
+  background-color: rgba(255, 0, 0, 0.417);
+
   border: 5px solid rgba(255, 255, 255, 0.383);
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   user-select: none;
 
-  &.form-alert {
-    top: 85%;
-    background-color: rgba(255, 0, 0, 0.417);
+  &.access-denied-alert {
+    top: 25%;
+    background-color: rgba(255, 0, 0, 0.193);
   }
 }
 

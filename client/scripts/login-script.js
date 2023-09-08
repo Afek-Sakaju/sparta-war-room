@@ -31,7 +31,6 @@ async function loginUser() {
         errorStatus === 500 ? 'Server error' : 'Incorrect username or password';
       await showAlert({
         message,
-        isFormAlert: true,
       });
     });
 }

@@ -61,7 +61,6 @@ async function logoutUser() {
       console.error(e);
       await showAlert({
         message: 'The logout process has encountered an error',
-        isFormAlert: true,
       });
     });
 }

@@ -4,6 +4,7 @@ window.onload = async () => {
     await showAlert({
       message: 'Entrance permitted only to Spartans who have been logged in.',
       alertButtonProperties: { text: 'Understood', href: '/login' },
+      isAccessDeniedAlert: true,
     });
     await updateNavbarAuthState(false);
     await wait(2);
