@@ -4,29 +4,6 @@ body {
   background-image: url('../../../assets/pictures/bg-naval-war.jpg');
 }
 
-.tactics-data-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.3em;
-  margin-top: 50px;
-  border: 1px solid $darker-greyish;
-  padding: 1.6em;
-  width: 810px;
-  max-height: 80%;
-  overflow-y: auto;
-  box-sizing: border-box;
-  background-color: $dark-charcoal;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  user-select: none;
-
-  &.hidden {
-    visibility: hidden;
-  }
-}
-
 .tactic-container {
   padding: 0.7em 1em;
   width: 100%;
@@ -37,6 +14,10 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   white-space: pre-line;
   line-height: 1.2;
+
+  @media screen and (max-width: 510px) {
+    line-height: 1;
+  }
 }
 
 .tactic-title {
@@ -44,6 +25,14 @@ body {
   color: $whitish;
   font-size: 1.3rem;
   font-weight: bold;
+
+  @media screen and (max-width: 1235px) {
+    font-size: 1.1rem;
+  }
+
+  @media screen and (max-width: 510px) {
+    font-size: 0.9rem;
+  }
 }
 
 .tactic-text {
@@ -51,6 +40,16 @@ body {
   margin-top: 0.5em;
   color: #ccc;
   font-size: 1.1rem;
+
+  @media screen and (max-width: 1235px) {
+    margin-top: 0.3em;
+    font-size: 0.9rem;
+  }
+
+  @media screen and (max-width: 510px) {
+    margin-top: 0;
+    font-size: 0.8rem;
+  }
 }
 
 .tactic-image {
