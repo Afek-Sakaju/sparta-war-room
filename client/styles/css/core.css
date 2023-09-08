@@ -22,7 +22,6 @@ body ::-webkit-scrollbar-thumb {
 body ::-webkit-scrollbar-thumb:hover {
   background: rgb(105, 105, 105);
 }
-
 .top-navbar {
   display: flex;
   justify-content: space-between;
