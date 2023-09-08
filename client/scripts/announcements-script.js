@@ -6,10 +6,11 @@ window.onload = async () => {
       alertButtonProperties: { text: 'Understood', href: '/login' },
       isAccessDeniedAlert: true,
       displayDuration: 2,
+      onClose: () => {
+        window.location.href = '/login';
+      },
     });
     await updateNavbarAuthState(false);
-    await wait(2);
-    window.location.href = '/login';
     localStorage.removeItem('jwtAccessToken');
     return;
   }

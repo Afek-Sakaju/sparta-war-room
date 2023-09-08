@@ -44,6 +44,7 @@ async function showAlert({
   displayDuration = 3,
   displayPermanent,
   delayDisplayDuration = 0.1,
+  onClose,
 }) {
   const alertContainer = document.getElementById('alert-container');
   if (isAlertActive || !alertContainer) return;
@@ -71,7 +72,10 @@ async function showAlert({
   isAlertActive = true;
 
   if (!displayPermanent) {
-    setTimeout(() => hideAlert(), displayDuration * 1000);
+    setTimeout(() => {
+      hideAlert();
+      onClose?.();
+    }, displayDuration * 1000);
   }
 }
 
