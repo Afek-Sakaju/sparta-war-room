@@ -45,6 +45,7 @@ async function showAlert({
   displayPermanent,
   delayDisplayDuration = 0.1,
   onClose,
+  onOpen,
 }) {
   const alertContainer = document.getElementById('alert-container');
   if (isAlertActive || !alertContainer) return;
@@ -70,6 +71,7 @@ async function showAlert({
 
   alertContainer.classList.remove('hidden');
   isAlertActive = true;
+  onOpen?.();
 
   if (!displayPermanent) {
     setTimeout(() => {

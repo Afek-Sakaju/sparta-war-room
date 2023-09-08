@@ -29,10 +29,10 @@ async function loginUser() {
     .catch(async (errorStatus) => {
       const message =
         errorStatus === 500 ? 'Server error' : 'Incorrect username or password';
-      disableSubmitButton();
       await showAlert({
         message,
         onClose: enableSubmitButton,
+        onOpen: disableSubmitButton,
       });
     });
 }

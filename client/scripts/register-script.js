@@ -14,26 +14,26 @@ async function registerUser() {
   const retypePassword = document.getElementById('re-password').value;
 
   if (username.length < 5) {
-    disableSubmitButton();
     return await showAlert({
       message: 'Username must contain at least 5 characters',
       onClose: enableSubmitButton,
+      onOpen: disableSubmitButton,
     });
   }
 
   if (password.length < 5) {
-    disableSubmitButton();
     return await showAlert({
       message: 'Password must contain at least 5 characters',
       onClose: enableSubmitButton,
+      onOpen: disableSubmitButton,
     });
   }
 
   if (password !== retypePassword) {
-    disableSubmitButton();
     return await showAlert({
       message: 'Password fields does not match',
       onClose: enableSubmitButton,
+      onOpen: disableSubmitButton,
     });
   }
 
@@ -47,10 +47,10 @@ async function registerUser() {
     .catch(async (errorStatus) => {
       const message =
         errorStatus === 500 ? 'Server error' : 'Username already exists';
-      disableSubmitButton();
       await showAlert({
         message,
         onClose: enableSubmitButton,
+        onOpen: disableSubmitButton,
       });
     });
 }
