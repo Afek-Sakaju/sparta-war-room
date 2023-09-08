@@ -85,3 +85,13 @@ function hideAlert() {
   alertContainer.innerHTML = '';
   isAlertActive = false;
 }
+
+function disableSubmitButton() {
+  const submitButton = document.getElementById('submit-button');
+  if (submitButton) submitButton.disabled = true;
+}
+
+function enableSubmitButton() {
+  const submitButton = document.getElementById('submit-button');
+  if (submitButton) submitButton.disabled = false;
+}
