@@ -44,7 +44,8 @@ async function showAlert({
   displayDuration = 4,
 }) {
   const alertContainer = document.getElementById('alert-container');
-  if (isFormAlert) alertContainer.classList?.add('form alert');
+  if (isAlertActive) return;
+  if (isFormAlert) alertContainer.classList.add('form-alert');
 
   const alertText = document.createElement('span');
   alertText.classList?.add('alert-text');
@@ -61,11 +62,13 @@ async function showAlert({
   }
 
   alertContainer?.classList?.remove('hidden');
-
+  isAlertActive = true;
   if (displayDuration) setTimeout(() => hideAlert(), displayDuration * 1000);
 }
 
 function hideAlert() {
   const alertContainer = document.getElementById('alert-container');
   alertContainer?.classList?.add('hidden');
+  alertContainer.innerHTML = '';
+  isAlertActive = false;
 }

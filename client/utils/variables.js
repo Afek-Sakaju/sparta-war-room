@@ -1,0 +1,1 @@
+let isAlertActive = false;
