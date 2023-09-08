@@ -89,11 +89,11 @@ function hideAlert() {
 }
 
 function disableSubmitButton() {
-  const submitButton = document.getElementById('submit-button');
+  const submitButton = document.getElementById('form-submit');
   if (submitButton) submitButton.disabled = true;
 }
 
 function enableSubmitButton() {
-  const submitButton = document.getElementById('submit-button');
+  const submitButton = document.getElementById('form-submit');
   if (submitButton) submitButton.disabled = false;
 }
