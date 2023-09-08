@@ -4,7 +4,7 @@ body {
   background-image: url('../../../assets/pictures/bg-flowers-field.jpg');
 }
 
-#announcements-list-container {
+.announcements-data-container {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -54,4 +54,3 @@ body {
     font-weight: bolder;
   }
 }
-

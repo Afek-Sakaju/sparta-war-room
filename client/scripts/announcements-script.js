@@ -17,15 +17,13 @@ window.onload = async () => {
   }
 
   await updateNavbarAuthState(true);
-  unhideElements('announcements-list-container');
+  unhideElements('announcements-panel');
 
   const annData = await getData('/announcements/all')
     .then((d) => d.json())
     .catch((e) => console.error(e));
 
-  const annListContainer = document.getElementById(
-    'announcements-list-container'
-  );
+  const annListContainer = document.getElementById('announcements-panel');
 
   annData?.forEach(({ title, description, announcer }) => {
     const annWrapper = document.createElement('div');
