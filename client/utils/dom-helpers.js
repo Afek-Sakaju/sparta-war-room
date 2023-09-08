@@ -41,7 +41,7 @@ async function showAlert({
   message,
   isAccessDeniedAlert,
   alertButtonProperties,
-  displayDuration = 4,
+  displayDuration = 3,
   displayPermanent,
   delayDisplayDuration = 0.1,
 }) {
