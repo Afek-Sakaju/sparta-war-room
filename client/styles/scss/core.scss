@@ -28,7 +28,7 @@ body {
     }
   }
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1235px) {
   }
 
   @media screen and (max-width: 768px) {
@@ -48,6 +48,10 @@ body {
   padding: 10px;
   background-color: $dark-charcoal;
   user-select: none;
+
+  @media screen and (max-width: 1235px) {
+    padding: 7px;
+  }
 }
 
 .nav-item {
@@ -58,6 +62,11 @@ body {
   color: $whitish;
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
+
+  @media screen and (max-width: 1235px) {
+    font-size: 0.9em;
+    padding: 7.5px 8px;
+  }
 
   &.home-button {
     display: flex;
@@ -73,6 +82,18 @@ body {
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
+    }
+
+    @media screen and (max-width: 1235px) {
+      width: 22px;
+      height: 22px;
+      padding: 5px 13px;
+    }
+  }
+  @media screen and (max-width: 815px) {
+    .tactics-button-text-extenstion {
+      display: none;
+      visibility: hidden;
     }
   }
 
@@ -97,14 +118,59 @@ body {
   text-align: center;
   width: 100%;
   z-index: -1;
+
+  @media screen and (max-width: 860px) {
+    position: initial;
+    display: flex;
+    align-items: center;
+    width: max-content;
+  }
 }
 
 .nav-title {
   margin: 0;
   font-size: 1.5rem;
+  font-weight: bold;
   color: $whitish;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   letter-spacing: 1px;
+
+  &.short-title {
+    display: none;
+    visibility: hidden;
+  }
+
+  @media screen and (max-width: 1600px) {
+    &.title-extension {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  @media screen and (max-width: 1235px) {
+    font-size: 1.3rem;
+  }
+
+  @media screen and (max-width: 1070px) {
+    &:not(.title-extension) {
+      display: none;
+      visibility: hidden;
+    }
+
+    &.short-title {
+      display: block;
+      visibility: unset;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    font-size: 1.1rem;
+  }
+
+  @media screen and (max-width: 520px) {
+    display: none !important;
+    visibility: hidden !important;
+  }
 }
 
 .alert-container {

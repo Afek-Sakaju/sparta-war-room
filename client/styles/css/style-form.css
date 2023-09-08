@@ -33,6 +33,11 @@ body ::-webkit-scrollbar-thumb:hover {
   background-color: #343434;
   user-select: none;
 }
+@media screen and (max-width: 1235px) {
+  .top-navbar {
+    padding: 7px;
+  }
+}
 
 .nav-item {
   padding: 10px 15px;
@@ -42,6 +47,12 @@ body ::-webkit-scrollbar-thumb:hover {
   color: #f2f2f2;
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
+}
+@media screen and (max-width: 1235px) {
+  .nav-item {
+    font-size: 0.9em;
+    padding: 7.5px 8px;
+  }
 }
 .nav-item.home-button {
   display: flex;
@@ -57,6 +68,19 @@ body ::-webkit-scrollbar-thumb:hover {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+}
+@media screen and (max-width: 1235px) {
+  .nav-item.home-button {
+    width: 22px;
+    height: 22px;
+    padding: 5px 13px;
+  }
+}
+@media screen and (max-width: 815px) {
+  .nav-item .tactics-button-text-extenstion {
+    display: none;
+    visibility: hidden;
+  }
 }
 .nav-item:hover {
   background-color: #232323;
@@ -79,13 +103,58 @@ body ::-webkit-scrollbar-thumb:hover {
   width: 100%;
   z-index: -1;
 }
+@media screen and (max-width: 860px) {
+  .nav-mid {
+    position: initial;
+    display: flex;
+    align-items: center;
+    width: max-content;
+  }
+}
 
 .nav-title {
   margin: 0;
   font-size: 1.5rem;
+  font-weight: bold;
   color: #f2f2f2;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   letter-spacing: 1px;
+}
+.nav-title.short-title {
+  display: none;
+  visibility: hidden;
+}
+@media screen and (max-width: 1600px) {
+  .nav-title.title-extension {
+    display: none;
+    visibility: hidden;
+  }
+}
+@media screen and (max-width: 1235px) {
+  .nav-title {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 1070px) {
+  .nav-title:not(.title-extension) {
+    display: none;
+    visibility: hidden;
+  }
+  .nav-title.short-title {
+    display: block;
+    visibility: unset;
+  }
+}
+@media screen and (max-width: 650px) {
+  .nav-title {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 520px) {
+  .nav-title {
+    display: none !important;
+    visibility: hidden !important;
+  }
 }
 
 .alert-container {

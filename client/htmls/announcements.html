@@ -19,11 +19,13 @@
           Announcements
         </a>
         <a id="tactics-btn" href="/tactics" class="nav-item hidden">
-          Spartan-Tactics
+          <span class="tactics-button-text-extenstion">Spartan-</span
+          ><span>Tactics</span>
         </a>
       </div>
       <div class="nav-mid">
-        <h1 class="nav-title">Sparta's Announcements Page</h1>
+        <span class="nav-title">Sparta's Announcements Page</span>
+        <span class="nav-title short-title">Announcements</span>
       </div>
       <div class="nav-right">
         <a id="logout-btn" onclick="logoutUser()" class="nav-item hidden">
@@ -36,7 +38,10 @@
       </div>
     </nav>
     <div id="page-alert" class="alert-container hidden"></div>
-    <div id="announcements-panel" class="announcements-data-container hidden"></div>
+    <div
+      id="announcements-panel"
+      class="announcements-data-container hidden"
+    ></div>
   </body>
   <script src="../utils/global-variables.js"></script>
   <script src="../utils/data-fetch-helpers.js"></script>
