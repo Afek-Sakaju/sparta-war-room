@@ -1,4 +1,4 @@
-# Chivalry-Auth <img src="./readme-resources/knight-defense.png" width=110px height=110px align="right">
+# sparta-war-room <img src="./readme-resources/knight-defense.png" width=110px height=110px align="right">
 
 ### This project utilizes Express and MongoDB for the server-side development.<br/> On the client side, JavaScript, HTML, and SCSS are used. <br/>The design is inspired by a medieval knights clan, contributing a creative and unique aspect to the project.<img src="./readme-resources/login-logo.png" width=40px height=40px align="right">
 

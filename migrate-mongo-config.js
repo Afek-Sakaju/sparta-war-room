@@ -1,8 +1,8 @@
 const config = {
   mongodb: {
-    url: 'mongodb://127.0.0.1:27017/chivalry-auth',
+    url: 'mongodb://127.0.0.1:27017/sparta-war-room',
 
-    databaseName: 'mongodb://127.0.0.1:27017/chivalry-auth'.split('/').pop(),
+    databaseName: 'mongodb://127.0.0.1:27017/sparta-war-room'.split('/').pop(),
 
     options: {
       useNewUrlParser: true,
