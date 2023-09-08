@@ -29,6 +29,9 @@ async function loginUser() {
     .catch((errorStatus) => {
       const message =
         errorStatus === 500 ? 'Server error' : 'Incorrect username or password';
-      showAlert(message, 4);
+      showAlert({
+        message,
+        isFormAlert: true,
+      });
     });
 }

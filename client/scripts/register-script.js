@@ -14,15 +14,24 @@ async function registerUser() {
   const retypePassword = document.getElementById('re-password').value;
 
   if (username.length < 5) {
-    return showAlert('Username must contain at least 5 characters', 4);
+    return showAlert({
+      message: 'Username must contain at least 5 characters',
+      isFormAlert: true,
+    });
   }
 
   if (password.length < 5) {
-    return showAlert('Password must contain at least 5 characters', 4);
+    return showAlert({
+      message: 'Password must contain at least 5 characters',
+      isFormAlert: true,
+    });
   }
 
   if (password !== retypePassword) {
-    return showAlert('Password fields does not match', 4);
+    return showAlert({
+      message: 'Password fields does not match',
+      isFormAlert: true,
+    });
   }
 
   await postData('/auth/register', {
@@ -35,6 +44,9 @@ async function registerUser() {
     .catch((errorStatus) => {
       const message =
         errorStatus === 500 ? 'Server error' : 'Username already exists';
-      showAlert(message, 4);
+      showAlert({
+        message,
+        isFormAlert: true,
+      });
     });
 }

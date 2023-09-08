@@ -37,13 +37,29 @@ async function updateNavbarAuthState(isAlreadyAuth) {
   else unhideElements(notAuthElementsToUnhide);
 }
 
-function showAlert(customMessage, displayDuration) {
+async function showAlert({
+  message,
+  isFormAlert,
+  alertButtonProperties,
+  displayDuration = 4,
+}) {
   const alertContainer = document.getElementById('alert-container');
+  if (isFormAlert) alertContainer.classList?.add('form alert');
 
-  if (customMessage) {
-    const alertText = document.getElementById('alert-text');
-    alertText.innerText = customMessage;
+  const alertText = document.createElement('span');
+  alertText.classList?.add('alert-text');
+  alertText.textContent = message;
+  alertContainer.appendChild(alertText);
+
+  if (alertButtonProperties && !isFormAlert) {
+    const { text, href } = alertButtonProperties;
+    const alertButton = document.createElement('a');
+    alertButton.classList?.add('alert-button');
+    alertButton.textContent = text || 'Understood';
+    alertButton.href = href || '/';
+    alertContainer.appendChild(alertButton);
   }
+
   alertContainer?.classList?.remove('hidden');
 
   if (displayDuration) setTimeout(() => hideAlert(), displayDuration * 1000);

@@ -2,7 +2,10 @@ window.onload = async () => {
   const isAuthenticated = await isAuthenticatedUser();
   if (!isAuthenticated) {
     await wait(0.1);
-    showAlert();
+    showAlert({
+      message: 'Entrance permitted only to Spartans who have been logged in.',
+      alertButtonProperties: { text: 'Understood', href: '/login' },
+    });
     await updateNavbarAuthState(false);
     await wait(2);
     window.location.href = '/login';
