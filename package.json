@@ -12,7 +12,7 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "start": "npm run build && node dist/app.js",
+    "start": "npm run migrateDB && npm run build && node dist/app.js",
     "dev-with-migrations": "npm run migrateDB && nodemon src/app.ts",
     "dev": "nodemon src/app.ts",
     "lint": "eslint .",
