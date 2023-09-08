@@ -145,7 +145,7 @@ body {
   background-image: url("../../../assets/pictures/bg-naval-war.jpg");
 }
 
-#tactics-list-container {
+.tactics-data-container {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -163,7 +163,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   user-select: none;
 }
-#tactics-list-container.hidden {
+.tactics-data-container.hidden {
   visibility: hidden;
 }
 
