@@ -42,28 +42,36 @@ async function showAlert({
   isFormAlert,
   alertButtonProperties,
   displayDuration = 4,
+  displayPermanent,
 }) {
-  const alertContainer = document.getElementById('alert-container');
   if (isAlertActive) return;
-  if (isFormAlert) alertContainer.classList.add('form-alert');
+
+  const alertContainer = document.getElementById('alert-container');
+  if (!alertContainer) return;
+
+  alertContainer.classList.toggle('form-alert', !!isFormAlert);
 
   const alertText = document.createElement('span');
-  alertText.classList?.add('alert-text');
+  alertText.classList.add('alert-text');
   alertText.textContent = message;
   alertContainer.appendChild(alertText);
 
-  if (alertButtonProperties && !isFormAlert) {
-    const { text, href } = alertButtonProperties;
+  if (!isFormAlert && alertButtonProperties) {
+    const { text = 'Understood', href = '/' } = alertButtonProperties;
     const alertButton = document.createElement('a');
-    alertButton.classList?.add('alert-button');
-    alertButton.textContent = text || 'Understood';
-    alertButton.href = href || '/';
+
+    alertButton.classList.add('alert-button');
+    alertButton.textContent = text;
+    alertButton.href = href;
     alertContainer.appendChild(alertButton);
   }
 
-  alertContainer?.classList?.remove('hidden');
+  alertContainer.classList.remove('hidden');
   isAlertActive = true;
-  if (displayDuration) setTimeout(() => hideAlert(), displayDuration * 1000);
+
+  if (!displayPermanent) {
+    setTimeout(() => hideAlert(), displayDuration * 1000);
+  }
 }
 
 function hideAlert() {
