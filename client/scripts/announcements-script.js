@@ -49,17 +49,3 @@ window.onload = async () => {
     annListContainer.appendChild(annWrapper);
   });
 };
-
-//const username = localStorage.getItem('successLoginUsername');
-//document.getElementById(
-//  'title'
-//).innerHTML = `Welcome ${username}</br> you have joined our clan!`;
-
-//async function logoutUser() {
-//  getData('/auth/logout')
-//    .catch(() => {})
-//    .finally(() => {
-//      window.location.href = '/login';
-//      localStorage.removeItem('jwtAccessToken');
-//    });
-//}

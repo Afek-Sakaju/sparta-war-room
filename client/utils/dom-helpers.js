@@ -1,7 +1,3 @@
-function soundEffect(name) {
-  new Audio(`../assets/sounds/${name}.mp3`).play();
-}
-
 function hideElements(elementsIds) {
   if (!(elementsIds instanceof Array)) elementsIds = [elementsIds];
 
