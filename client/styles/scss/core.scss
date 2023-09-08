@@ -27,15 +27,6 @@ body {
       background: $darker-greyish;
     }
   }
-
-  @media screen and (max-width: 1235px) {
-  }
-
-  @media screen and (max-width: 768px) {
-  }
-
-  @media screen and (max-width: 480px) {
-  }
 }
 
 .top-navbar {
@@ -51,6 +42,10 @@ body {
 
   @media screen and (max-width: 1235px) {
     padding: 7px;
+  }
+
+  @media screen and (max-width: 360px) {
+    padding: 3px;
   }
 }
 
@@ -83,17 +78,32 @@ body {
       background-size: contain;
       background-repeat: no-repeat;
     }
+  }
 
-    @media screen and (max-width: 1235px) {
+  @media screen and (max-width: 1235px) {
+    &.home-button {
       width: 22px;
       height: 22px;
       padding: 5px 13px;
     }
   }
+
   @media screen and (max-width: 815px) {
-    .tactics-button-text-extenstion {
+    .tactics-button-text-extension {
       display: none;
       visibility: hidden;
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    font-size: 0.75em;
+    padding: 5px 6px;
+    margin: 0 3px;
+
+    &.home-button {
+      width: 18px;
+      height: 18px;
+      padding: 3.5px 8px;
     }
   }
 

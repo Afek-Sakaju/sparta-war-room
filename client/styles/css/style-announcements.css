@@ -22,6 +22,7 @@ body ::-webkit-scrollbar-thumb {
 body ::-webkit-scrollbar-thumb:hover {
   background: rgb(105, 105, 105);
 }
+
 .top-navbar {
   display: flex;
   justify-content: space-between;
@@ -36,6 +37,11 @@ body ::-webkit-scrollbar-thumb:hover {
 @media screen and (max-width: 1235px) {
   .top-navbar {
     padding: 7px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .top-navbar {
+    padding: 3px;
   }
 }
 
@@ -77,9 +83,21 @@ body ::-webkit-scrollbar-thumb:hover {
   }
 }
 @media screen and (max-width: 815px) {
-  .nav-item .tactics-button-text-extenstion {
+  .nav-item .tactics-button-text-extension {
     display: none;
     visibility: hidden;
+  }
+}
+@media screen and (max-width: 360px) {
+  .nav-item {
+    font-size: 0.75em;
+    padding: 5px 6px;
+    margin: 0 3px;
+  }
+  .nav-item.home-button {
+    width: 18px;
+    height: 18px;
+    padding: 3.5px 8px;
   }
 }
 .nav-item:hover {
