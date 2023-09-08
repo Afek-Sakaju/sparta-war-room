@@ -37,12 +37,19 @@ async function updateNavbarAuthState(isAlreadyAuth) {
   else unhideElements(notAuthElementsToUnhide);
 }
 
-function showAlert() {
-  const customAlert = document.getElementById('alert-container');
-  customAlert?.classList?.remove('hidden');
+function showAlert(customMessage, displayDuration) {
+  const alertContainer = document.getElementById('alert-container');
+
+  if (customMessage) {
+    const alertText = document.getElementById('alert-text');
+    alertText.innerText = customMessage;
+  }
+  alertContainer?.classList?.remove('hidden');
+
+  if (displayDuration) setTimeout(() => hideAlert(), displayDuration * 1000);
 }
 
 function hideAlert() {
-  const customAlert = document.getElementById('alert-container');
-  customAlert?.classList?.add('hidden');
+  const alertContainer = document.getElementById('alert-container');
+  alertContainer?.classList?.add('hidden');
 }

@@ -117,9 +117,14 @@ body {
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   user-select: none;
+
+  &.form-alert {
+    top: 85%;
+    background-color: rgba(255, 0, 0, 0.417);
+  }
 }
 
-.alert-text {
+#alert-text {
   font-size: 1.3rem;
   color: $whitish;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
