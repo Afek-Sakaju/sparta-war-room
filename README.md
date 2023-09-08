@@ -8,11 +8,11 @@ This project utilizes a database to store data and provides access to it through
 
 The project incorporates the following APIs:
 
-| Users data and authentication | Announcements data | Spartan-tactics data
-| ------------------- | -----------| -------
-| + Register | + Get all announcements data| + Get all tactics data
-| + Login | 
-| + Logout | 
+| Users data and authentication | Announcements data           | Spartan-tactics data   |
+| ----------------------------- | ---------------------------- | ---------------------- |
+| + Register                    | + Get all announcements data | + Get all tactics data |
+| + Login                       |
+| + Logout                      |
 
 ---
 
@@ -22,6 +22,7 @@ The project incorporates the following APIs:
 - _MongoDB service_ version 6.0.1+
 
 **Command lines**
+
 - `npm install` <br /> Install all the necessary packages for running and developing the server-side.
 - `npm run start`<br /> Build the _TS_ code and execute the compiled _JS_ project.
 - `npm run dev-with-migrations`<br /> This command triggers the _migration_ process, initializing the database with essential data to showcase the project's functionality. It subsequently launches _TS_ code using _nodemon_ for a smooth and uninterrupted development experience.
@@ -45,7 +46,7 @@ The project incorporates the following APIs:
 - [x] _**Typescript**_ : the project has been implemented using _typescript_ interfaces.
 - [x] _**jwt**_ : implementing authentication using JSON Web Tokens involves securely storing the token for the authenticated user.
 - [x] _**MongoDB**_ : utilized with the _**mongoose**_ library for defining schemas and models, which are then utilized in the controllers and services.
--   [x] _**mongo-migrate**_ : the **migrations** ensure that the MongoDB handle important database initializations before running, including announcements creation and Spartan-tactics data.
+- [x] _**mongo-migrate**_ : the **migrations** ensure that the MongoDB handle important database initializations before running, including announcements creation and Spartan-tactics data.
 - [x] _**Bcrypt**_ : user passwords are securely encrypted in accordance with best practices to ensure data security.
 - [x] **JavaScript** : _javascript_ script files enable interactive behavior in web pages by handling user interactions on elements.
 - [x] _**HTML**_ : the project extensively relies on _HTML_ for constructing and defining its web page elements.
@@ -55,6 +56,13 @@ The project incorporates the following APIs:
 
 - [x] _**ESLINT**_ : the project adheres to the _ESLint_ guidelines and follows the best practices recommended by _airbnb_.
 - [x] _**nodemon**_ : watches for _typescript_ file changes and compiles them in real-time.
+
+### In addition, the project incorporates the following features:
+
+- [x] _**Responsiveness**_: The application is intentionally designed to adapt to screens of various sizes by utilizing _media queries_ within its components. This ensures that the user interface adjusts seamlessly to different screen dimensions.
+- [x] **status code** : HTTP request responses return the appropriate and correct status codes.
+- [x] **_postman_** : _postman_ collection for simplified testing and interaction with the project's APIs : </br>
+      `sparta-war-room.postman_collection.json`
 
 ## Author
 
