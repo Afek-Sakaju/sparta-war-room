@@ -43,7 +43,7 @@ async function showAlert({
   alertButtonProperties,
   displayDuration = 3,
   displayPermanent,
-  delayDisplayDuration = 0.1,
+  delayDisplayDuration,
   onClose,
   onOpen,
 }) {
