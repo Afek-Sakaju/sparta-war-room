@@ -9,8 +9,8 @@ window.onload = async () => {
 };
 
 async function loginUser() {
-  const username = document.getElementById('username').value;
-  const password = document.getElementById('password').value;
+  const username = document.getElementById('username-field').value;
+  const password = document.getElementById('password-field').value;
 
   await postData('/auth/login', {
     username,

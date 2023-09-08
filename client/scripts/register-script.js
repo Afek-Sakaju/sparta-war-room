@@ -9,9 +9,11 @@ window.onload = async () => {
 };
 
 async function registerUser() {
-  const username = document.getElementById('username').value;
-  const password = document.getElementById('password').value;
-  const retypePassword = document.getElementById('re-password').value;
+  const username = document.getElementById('username-field').value;
+  const password = document.getElementById('password-field').value;
+  const retypePassword = document.getElementById(
+    'confirm-password-field'
+  ).value;
 
   if (username.length < 5) {
     return await showAlert({

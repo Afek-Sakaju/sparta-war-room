@@ -18,15 +18,13 @@ window.onload = async () => {
   }
 
   await updateNavbarAuthState(true);
-  unhideElements('tactics-list-container');
+  unhideElements('tactics-panel');
 
   const tacticsData = await getData('/tactics/all')
     .then((d) => d.json())
     .catch((e) => console.error(e));
 
-  const tacticsListContainer = document.getElementById(
-    'tactics-list-container'
-  );
+  const tacticsListContainer = document.getElementById('tactics-panel');
 
   tacticsData?.forEach(({ title, information, image }) => {
     const tacticWrapper = document.createElement('div');
