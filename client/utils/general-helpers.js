@@ -1,16 +1,8 @@
 function addLineBreaksToText(text, lineBreaksCount = 1) {
   const lineBreaks = '\n'.repeat(lineBreaksCount);
   const punctuations = /[.!?]/g;
-  const textWithLineBreaks = text?.replaceAll(punctuations, `$& ${lineBreaks}`);
-  let result = textWithLineBreaks;
 
-  const isEndsWithLineBreaks = textWithLineBreaks?.endsWith('\n');
-  if (isEndsWithLineBreaks) {
-    const subStrEndIndex = textWithLineBreaks?.length - lineBreaksCount - 1;
-    result = textWithLineBreaks?.substring(0, subStrEndIndex);
-  }
-
-  return result;
+  return text?.replace(punctuations, `$& ${lineBreaks}`)?.trimEnd();
 }
 
 async function wait(seconds) {
