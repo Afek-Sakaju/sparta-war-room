@@ -26,7 +26,7 @@ async function getData(url) {
     headers,
   })
     .then((response) => {
-      if (!response?.ok) throw Error(response.status);
+      if (!response || !response?.ok) throw Error(response.status);
       return response;
     })
     .catch((e) => console.error(e));
