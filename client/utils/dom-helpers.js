@@ -85,12 +85,9 @@ function hideAlert() {
   isAlertActive = false;
 }
 
-function disableSubmitButton() {
+function setSubmitButtonState(disabled) {
   const submitButton = document.getElementById('form-submit');
-  if (submitButton) submitButton.disabled = true;
-}
+  if (!submitButton) return;
 
-function enableSubmitButton() {
-  const submitButton = document.getElementById('form-submit');
-  if (submitButton) submitButton.disabled = false;
+  submitButton.disabled = disabled;
 }

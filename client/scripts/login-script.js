@@ -28,8 +28,8 @@ async function loginUser() {
         : 'Incorrect username or password';
       await showAlert({
         message,
-        onClose: enableSubmitButton,
-        onOpen: disableSubmitButton,
+        onClose: () => setSubmitButtonState(false),
+        onOpen: () => setSubmitButtonState(true),
       });
     });
 }
