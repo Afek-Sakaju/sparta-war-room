@@ -78,7 +78,9 @@ async function showAlert({
 
 function hideAlert() {
   const alertContainer = document.getElementById('page-alert');
-  alertContainer?.classList?.add('hidden');
+  if (!isAlertActive || !alertContainer) return;
+
+  alertContainer.classList.add('hidden');
   alertContainer.innerHTML = '';
   isAlertActive = false;
 }

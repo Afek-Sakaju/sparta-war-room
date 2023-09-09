@@ -7,7 +7,7 @@ async function postData(url, data) {
     body: JSON.stringify(data),
   })
     .then((response) => {
-      if (!response.ok) throw Error(response.status);
+      if (!response?.ok) throw Error(response.status);
       return response;
     })
     .catch((e) => console.error(e));
@@ -26,7 +26,7 @@ async function getData(url) {
     headers,
   })
     .then((response) => {
-      if (!response.ok) throw Error(response.status);
+      if (!response?.ok) throw Error(response.status);
       return response;
     })
     .catch((e) => console.error(e));

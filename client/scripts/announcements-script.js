@@ -20,10 +20,11 @@ window.onload = async () => {
   unhideElements('announcements-panel');
 
   const annData = await getData('/announcements/all')
-    .then((d) => d.json())
+    .then((d) => d?.json())
     .catch((e) => console.error(e));
 
   const annListContainer = document.getElementById('announcements-panel');
+  if (!annListContainer) return;
 
   annData?.forEach(({ title, description, announcer }) => {
     const annWrapper = document.createElement('div');

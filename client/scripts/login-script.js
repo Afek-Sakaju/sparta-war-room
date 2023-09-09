@@ -14,18 +14,18 @@ async function loginUser() {
     password,
   })
     .then((res) => {
-      return res.json();
+      return res?.json();
     })
     .then((data) => {
       localStorage.setItem('successLoginUsername', username);
       localStorage.setItem('jwtAccessToken', data.accessToken);
-    })
-    .then(() => {
       window.location.href = '/';
     })
     .catch(async (errorStatus) => {
-      const message =
-        errorStatus === 500 ? 'Server error' : 'Incorrect username or password';
+      const isServerError = errorStatus === 500;
+      const message = isServerError
+        ? 'Server error'
+        : 'Incorrect username or password';
       await showAlert({
         message,
         onClose: enableSubmitButton,

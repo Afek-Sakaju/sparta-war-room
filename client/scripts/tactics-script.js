@@ -20,10 +20,11 @@ window.onload = async () => {
   unhideElements('tactics-panel');
 
   const tacticsData = await getData('/tactics/all')
-    .then((d) => d.json())
+    .then((d) => d?.json())
     .catch((e) => console.error(e));
 
   const tacticsListContainer = document.getElementById('tactics-panel');
+  if (!tacticsListContainer) return;
 
   tacticsData?.forEach(({ title, information, image }) => {
     const tacticWrapper = document.createElement('div');
