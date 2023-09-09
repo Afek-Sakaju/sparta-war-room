@@ -15,7 +15,7 @@ async function registerUser() {
   if (username?.length < 5) {
     return await showAlert({
       message: 'Username must contain at least 5 characters',
-      onClose: () => setSubmitButtonState(false),
+      onClose: setSubmitButtonState,
       onOpen: () => setSubmitButtonState(true),
     });
   }
@@ -23,7 +23,7 @@ async function registerUser() {
   if (password?.length < 5) {
     return await showAlert({
       message: 'Password must contain at least 5 characters',
-      onClose: () => setSubmitButtonState(false),
+      onClose: setSubmitButtonState,
       onOpen: () => setSubmitButtonState(true),
     });
   }
@@ -31,7 +31,7 @@ async function registerUser() {
   if (password !== retypePassword) {
     return await showAlert({
       message: 'Password fields does not match',
-      onClose: () => setSubmitButtonState(false),
+      onClose: setSubmitButtonState,
       onOpen: () => setSubmitButtonState(true),
     });
   }
@@ -48,7 +48,7 @@ async function registerUser() {
         errorStatus === 500 ? 'Server error' : 'Username already exists';
       await showAlert({
         message,
-        onClose: () => setSubmitButtonState(false),
+        onClose: setSubmitButtonState,
         onOpen: () => setSubmitButtonState(true),
       });
     });

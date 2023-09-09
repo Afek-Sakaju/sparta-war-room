@@ -28,7 +28,7 @@ async function loginUser() {
         : 'Incorrect username or password';
       await showAlert({
         message,
-        onClose: () => setSubmitButtonState(false),
+        onClose: setSubmitButtonState,
         onOpen: () => setSubmitButtonState(true),
       });
     });
