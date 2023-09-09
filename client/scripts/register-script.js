@@ -1,9 +1,6 @@
 window.onload = async () => {
   const isAuthenticated = await isAuthenticatedUser();
-  if (isAuthenticated) {
-    window.location.href = '/';
-    return;
-  }
+  if (isAuthenticated) return (window.location.href = '/');
 
   updateNavbarAuthState(false);
 };

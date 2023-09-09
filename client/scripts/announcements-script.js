@@ -11,12 +11,12 @@ window.onload = async () => {
         window.location.href = '/login';
       },
     });
-     updateNavbarAuthState(false);
+
     localStorage.removeItem('jwtAccessToken');
-    return;
+    return updateNavbarAuthState(false);
   }
 
-   updateNavbarAuthState(true);
+  updateNavbarAuthState(true);
   unhideElements('announcements-panel');
 
   const annData = await getData('/announcements/all')
