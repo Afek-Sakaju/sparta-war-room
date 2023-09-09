@@ -5,7 +5,7 @@ window.onload = async () => {
     return;
   }
 
-  await updateNavbarAuthState(false);
+  updateNavbarAuthState(false);
 };
 
 async function registerUser() {

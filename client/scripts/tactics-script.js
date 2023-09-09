@@ -11,13 +11,13 @@ window.onload = async () => {
         window.location.href = '/login';
       },
     });
-    await updateNavbarAuthState(false);
+     updateNavbarAuthState(false);
 
     localStorage.removeItem('jwtAccessToken');
     return;
   }
 
-  await updateNavbarAuthState(true);
+   updateNavbarAuthState(true);
   unhideElements('tactics-panel');
 
   const tacticsData = await getData('/tactics/all')
