@@ -1,0 +1,153 @@
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: $dark-charcoal;
+  user-select: none;
+
+  @media screen and (max-width: 1235px) {
+    padding: 7px;
+  }
+
+  @media screen and (max-width: 360px) {
+    padding: 3px;
+  }
+}
+
+.nav-item {
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 5px;
+  background-color: $darker-greyish;
+  color: $whitish;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+
+  @media screen and (max-width: 1235px) {
+    font-size: 0.9em;
+    padding: 7.5px 8px;
+  }
+
+  &.home-button {
+    display: flex;
+    justify-content: center;
+    width: 27px;
+    height: 27px;
+    padding: 6px 13px;
+
+    .home-icon {
+      height: 100%;
+      width: 100%;
+      background-image: url('../../assets/pictures/home-icon.png');
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  @media screen and (max-width: 1235px) {
+    &.home-button {
+      width: 22px;
+      height: 22px;
+      padding: 5px 13px;
+    }
+  }
+
+  @media screen and (max-width: 815px) {
+    .tactics-button-text-extension {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    font-size: 0.75em;
+    padding: 5px 6px;
+    margin: 0 3px;
+
+    &.home-button {
+      width: 18px;
+      height: 18px;
+      padding: 3.5px 8px;
+    }
+  }
+
+  &:hover {
+    background-color: $on-hover-darker;
+    cursor: pointer;
+  }
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-mid {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: -1;
+
+  @media screen and (max-width: 860px) {
+    position: initial;
+    display: flex;
+    align-items: center;
+    width: max-content;
+  }
+}
+
+.nav-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: $whitish;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+
+  &.short-title {
+    display: none;
+    visibility: hidden;
+  }
+
+  @media screen and (max-width: 1600px) {
+    &.title-extension {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  @media screen and (max-width: 1235px) {
+    font-size: 1.3rem;
+  }
+
+  @media screen and (max-width: 1070px) {
+    &:not(.title-extension) {
+      display: none;
+      visibility: hidden;
+    }
+
+    &.short-title {
+      display: block;
+      visibility: unset;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    font-size: 1.1rem;
+  }
+
+  @media screen and (max-width: 520px) {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}

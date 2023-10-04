@@ -1,0 +1,77 @@
+body {
+  background-image: url("../../../assets/pictures/bg-flowers-field.jpg");
+}
+
+.data-container {
+  line-height: 1.28;
+}
+
+.announcement-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 1em;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgb(105, 105, 105);
+  border: 2px solid rgb(105, 105, 105);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 1235px) {
+  .announcement-container {
+    padding: 0.6em;
+  }
+}
+@media screen and (max-width: 900px) {
+  .announcement-container {
+    text-align: center;
+    gap: 15px;
+  }
+}
+@media screen and (max-width: 510px) {
+  .announcement-container {
+    padding: 0.2em;
+    gap: 11px;
+  }
+}
+
+.announcement-title {
+  margin: 0;
+  margin-bottom: 3px;
+  color: #f2f2f2;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+@media screen and (max-width: 1235px) {
+  .announcement-title {
+    margin-bottom: 1px;
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 510px) {
+  .announcement-title {
+    font-size: 0.75rem;
+  }
+}
+
+.announcement-text {
+  margin: 0;
+  color: #ccc;
+  font-size: 1rem;
+}
+.announcement-text.announcer-text {
+  font-weight: bolder;
+}
+@media screen and (max-width: 1235px) {
+  .announcement-text {
+    font-size: 0.85rem;
+  }
+}
+@media screen and (max-width: 510px) {
+  .announcement-text {
+    font-size: 0.65rem;
+  }
+}
+
+/*# sourceMappingURL=announcements.css.map */

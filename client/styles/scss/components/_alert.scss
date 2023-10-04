@@ -1,0 +1,88 @@
+.alert-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 25px;
+  width: 400px;
+  position: fixed;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1em;
+  z-index: 5;
+
+  background-color: rgba(255, 0, 0, 0.417);
+
+  border: 5px solid rgba(255, 255, 255, 0.383);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  user-select: none;
+
+  &.access-denied-alert {
+    top: 25%;
+    background-color: rgba(255, 0, 0, 0.193);
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 50%;
+    padding: 0.8em;
+  }
+
+  @media screen and (max-width: 450px) {
+    width: 60%;
+    padding: 0.65em;
+  }
+
+  @media screen and (max-width: 320px) {
+    width: 65%;
+    padding: 0.55em;
+  }
+}
+
+.alert-text {
+  font-size: 1.3rem;
+  color: $whitish;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+  @media screen and (max-width: 800px) {
+    font-size: 1.05rem;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 0.8rem;
+  }
+
+  @media screen and (max-width: 320px) {
+    font-size: 0.75rem;
+  }
+}
+
+.alert-button {
+  padding: 10px 14px;
+  font-size: 0.95em;
+  font-weight: bold;
+  text-decoration: none;
+  color: $whitish;
+  background-color: rgba(255, 0, 0, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    color: rgba(255, 0, 0, 0.7);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-color: rgba(255, 0, 0, 0.7);
+  }
+
+  @media screen and (max-width: 800px) {
+    padding: 7px 9px;
+    font-size: 0.8em;
+  }
+
+  @media screen and (max-width: 450px) {
+    padding: 6px 4px;
+    font-size: 0.65em;
+  }
+}
