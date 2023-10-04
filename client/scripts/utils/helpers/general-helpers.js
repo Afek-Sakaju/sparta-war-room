@@ -14,3 +14,5 @@ async function wait(seconds) {
 }
 
 const encodeImageToBase64 = (image) => `data:image/jpeg;base64,${image}`;
+
+const createBearerTokenString = (accessToken) => `Bearer ${accessToken}`;

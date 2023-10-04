@@ -15,10 +15,10 @@ async function postData(url, data) {
 
 async function getData(url) {
   const accessToken = localStorage.getItem(JWT_ACCESS_TOKEN_NAME);
-
+  const bearerToken = createBearerTokenString(accessToken);
   const headers = {
     'Content-Type': 'application/json',
-    Authorization: `Bearer ${accessToken}`,
+    Authorization: bearerToken,
   };
 
   const fetchedData = await fetch(url, {
