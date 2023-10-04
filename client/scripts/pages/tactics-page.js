@@ -43,7 +43,7 @@ window.onload = async () => {
 
       const tacticImage = document.createElement('img');
       tacticImage.classList.add(STYLE_CLASSES.TACTIC_IMAGE);
-      tacticImage.src = `data:image/jpeg;base64,${image}`;
+      tacticImage.src = encodeImageToBase64(image);
       tacticImage.alt = title;
       tacticWrapper.appendChild(tacticImage);
 
