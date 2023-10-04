@@ -53,6 +53,8 @@ NAVIGATION_PATHS = Object.freeze({
 API_URLS = Object.freeze({
   AUTH_LOGIN: '/auth/login',
   AUTH_REGISTER: '/auth/register',
+  AUTH_LOGOUT: '/auth/logout',
+  IS_AUTH: '/auth/user-authenticated',
   GET_ALL_TACTICS: '/tactics/all',
   GET_ALL_ANNS: '/announcements/all',
 });

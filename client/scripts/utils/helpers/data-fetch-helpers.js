@@ -39,7 +39,7 @@ async function isAuthenticatedUser() {
 
   let isAuth = false;
   if (accessToken) {
-    isAuth = await getData('/auth/user-authenticated')
+    isAuth = await getData(API_URLS.IS_AUTH)
       .then((d) => {
         if (!d) throw Error(ERROR_MESSAGES.TOKEN_UNVERIFIED);
         return true;
@@ -51,7 +51,7 @@ async function isAuthenticatedUser() {
 }
 
 async function logoutUser() {
-  await postData('/auth/logout')
+  await postData(API_URLS.AUTH_LOGOUT)
     .then(() => {
       localStorage.removeItem(JWT_ACCESS_TOKEN_NAME);
       window.location.href = NAVIGATION_PATHS.ROOT;
