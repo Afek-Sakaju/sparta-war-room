@@ -1,4 +1,5 @@
 @import './abstracts/variables';
+@import './abstracts/mixins';
 @import './components/alert';
 @import './components/containers';
 @import './layout/navbar';
@@ -36,6 +37,5 @@ body {
 }
 
 .hidden {
-  display: none;
-  visibility: hidden;
+  @include hidden;
 }

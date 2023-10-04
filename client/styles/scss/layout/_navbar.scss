@@ -107,31 +107,32 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   letter-spacing: 1px;
 
+  &.medium-title,
   &.short-title {
-    display: none;
-    visibility: hidden;
+    @include hidden;
   }
 
-  @media screen and (max-width: 1600px) {
-    &.title-extension {
-      display: none;
-      visibility: hidden;
-    }
-  }
-
-  @media screen and (max-width: 1235px) {
+  @media screen and (max-width: 1280px) {
     font-size: 1.3rem;
   }
 
-  @media screen and (max-width: 1070px) {
-    &:not(.title-extension) {
-      display: none;
-      visibility: hidden;
+  @media screen and (max-width: 1100px) {
+    &.long-title {
+      @include hidden;
+    }
+
+    &.medium-title {
+      @include visible;
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    &.medium-title {
+      @include hidden;
     }
 
     &.short-title {
-      display: block;
-      visibility: unset;
+      @include visible;
     }
   }
 
@@ -140,7 +141,6 @@
   }
 
   @media screen and (max-width: 520px) {
-    display: none !important;
-    visibility: hidden !important;
+    @include hidden;
   }
 }

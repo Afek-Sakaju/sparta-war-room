@@ -8,7 +8,7 @@ This project utilizes a database to store data and provides access to it through
 
 The project incorporates the following APIs:
 
-| Users data and authentication | Announcements data           | Spartan-tactics data   |
+| Users data and authentication | Announcements data           | Tactics data           |
 | ----------------------------- | ---------------------------- | ---------------------- |
 | + Register                    | + Get all announcements data | + Get all tactics data |
 | + Login                       |
@@ -48,7 +48,7 @@ https://github.com/Afek-Sakaju/sparta-war-room/assets/100536372/eee36151-148d-49
 - [x] _**Typescript**_ : the project has been implemented using _typescript_ interfaces.
 - [x] _**jwt**_ : implementing authentication using JSON Web Tokens involves securely storing the token for the authenticated user.
 - [x] _**MongoDB**_ : utilized with the _**mongoose**_ library for defining schemas and models, which are then utilized in the controllers and services.
-- [x] _**mongo-migrate**_ : the **migrations** ensure that the MongoDB handle important database initializations before running, including announcements creation and Spartan-tactics data.
+- [x] _**mongo-migrate**_ : the **migrations** ensure that the MongoDB handle important database initializations before running, including announcements creation and Tactics data.
 - [x] _**Bcrypt**_ : user passwords are securely encrypted in accordance with best practices to ensure data security.
 - [x] **JavaScript** : _javascript_ script files enable interactive behavior in web pages by handling user interactions on elements.
 - [x] _**HTML**_ : the project extensively relies on _HTML_ for constructing and defining its web page elements.
