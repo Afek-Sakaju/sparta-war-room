@@ -28,10 +28,6 @@ const ELEMENTS_IDS = Object.freeze({
   TACTICS_PANEL: 'tactics-panel',
 });
 
-JWT_ACCESS_TOKEN_NAME = 'jwtAccessToken';
-
-ALERT_BUTTON_TEXT = 'Understood';
-
 ALERT_MESSAGES = Object.freeze({
   ACCESS_DENIED: 'Entrance permitted only to Spartans who have been logged in.',
   INVALID_USERNAME_LENGTH: 'Username must contain at least 5 characters',
@@ -48,3 +44,7 @@ ERROR_MESSAGES = Object.freeze({
   INCORRECT_LOGIN_DATA: 'Incorrect username or password',
   USERNAME_TAKEN: 'Username already exists',
 });
+
+ALERT_BUTTON_TEXT = 'Understood';
+
+JWT_ACCESS_TOKEN_NAME = 'jwtAccessToken';
