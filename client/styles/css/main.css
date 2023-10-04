@@ -153,9 +153,9 @@
     padding: 7px;
   }
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 420px) {
   .top-navbar {
-    padding: 3px;
+    padding: 6px;
   }
 }
 
@@ -167,12 +167,6 @@
   color: #f2f2f2;
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
-}
-@media screen and (max-width: 1235px) {
-  .nav-item {
-    font-size: 0.9em;
-    padding: 7.5px 8px;
-  }
 }
 .nav-item.home-button {
   display: flex;
@@ -190,22 +184,33 @@
   background-repeat: no-repeat;
 }
 @media screen and (max-width: 1235px) {
+  .nav-item {
+    font-size: 0.9em;
+    padding: 7.5px 8px;
+    border-radius: 4px;
+  }
   .nav-item.home-button {
     width: 22px;
     height: 22px;
     padding: 5px 13px;
   }
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 750px) {
   .nav-item {
-    font-size: 0.75em;
-    padding: 5px 6px;
     margin: 0 3px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .nav-item {
+    padding: 5px 6px;
+    margin: 0 1.5px;
+    border-radius: 2.5px;
+    font-size: 0.75em;
   }
   .nav-item.home-button {
     width: 18px;
     height: 18px;
-    padding: 3.5px 8px;
+    padding: 3.5px 6px;
   }
 }
 .nav-item:hover {
@@ -229,7 +234,7 @@
   width: 100%;
   z-index: -1;
 }
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 950px) {
   .nav-mid {
     position: initial;
     display: flex;
