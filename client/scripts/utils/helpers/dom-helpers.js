@@ -61,7 +61,7 @@ async function showAlert({
   alertContainer.appendChild(alertText);
 
   if (alertButtonProperties) {
-    const { text, href = '/' } = alertButtonProperties;
+    const { text, href = NAVIGATION_PATHS.ROOT } = alertButtonProperties;
     const alertButton = document.createElement('a');
 
     alertButton.classList.add(STYLE_CLASSES.ALERT_BUTTON);

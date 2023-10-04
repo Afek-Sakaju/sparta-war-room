@@ -3,12 +3,15 @@ window.onload = async () => {
   if (!isAuthenticated) {
     await showAlert({
       message: ALERT_MESSAGES.ACCESS_DENIED,
-      alertButtonProperties: { text: ALERT_BUTTON_TEXT, href: '/login' },
+      alertButtonProperties: {
+        text: ALERT_BUTTON_TEXT,
+        href: NAVIGATION_PATHS.LOGIN,
+      },
       isAccessDeniedAlert: true,
       displayDuration: 2,
       delayDisplayDuration: 0.1,
       onClose: () => {
-        window.location.href = '/login';
+        window.location.href = NAVIGATION_PATHS.LOGIN;
       },
     });
 
@@ -21,7 +24,7 @@ window.onload = async () => {
     const annListContainer = document.getElementById(ELEMENTS_IDS.ANN_PANEL);
     if (!annListContainer) return;
 
-    const annResponse = await getData('/announcements/all');
+    const annResponse = await getData(API_URLS.GET_ALL_ANNS);
     if (!annResponse) throw Error(ERROR_MESSAGES.TACTICS_DATA_FETCH_ERROR);
 
     const annData = await annResponse?.json();

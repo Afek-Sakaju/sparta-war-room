@@ -45,6 +45,18 @@ ERROR_MESSAGES = Object.freeze({
   USERNAME_TAKEN: 'Username already exists',
 });
 
+NAVIGATION_PATHS = Object.freeze({
+  LOGIN: '/login',
+  ROOT: '/',
+});
+
+API_URLS = Object.freeze({
+  AUTH_LOGIN: '/auth/login',
+  AUTH_REGISTER: '/auth/register',
+  GET_ALL_TACTICS: '/tactics/all',
+  GET_ALL_ANNS: '/announcements/all',
+});
+// API_URLS.AUTH_LOGIN
 ALERT_BUTTON_TEXT = 'Understood';
 
 JWT_ACCESS_TOKEN_NAME = 'jwtAccessToken';

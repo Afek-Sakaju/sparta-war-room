@@ -3,12 +3,15 @@ window.onload = async () => {
   if (!isAuthenticated) {
     await showAlert({
       message: ALERT_MESSAGES.ACCESS_DENIED,
-      alertButtonProperties: { text: ALERT_BUTTON_TEXT, href: '/login' },
+      alertButtonProperties: {
+        text: ALERT_BUTTON_TEXT,
+        href: NAVIGATION_PATHS.LOGIN,
+      },
       isAccessDeniedAlert: true,
       displayDuration: 2,
       delayDisplayDuration: 0.1,
       onClose: () => {
-        window.location.href = '/login';
+        window.location.href = NAVIGATION_PATHS.LOGIN;
       },
     });
 
@@ -23,7 +26,7 @@ window.onload = async () => {
     );
     if (!tacticsListContainer) return;
 
-    const tacticsResponse = await getData('/tactics/all');
+    const tacticsResponse = await getData(API_URLS.GET_ALL_TACTICS);
     if (!tacticsResponse) {
       throw Error(ERROR_MESSAGES.TACTICS_DATA_FETCH_ERROR);
     }

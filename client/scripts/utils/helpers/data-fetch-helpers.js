@@ -54,7 +54,7 @@ async function logoutUser() {
   await postData('/auth/logout')
     .then(() => {
       localStorage.removeItem(JWT_ACCESS_TOKEN_NAME);
-      window.location.href = '/';
+      window.location.href = NAVIGATION_PATHS.ROOT;
     })
     .catch(async (e) => {
       console.error(e);

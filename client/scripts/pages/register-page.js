@@ -1,6 +1,6 @@
 window.onload = async () => {
   const isAuthenticated = await isAuthenticatedUser();
-  if (isAuthenticated) return (window.location.href = '/');
+  if (isAuthenticated) return (window.location.href = NAVIGATION_PATHS.ROOT);
 
   updateNavbarAuthState(false);
 };
@@ -36,12 +36,12 @@ async function registerUser() {
     });
   }
 
-  await postData('/auth/register', {
+  await postData(API_URLS.AUTH_REGISTER, {
     username,
     password,
   })
     .then(() => {
-      window.location.href = '/login';
+      window.location.href = NAVIGATION_PATHS.LOGIN;
     })
     .catch(async (errorStatus) => {
       const message =

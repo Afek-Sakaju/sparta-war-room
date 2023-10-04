@@ -1,6 +1,6 @@
 window.onload = async () => {
   const isAuthenticated = await isAuthenticatedUser();
-  if (isAuthenticated) return (window.location.href = '/');
+  if (isAuthenticated) return (window.location.href = NAVIGATION_PATHS.ROOT);
 
   updateNavbarAuthState(false);
 };
@@ -9,7 +9,7 @@ async function loginUser() {
   const username = document.getElementById(ELEMENTS_IDS.USERNAME_INPUT).value;
   const password = document.getElementById(ELEMENTS_IDS.PASSWORD_INPUT).value;
 
-  await postData('/auth/login', {
+  await postData(API_URLS.AUTH_LOGIN, {
     username,
     password,
   })
@@ -18,7 +18,7 @@ async function loginUser() {
     })
     .then((data) => {
       localStorage.setItem(JWT_ACCESS_TOKEN_NAME, data.accessToken);
-      window.location.href = '/';
+      window.location.href = NAVIGATION_PATHS.ROOT;
     })
     .catch(async (errorStatus) => {
       const isServerError = errorStatus === 500;
