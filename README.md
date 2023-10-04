@@ -65,12 +65,12 @@ https://github.com/Afek-Sakaju/sparta-war-room/assets/100536372/eee36151-148d-49
 - [x] **status code** : HTTP request responses return the appropriate and correct status codes.
 - [x] **_postman_** : _postman_ collection for simplified testing and interaction with the project's APIs : </br>
       `sparta-war-room.postman_collection.json`
+- [x] _**Best-Practices in Structure and Naming**_: : The application adheres to _Best-Practices_ organization and structuring of the folders and files, improving maintainability and promoting a standardized development process. It also maintains superior naming conventions throughout all the files for code clarity and consistency.
 - [x] _**Responsiveness**_: The application is intentionally designed to adapt to screens of various sizes by utilizing _media queries_ within its components. This ensures that the user interface adjusts seamlessly to different screen dimensions.
 
 ---
 
 ### **A brief illustration showcasing how the app appears on various screens**
-
 
 ---
 
