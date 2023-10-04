@@ -3,7 +3,13 @@ const STYLE_CLASSES = Object.freeze({
   ALERT_ACCESS_DENIED: 'access-denied-alert',
   ALERT_TEXT: 'alert-text',
   ALERT_BUTTON: 'alert-button',
+  ANN_CONTAINER: 'announcement-container',
+  ANN_TITLE: 'announcement-title',
+  ANN_TEXT: 'announcement-text',
+  ANN_ANNOUNCER_TEXT: 'announcer-text',
 });
+
+// STYLE_CLASSES.ANN_CONTAINER
 
 const ELEMENTS_IDS = Object.freeze({
   LOGOUT_NAV_BUTTON: 'logout-btn',
@@ -13,6 +19,7 @@ const ELEMENTS_IDS = Object.freeze({
   REGISTER_NAV_BUTTON: 'register-btn',
   FORM_SUBMIT_BUTTON: 'form-submit',
   PAGE_ALERT: 'page-alert',
+  ANN_PANEL: 'announcements-panel',
 });
 
 JWT_ACCESS_TOKEN_NAME = 'jwtAccessToken';
@@ -30,4 +37,5 @@ ALERT_MESSAGES = Object.freeze({
 ERROR_MESSAGES = Object.freeze({
   TACTICS_DATA_FETCH_ERROR: 'There was an issue fetching tactics data.',
   TOKEN_UNVERIFIED: 'Token is not verified/it is expired',
+  DEFAULT_DATA_RETRIEVE_ERROR: 'Server data retrieval issue.',
 });

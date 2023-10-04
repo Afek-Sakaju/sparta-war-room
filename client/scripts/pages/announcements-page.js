@@ -18,7 +18,7 @@ window.onload = async () => {
 
   updateNavbarAuthState(true);
   try {
-    const annListContainer = document.getElementById('announcements-panel');
+    const annListContainer = document.getElementById(ELEMENTS_IDS.ANN_PANEL);
     if (!annListContainer) return;
 
     const annResponse = await getData('/announcements/all');
@@ -27,30 +27,33 @@ window.onload = async () => {
     const annData = await annResponse?.json();
     annData?.forEach(({ title, description, announcer }) => {
       const annWrapper = document.createElement('div');
-      annWrapper.classList.add('announcement-container');
+      annWrapper.classList.add(STYLE_CLASSES.ANN_CONTAINER);
 
       const annTitle = document.createElement('h3');
-      annTitle.classList.add('announcement-title');
+      annTitle.classList.add(STYLE_CLASSES.ANN_TITLE);
       annTitle.textContent = title;
       annWrapper.appendChild(annTitle);
 
       const annDescription = document.createElement('p');
-      annDescription.classList.add('announcement-text');
+      annDescription.classList.add(STYLE_CLASSES.ANN_TEXT);
 
       const replacedAnnDescription = addLineBreaksToText(description);
       annDescription.textContent = replacedAnnDescription;
       annWrapper.appendChild(annDescription);
 
       const annAnnouncer = document.createElement('p');
-      annAnnouncer.classList.add('announcement-text', 'announcer-text');
+      annAnnouncer.classList.add(
+        STYLE_CLASSES.ANN_TEXT,
+        STYLE_CLASSES.ANN_ANNOUNCER_TEXT
+      );
       annAnnouncer.textContent = announcer;
       annWrapper.appendChild(annAnnouncer);
 
       annListContainer.appendChild(annWrapper);
-      unhideElements('announcements-panel');
+      unhideElements(ELEMENTS_IDS.ANN_PANEL);
     });
   } catch (e) {
-    const message = e?.message ?? 'Server data retrieval issue.';
+    const message = e?.message ?? ERROR_MESSAGES.DEFAULT_DATA_RETRIEVE_ERROR;
     console.error(e);
     await showAlert({ message });
   }

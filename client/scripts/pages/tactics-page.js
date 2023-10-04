@@ -53,7 +53,7 @@ window.onload = async () => {
       unhideElements('tactics-panel');
     });
   } catch (e) {
-    const message = e?.message ?? 'Server data retrieval issue.';
+    const message = e?.message ?? ERROR_MESSAGES.DEFAULT_DATA_RETRIEVE_ERROR;
     console.error(e);
     await showAlert({ message });
   }
