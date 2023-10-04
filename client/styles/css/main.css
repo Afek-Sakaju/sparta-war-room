@@ -213,6 +213,16 @@
     padding: 3.5px 6px;
   }
 }
+@media screen and (max-width: 315px) {
+  .nav-item {
+    margin: 0 1px;
+    padding: 4.5px 5.2px;
+    font-size: 0.67em;
+  }
+  .nav-item.home-button {
+    padding: 2px 3.5px;
+  }
+}
 .nav-item:hover {
   background-color: #232323;
   cursor: pointer;
@@ -285,10 +295,9 @@
     font-size: 1.1rem;
   }
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 350px) {
   .nav-title {
-    display: none;
-    visibility: hidden;
+    font-size: 0.8rem;
   }
 }
 

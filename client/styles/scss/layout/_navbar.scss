@@ -73,6 +73,16 @@
     }
   }
 
+  @media screen and (max-width: 315px) {
+    margin: 0 1px;
+    padding: 4.5px 5.2px;
+    font-size: 0.67em;
+
+    &.home-button {
+      padding: 2px 3.5px;
+    }
+  }
+
   &:hover {
     background-color: $on-hover-darker;
     cursor: pointer;
@@ -144,7 +154,7 @@
     font-size: 1.1rem;
   }
 
-  @media screen and (max-width: 520px) {
-    @include hidden;
+  @media screen and (max-width: 350px) {
+    font-size: 0.8rem;
   }
 }
