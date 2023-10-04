@@ -17,7 +17,6 @@ async function loginUser() {
       return res?.json();
     })
     .then((data) => {
-      localStorage.setItem('successLoginUsername', username);
       localStorage.setItem(JWT_ACCESS_TOKEN_NAME, data.accessToken);
       window.location.href = '/';
     })

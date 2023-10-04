@@ -41,7 +41,7 @@ async function isAuthenticatedUser() {
   if (accessToken) {
     isAuth = await getData('/auth/user-authenticated')
       .then((d) => {
-        if (!d) throw Error('Token is not verified/it is expired');
+        if (!d) throw Error(ERROR_MESSAGES.TOKEN_UNVERIFIED);
         return true;
       })
       .catch(() => false);
@@ -53,7 +53,6 @@ async function isAuthenticatedUser() {
 async function logoutUser() {
   await postData('/auth/logout')
     .then(() => {
-      localStorage.removeItem('successLoginUsername');
       localStorage.removeItem(JWT_ACCESS_TOKEN_NAME);
       window.location.href = '/';
     })

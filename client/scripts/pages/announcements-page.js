@@ -22,7 +22,7 @@ window.onload = async () => {
     if (!annListContainer) return;
 
     const annResponse = await getData('/announcements/all');
-    if (!annResponse) throw Error('There was an issue fetching tactics data.');
+    if (!annResponse) throw Error(ERROR_MESSAGES.TACTICS_DATA_FETCH_ERROR);
 
     const annData = await annResponse?.json();
     annData?.forEach(({ title, description, announcer }) => {

@@ -19,10 +19,15 @@ JWT_ACCESS_TOKEN_NAME = 'jwtAccessToken';
 
 ALERT_BUTTON_TEXT = 'Understood';
 
-ALERT_MESSAGES = {
+ALERT_MESSAGES = Object.freeze({
   ACCESS_DENIED: 'Entrance permitted only to Spartans who have been logged in.',
   INVALID_USERNAME_LENGTH: 'Username must contain at least 5 characters',
   INVALID_PASSWORD_LENGTH: 'Password must contain at least 5 characters',
   PASSWORDS_MISMATCH: 'Password fields does not match',
   LOGOUT_ERROR: 'The logout process has encountered an error',
-};
+});
+
+ERROR_MESSAGES = Object.freeze({
+  TACTICS_DATA_FETCH_ERROR: 'There was an issue fetching tactics data.',
+  TOKEN_UNVERIFIED: 'Token is not verified/it is expired',
+});

@@ -23,7 +23,7 @@ window.onload = async () => {
 
     const tacticsResponse = await getData('/tactics/all');
     if (!tacticsResponse) {
-      throw Error('There was an issue fetching tactics data.');
+      throw Error(ERROR_MESSAGES.TACTICS_DATA_FETCH_ERROR);
     }
 
     const tacticsData = await tacticsResponse?.json();
