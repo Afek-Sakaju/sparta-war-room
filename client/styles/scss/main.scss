@@ -3,6 +3,8 @@
 @import './components/containers';
 @import './layout/navbar';
 
+/*	This file serves to gather styles commonly used across all pages.
+It is loaded on every page, along with the respective page-specific's style file. */
 body {
   display: flex;
   justify-content: center;
