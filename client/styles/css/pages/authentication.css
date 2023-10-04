@@ -1,3 +1,7 @@
+body {
+  background-image: url("../../../assets/pictures/bg-temple.jpg");
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -175,10 +179,6 @@ input:hover {
   .form-bottom-redirect-link {
     font-size: 0.55em;
   }
-}
-
-body {
-  background-image: url("../../../assets/pictures/bg-temple.jpg");
 }
 
 /*# sourceMappingURL=authentication.css.map */
