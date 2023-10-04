@@ -9,7 +9,7 @@ const STYLE_CLASSES = Object.freeze({
   ANN_ANNOUNCER_TEXT: 'announcer-text',
 });
 
-// STYLE_CLASSES.ANN_CONTAINER
+// ERROR_MESSAGES.INCORRECT_LOGIN_DATA
 
 const ELEMENTS_IDS = Object.freeze({
   LOGOUT_NAV_BUTTON: 'logout-btn',
@@ -20,6 +20,9 @@ const ELEMENTS_IDS = Object.freeze({
   FORM_SUBMIT_BUTTON: 'form-submit',
   PAGE_ALERT: 'page-alert',
   ANN_PANEL: 'announcements-panel',
+  USERNAME_INPUT: 'username-field',
+  PASSWORD_INPUT: 'password-field',
+  CONFIRM_PASSWORD_INPUT: 'confirm-password-field',
 });
 
 JWT_ACCESS_TOKEN_NAME = 'jwtAccessToken';
@@ -38,4 +41,7 @@ ERROR_MESSAGES = Object.freeze({
   TACTICS_DATA_FETCH_ERROR: 'There was an issue fetching tactics data.',
   TOKEN_UNVERIFIED: 'Token is not verified/it is expired',
   DEFAULT_DATA_RETRIEVE_ERROR: 'Server data retrieval issue.',
+  SERVER_ERROR: 'Server error',
+  INCORRECT_LOGIN_DATA: 'Incorrect username or password',
+  USERNAME_TAKEN: 'Username already exists',
 });

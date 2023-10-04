@@ -6,10 +6,10 @@ window.onload = async () => {
 };
 
 async function registerUser() {
-  const username = document.getElementById('username-field')?.value;
-  const password = document.getElementById('password-field')?.value;
+  const username = document.getElementById(ELEMENTS_IDS.USERNAME_INPUT)?.value;
+  const password = document.getElementById(ELEMENTS_IDS.PASSWORD_INPUT)?.value;
   const retypePassword = document.getElementById(
-    'confirm-password-field'
+    ELEMENTS_IDS.CONFIRM_PASSWORD_INPUT
   )?.value;
 
   if (username?.length < 5) {
@@ -30,7 +30,7 @@ async function registerUser() {
 
   if (password !== retypePassword) {
     return await showAlert({
-      message: ALERT_MESSAGES.PASSWORDS_MISMATCH ,
+      message: ALERT_MESSAGES.PASSWORDS_MISMATCH,
       onClose: setSubmitButtonState,
       onOpen: () => setSubmitButtonState(true),
     });
@@ -45,7 +45,9 @@ async function registerUser() {
     })
     .catch(async (errorStatus) => {
       const message =
-        errorStatus === 500 ? 'Server error' : 'Username already exists';
+        errorStatus === 500
+          ? ERROR_MESSAGES.SERVER_ERROR
+          : ERROR_MESSAGES.USERNAME_TAKEN;
       await showAlert({
         message,
         onClose: setSubmitButtonState,

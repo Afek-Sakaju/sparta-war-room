@@ -6,8 +6,8 @@ window.onload = async () => {
 };
 
 async function loginUser() {
-  const username = document.getElementById('username-field').value;
-  const password = document.getElementById('password-field').value;
+  const username = document.getElementById(ELEMENTS_IDS.USERNAME_INPUT).value;
+  const password = document.getElementById(ELEMENTS_IDS.PASSWORD_INPUT).value;
 
   await postData('/auth/login', {
     username,
@@ -23,8 +23,8 @@ async function loginUser() {
     .catch(async (errorStatus) => {
       const isServerError = errorStatus === 500;
       const message = isServerError
-        ? 'Server error'
-        : 'Incorrect username or password';
+        ? ERROR_MESSAGES.SERVER_ERROR
+        : ERROR_MESSAGES.INCORRECT_LOGIN_DATA;
       await showAlert({
         message,
         onClose: setSubmitButtonState,
