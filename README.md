@@ -37,7 +37,7 @@ The project incorporates the following APIs:
 
 ### **A practical example that exemplifies how the project can be utilized**
 
-https://github.com/Afek-Sakaju/sparta-war-room/assets/100536372/eee36151-148d-4958-8776-18d441721fbd
+https://github.com/Afek-Sakaju/sparta-war-room/assets/100536372/235bd194-e911-4dff-a9fd-3fcbf822dbd1
 
 ---
 
@@ -71,6 +71,8 @@ https://github.com/Afek-Sakaju/sparta-war-room/assets/100536372/eee36151-148d-49
 ---
 
 ### **A brief illustration showcasing how the app appears on various screens**
+
+https://github.com/Afek-Sakaju/sparta-war-room/assets/100536372/4d54aa88-235d-4aab-bd2c-40152e32784c
 
 ---
 
