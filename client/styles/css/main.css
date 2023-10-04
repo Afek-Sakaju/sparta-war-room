@@ -298,6 +298,7 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-attachment: fixed;
   background-size: cover;
+  background-position: center;
   cursor: url("../../../assets/pictures/sword-cursor.png"), default;
   height: 98vh;
 }
