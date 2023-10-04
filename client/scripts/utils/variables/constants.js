@@ -7,9 +7,11 @@ const STYLE_CLASSES = Object.freeze({
   ANN_TITLE: 'announcement-title',
   ANN_TEXT: 'announcement-text',
   ANN_ANNOUNCER_TEXT: 'announcer-text',
+  TACTIC_CONTAINER: 'tactic-container',
+  TACTIC_TITLE: 'tactic-title',
+  TACTIC_IMAGE: 'tactic-image',
+  TACTIC_TEXT: 'tactic-text',
 });
-
-// ERROR_MESSAGES.INCORRECT_LOGIN_DATA
 
 const ELEMENTS_IDS = Object.freeze({
   LOGOUT_NAV_BUTTON: 'logout-btn',
@@ -23,6 +25,7 @@ const ELEMENTS_IDS = Object.freeze({
   USERNAME_INPUT: 'username-field',
   PASSWORD_INPUT: 'password-field',
   CONFIRM_PASSWORD_INPUT: 'confirm-password-field',
+  TACTICS_PANEL: 'tactics-panel',
 });
 
 JWT_ACCESS_TOKEN_NAME = 'jwtAccessToken';

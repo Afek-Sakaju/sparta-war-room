@@ -18,7 +18,9 @@ window.onload = async () => {
 
   updateNavbarAuthState(true);
   try {
-    const tacticsListContainer = document.getElementById('tactics-panel');
+    const tacticsListContainer = document.getElementById(
+      ELEMENTS_IDS.TACTICS_PANEL
+    );
     if (!tacticsListContainer) return;
 
     const tacticsResponse = await getData('/tactics/all');
@@ -29,28 +31,28 @@ window.onload = async () => {
     const tacticsData = await tacticsResponse?.json();
     tacticsData?.forEach(({ title, information, image }) => {
       const tacticWrapper = document.createElement('div');
-      tacticWrapper.classList.add('tactic-container');
+      tacticWrapper.classList.add(STYLE_CLASSES.TACTIC_CONTAINER);
 
       const tacticTitle = document.createElement('h3');
-      tacticTitle.classList.add('tactic-title');
+      tacticTitle.classList.add(STYLE_CLASSES.TACTIC_TITLE);
       tacticTitle.textContent = title;
       tacticWrapper.appendChild(tacticTitle);
 
       const tacticImage = document.createElement('img');
-      tacticImage.classList.add('tactic-image');
+      tacticImage.classList.add(STYLE_CLASSES.TACTIC_IMAGE);
       tacticImage.src = `data:image/jpeg;base64,${image}`;
       tacticImage.alt = title;
       tacticWrapper.appendChild(tacticImage);
 
       const tacticDescription = document.createElement('p');
-      tacticDescription.classList.add('tactic-text');
+      tacticDescription.classList.add(STYLE_CLASSES.TACTIC_TEXT);
 
       const replacedTacticInformation = addLineBreaksToText(information, 2);
       tacticDescription.textContent = replacedTacticInformation;
       tacticWrapper.appendChild(tacticDescription);
 
       tacticsListContainer.appendChild(tacticWrapper);
-      unhideElements('tactics-panel');
+      unhideElements(ELEMENTS_IDS.TACTICS_PANEL);
     });
   } catch (e) {
     const message = e?.message ?? ERROR_MESSAGES.DEFAULT_DATA_RETRIEVE_ERROR;
