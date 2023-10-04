@@ -14,7 +14,7 @@ async function registerUser() {
 
   if (username?.length < 5) {
     return await showAlert({
-      message: 'Username must contain at least 5 characters',
+      message: ALERT_MESSAGES.USERNAME_CHARS_VALIDATION,
       onClose: setSubmitButtonState,
       onOpen: () => setSubmitButtonState(true),
     });
@@ -22,7 +22,7 @@ async function registerUser() {
 
   if (password?.length < 5) {
     return await showAlert({
-      message: 'Password must contain at least 5 characters',
+      message: ALERT_MESSAGES.INVALID_PASSWORD_LENGTH,
       onClose: setSubmitButtonState,
       onOpen: () => setSubmitButtonState(true),
     });
@@ -30,7 +30,7 @@ async function registerUser() {
 
   if (password !== retypePassword) {
     return await showAlert({
-      message: 'Password fields does not match',
+      message: ALERT_MESSAGES.PASSWORDS_MISMATCH ,
       onClose: setSubmitButtonState,
       onOpen: () => setSubmitButtonState(true),
     });

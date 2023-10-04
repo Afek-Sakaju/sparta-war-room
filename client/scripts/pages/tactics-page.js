@@ -2,8 +2,8 @@ window.onload = async () => {
   const isAuthenticated = await isAuthenticatedUser();
   if (!isAuthenticated) {
     await showAlert({
-      message: 'Entrance permitted only to Spartans who have been logged in.',
-      alertButtonProperties: { text: 'Understood', href: '/login' },
+      message: ALERT_MESSAGES.ACCESS_DENIED,
+      alertButtonProperties: { text: ALERT_BUTTON_TEXT, href: '/login' },
       isAccessDeniedAlert: true,
       displayDuration: 2,
       delayDisplayDuration: 0.1,
@@ -12,7 +12,7 @@ window.onload = async () => {
       },
     });
 
-    localStorage.removeItem('jwtAccessToken');
+    localStorage.removeItem(JWT_ACCESS_TOKEN_NAME);
     return updateNavbarAuthState(false);
   }
 

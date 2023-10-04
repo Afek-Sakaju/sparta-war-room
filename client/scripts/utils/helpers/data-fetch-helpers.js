@@ -14,7 +14,7 @@ async function postData(url, data) {
 }
 
 async function getData(url) {
-  const accessToken = localStorage.getItem('jwtAccessToken');
+  const accessToken = localStorage.getItem(JWT_ACCESS_TOKEN_NAME);
 
   const headers = {
     'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ async function getData(url) {
 }
 
 async function isAuthenticatedUser() {
-  const accessToken = localStorage.getItem('jwtAccessToken');
+  const accessToken = localStorage.getItem(JWT_ACCESS_TOKEN_NAME);
 
   let isAuth = false;
   if (accessToken) {
@@ -54,13 +54,13 @@ async function logoutUser() {
   await postData('/auth/logout')
     .then(() => {
       localStorage.removeItem('successLoginUsername');
-      localStorage.removeItem('jwtAccessToken');
+      localStorage.removeItem(JWT_ACCESS_TOKEN_NAME);
       window.location.href = '/';
     })
     .catch(async (e) => {
       console.error(e);
       await showAlert({
-        message: 'The logout process has encountered an error',
+        message: ALERT_MESSAGES.LOGOUT_ERROR,
       });
     });
 }

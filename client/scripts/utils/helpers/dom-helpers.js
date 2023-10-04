@@ -3,7 +3,7 @@ function hideElements(elementsIds) {
 
   elementsIds?.forEach((id) => {
     const element = document.getElementById(id);
-    element?.classList?.add('hidden');
+    element?.classList?.add(STYLE_CLASSES.HIDDEN);
   });
 }
 
@@ -12,7 +12,7 @@ function unhideElements(elementsIds) {
 
   elementsIds?.forEach((id) => {
     const element = document.getElementById(id);
-    element?.classList?.remove('hidden');
+    element?.classList?.remove(STYLE_CLASSES.HIDDEN);
   });
 }
 
@@ -22,11 +22,14 @@ async function updateNavbarAuthState(isAlreadyAuth) {
   const isAuth = !!isAlreadyAuth ? isAlreadyAuth : await isAuthenticatedUser();
 
   const authElementsToUnhide = [
-    'logout-btn',
-    'tactics-btn',
-    'announcements-btn',
+    ELEMENTS_IDS.LOGOUT_NAV_BUTTON,
+    ELEMENTS_IDS.TACTICS_NAV_BUTTON,
+    ELEMENTS_IDS.ANN_NAV_BUTTON,
   ];
-  const notAuthElementsToUnhide = ['login-btn', 'register-btn'];
+  const notAuthElementsToUnhide = [
+    ELEMENTS_IDS.LOGIN_NAV_BUTTON,
+    ELEMENTS_IDS.REGISTER_NAV_BUTTON,
+  ];
 
   if (isAuth) unhideElements(authElementsToUnhide);
   else unhideElements(notAuthElementsToUnhide);
@@ -42,29 +45,32 @@ async function showAlert({
   onClose,
   onOpen,
 }) {
-  const alertContainer = document.getElementById('page-alert');
+  const alertContainer = document.getElementById(ELEMENTS_IDS.PAGE_ALERT);
   if (isAlertActive || !alertContainer) return;
 
   if (delayDisplayDuration) await wait(delayDisplayDuration);
 
-  alertContainer.classList.toggle('access-denied-alert', !!isAccessDeniedAlert);
+  alertContainer.classList.toggle(
+    STYLE_CLASSES.ALERT_ACCESS_DENIED,
+    !!isAccessDeniedAlert
+  );
 
   const alertText = document.createElement('span');
-  alertText.classList.add('alert-text');
+  alertText.classList.add(STYLE_CLASSES.ALERT_TEXT);
   alertText.textContent = message;
   alertContainer.appendChild(alertText);
 
   if (alertButtonProperties) {
-    const { text = 'Understood', href = '/' } = alertButtonProperties;
+    const { text, href = '/' } = alertButtonProperties;
     const alertButton = document.createElement('a');
 
-    alertButton.classList.add('alert-button');
+    alertButton.classList.add(STYLE_CLASSES.ALERT_BUTTON);
     alertButton.textContent = text;
     alertButton.href = href;
     alertContainer.appendChild(alertButton);
   }
 
-  alertContainer.classList.remove('hidden');
+  alertContainer.classList.remove(STYLE_CLASSES.HIDDEN);
   isAlertActive = true;
   onOpen?.();
 
@@ -77,16 +83,16 @@ async function showAlert({
 }
 
 function hideAlert() {
-  const alertContainer = document.getElementById('page-alert');
+  const alertContainer = document.getElementById(ELEMENTS_IDS.PAGE_ALERT);
   if (!isAlertActive || !alertContainer) return;
 
-  alertContainer.classList.add('hidden');
+  alertContainer.classList.add(STYLE_CLASSES.HIDDEN);
   alertContainer.innerHTML = '';
   isAlertActive = false;
 }
 
 function setSubmitButtonState(disabled) {
-  const submitButton = document.getElementById('form-submit');
+  const submitButton = document.getElementById(ELEMENTS_IDS.FORM_SUBMIT_BUTTON);
   if (!submitButton) return;
 
   submitButton.disabled = disabled;
