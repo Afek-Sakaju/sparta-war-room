@@ -61,11 +61,18 @@ https://github.com/Afek-Sakaju/sparta-war-room/assets/100536372/eee36151-148d-49
 
 ### In addition, the project incorporates the following features:
 
-- [x] _**Responsiveness**_: The application is intentionally designed to adapt to screens of various sizes by utilizing _media queries_ within its components. This ensures that the user interface adjusts seamlessly to different screen dimensions.
--   [x] **_mongoose_ schema hooks** : incorporates a pre-save hook that encrypts the user's password before creating a new user.
+- [x] **_mongoose_ schema hooks** : incorporates a pre-save hook that encrypts the user's password before creating a new user.
 - [x] **status code** : HTTP request responses return the appropriate and correct status codes.
 - [x] **_postman_** : _postman_ collection for simplified testing and interaction with the project's APIs : </br>
       `sparta-war-room.postman_collection.json`
+- [x] _**Responsiveness**_: The application is intentionally designed to adapt to screens of various sizes by utilizing _media queries_ within its components. This ensures that the user interface adjusts seamlessly to different screen dimensions.
+
+---
+
+### **A brief illustration showcasing how the app appears on various screens**
+
+
+---
 
 ## Author
 
