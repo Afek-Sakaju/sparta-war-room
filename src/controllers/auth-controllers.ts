@@ -51,5 +51,5 @@ export async function logoutUserCtrl(
   res: Response,
   _next: NextFunction
 ): Promise<void> {
-  res.cookie(JWT_ACCESS_TOKEN_NAME, '', { maxAge: 1 });
+  res.cookie('jwtAccessToken', '', { maxAge: 1 });
 }
