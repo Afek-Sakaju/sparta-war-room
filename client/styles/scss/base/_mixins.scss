@@ -1,0 +1,26 @@
+@mixin hidden {
+  display: none;
+  visibility: hidden;
+}
+
+@mixin visible {
+  display: block;
+  visibility: visible;
+}
+
+@mixin flex-col-align-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin soft-shadow-border {
+  border-radius: 5px;
+  border: 2px solid $dark-grey;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

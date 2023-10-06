@@ -1,17 +1,15 @@
-@import '../abstracts/variables';
+@import '../base/base-styles';
 
 body {
   background-image: url('../../../assets/pictures/bg-naval-war.jpg');
 }
 
 .tactic-container {
+  @include soft-shadow-border;
   padding: 0.7em 1em;
   width: 100%;
+  background-color: $dark-grey;
   box-sizing: border-box;
-  background-color: $darker-greyish;
-  border: 2px solid $darker-greyish;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   white-space: pre-line;
   line-height: 1.2;
 
@@ -22,7 +20,7 @@ body {
 
 .tactic-title {
   margin-top: 0;
-  color: $whitish;
+  color: $white-cream;
   font-size: 1.3rem;
   font-weight: bold;
 
@@ -38,7 +36,7 @@ body {
 .tactic-text {
   margin: 0;
   margin-top: 0.5em;
-  color: #ccc;
+  color: $light-grey;
   font-size: 1.1rem;
 
   @media screen and (max-width: 1235px) {

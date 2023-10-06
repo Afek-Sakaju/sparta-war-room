@@ -1,4 +1,4 @@
-@import '../abstracts/variables';
+@import '../base/base-styles';
 
 body {
   background-image: url('../../../assets/pictures/bg-sea-view.jpg');
@@ -12,9 +12,9 @@ body {
   width: 920px;
   padding: 1.9em 2.2em;
   margin-bottom: 50px;
-  border: 1px solid $darker-greyish;
+  border: 1px solid $dark-grey;
   border-radius: 10px;
-  background-color: $dark-charcoal;
+  background-color: $charcoal;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   user-select: none;
 
@@ -40,15 +40,11 @@ body {
 }
 
 .inner-description-container {
-  display: flex;
-  flex-direction: column;
+  @include flex-col-align-center;
+  @include soft-shadow-border;
   gap: 50px;
-  align-items: center;
   padding: 1em 2em;
-  background-color: $darker-greyish;
-  border: 2px solid $darker-greyish;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: $dark-grey;
 
   @media screen and (max-width: 1600px) {
     gap: 40px;
@@ -75,13 +71,12 @@ body {
 }
 
 .description-paragraph {
-  display: flex;
-  flex-direction: column;
+  @include flex-col;
   gap: 8px;
 }
 
 .description-text {
-  color: $whitish;
+  color: $white-cream;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   font-size: 1.2rem;
   margin: 0;

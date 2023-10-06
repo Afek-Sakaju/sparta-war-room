@@ -1,12 +1,10 @@
 .data-container {
-  align-items: center;
-  background-color: $dark-charcoal;
+  @include flex-col-align-center;
+  background-color: $charcoal;
   border-radius: 10px;
-  border: 1px solid $darker-greyish;
+  border: 1px solid $dark-grey;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
   gap: 1.3em;
   margin-top: 50px;
   max-height: 80%;

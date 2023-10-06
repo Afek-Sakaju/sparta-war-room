@@ -1,7 +1,6 @@
 .alert-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex-col-align-center;
+  @include soft-shadow-border;
   text-align: center;
   gap: 25px;
   width: 400px;
@@ -11,17 +10,12 @@
   transform: translate(-50%, -50%);
   padding: 1em;
   z-index: 5;
-
-  background-color: rgba(255, 0, 0, 0.417);
-
-  border: 5px solid rgba(255, 255, 255, 0.383);
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 0, 0, 0.41);
   user-select: none;
 
   &.access-denied-alert {
     top: 25%;
-    background-color: rgba(255, 0, 0, 0.193);
+    background-color: rgba(255, 0, 0, 0.19);
   }
 
   @media screen and (max-width: 800px) {
@@ -42,7 +36,7 @@
 
 .alert-text {
   font-size: 1.3rem;
-  color: $whitish;
+  color: $white-cream;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 
   @media screen and (max-width: 800px) {
@@ -63,7 +57,7 @@
   font-size: 0.95em;
   font-weight: bold;
   text-decoration: none;
-  color: $whitish;
+  color: $white-cream;
   background-color: rgba(255, 0, 0, 0.4);
   border: 2px solid rgba(255, 255, 255, 0.8);
   border-radius: 5px;

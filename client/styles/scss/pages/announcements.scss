@@ -1,4 +1,4 @@
-@import '../abstracts/variables';
+@import '../base/base-styles';
 
 body {
   background-image: url('../../../assets/pictures/bg-flowers-field.jpg');
@@ -9,16 +9,13 @@ body {
 }
 
 .announcement-container {
-  display: flex;
-  flex-direction: column;
+  @include flex-col;
+  @include soft-shadow-border;
   gap: 20px;
   padding: 1em;
   width: 100%;
+  background-color: $dark-grey;
   box-sizing: border-box;
-  background-color: $darker-greyish;
-  border: 2px solid $darker-greyish;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
   @media screen and (max-width: 1235px) {
     padding: 0.6em;
@@ -38,7 +35,7 @@ body {
 .announcement-title {
   margin: 0;
   margin-bottom: 3px;
-  color: $whitish;
+  color: $white-cream;
   font-size: 1.2rem;
   font-weight: bold;
 
@@ -54,11 +51,11 @@ body {
 
 .announcement-text {
   margin: 0;
-  color: #ccc;
+  color: $light-grey;
   font-size: 1rem;
 
   &.announcer-text {
-    font-weight: bolder;
+    font-weight: bold;
   }
 
   @media screen and (max-width: 1235px) {

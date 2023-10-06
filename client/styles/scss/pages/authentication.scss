@@ -1,16 +1,15 @@
-@import '../abstracts/variables';
+@import '../base/base-styles';
 
 body {
   background-image: url('../../../assets/pictures/bg-temple.jpg');
 }
 
 form {
-  display: flex;
-  flex-direction: column;
+  @include flex-col;
   gap: 20px;
   width: 500px;
   padding: 20px 80px;
-  background-color: $dark-charcoal;
+  background-color: $charcoal;
   border: 2px solid #444;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -46,8 +45,7 @@ form {
 }
 
 .form-bottom-buttons-container {
-  display: flex;
-  flex-direction: column;
+  @include flex-col;
   margin-top: 40px;
 
   @media screen and (max-width: 800px) {
@@ -69,17 +67,17 @@ form {
   font-weight: bold;
   padding: 14px 20px;
   width: 100%;
-  color: $dark-charcoal;
-  background-color: $whitish;
-  border: 2px solid $dark-charcoal;
+  color: $charcoal;
+  background-color: $white-cream;
+  border: 2px solid $charcoal;
   border-radius: 5px;
   transition: background-color 0.3s, color 0.3s;
   user-select: none;
   cursor: pointer;
 
   &:hover {
-    background-color: $on-hover-darker;
-    color: $whitish;
+    background-color: $hover-darker-charcoal;
+    color: $white-cream;
   }
 
   @media screen and (max-width: 800px) {
@@ -99,7 +97,7 @@ input {
   width: 100%;
   padding: 12px 20px;
   margin: 0;
-  border: 3px solid $dark-charcoal;
+  border: 3px solid $charcoal;
   border-radius: 5px;
   box-sizing: border-box;
 
@@ -110,7 +108,7 @@ input {
 
 .input-label {
   font-size: 1.2em;
-  color: $whitish;
+  color: $white-cream;
   margin: 0;
   user-select: none;
 
@@ -128,13 +126,12 @@ input {
 }
 
 .input-wrapper {
-  display: flex;
-  flex-direction: column;
+  @include flex-col;
   gap: 6px;
 }
 
 .form-bottom-text {
-  color: $whitish;
+  color: $white-cream;
   font-weight: 500;
   font-size: 0.9em;
   padding: 0 8px;
@@ -150,7 +147,7 @@ input {
 }
 
 .form-bottom-redirect-link {
-  color: $whitish;
+  color: $white-cream;
   font-size: 0.9em;
   font-weight: bold;
   user-select: none;
