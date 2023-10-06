@@ -5,9 +5,7 @@ body {
 }
 
 .description-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-justify-align-center;
   width: 920px;
   padding: 1.9em 2.2em;
   margin: 110px 0 50px 0;

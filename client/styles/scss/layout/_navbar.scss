@@ -1,9 +1,8 @@
 .top-navbar {
+  @include flex-align-center;
   position: fixed;
   top: 0;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
   width: 100%;
   padding: 10px;
   background-color: $charcoal;
@@ -27,8 +26,7 @@
   transition: background-color 0.3s, color 0.3s;
 
   &.home-button {
-    display: flex;
-    justify-content: center;
+    @include flex-justify-align-center;
     width: 27px;
     height: 27px;
     padding: 6px 13px;
@@ -89,13 +87,11 @@
 }
 
 .nav-left {
-  display: flex;
-  align-items: center;
+  @include flex-align-center;
 }
 
 .nav-right {
-  display: flex;
-  align-items: center;
+  @include flex-align-center;
 }
 
 .nav-mid {
@@ -105,9 +101,8 @@
   z-index: -1;
 
   @media screen and (max-width: 950px) {
+    @include flex-align-center;
     position: initial;
-    display: flex;
-    align-items: center;
     width: max-content;
   }
 }

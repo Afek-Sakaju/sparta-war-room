@@ -136,11 +136,11 @@
 }
 
 .top-navbar {
+  display: flex;
+  align-items: center;
   position: fixed;
   top: 0;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
   width: 100%;
   padding: 10px;
   background-color: #343434;
@@ -168,6 +168,7 @@
 .nav-item.home-button {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 27px;
   height: 27px;
   padding: 6px 13px;
@@ -243,9 +244,9 @@
 }
 @media screen and (max-width: 950px) {
   .nav-mid {
-    position: initial;
     display: flex;
     align-items: center;
+    position: initial;
     width: max-content;
   }
 }

@@ -1,11 +1,12 @@
-@mixin hidden {
-  display: none;
-  visibility: hidden;
+@mixin flex-justify-align-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@mixin visible {
-  display: block;
-  visibility: visible;
+@mixin flex-align-center {
+  display: flex;
+  align-items: center;
 }
 
 @mixin flex-col-align-center {
@@ -23,4 +24,14 @@
   border: 2px solid $dark-grey;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@mixin hidden {
+  display: none;
+  visibility: hidden;
+}
+
+@mixin visible {
+  display: block;
+  visibility: visible;
 }
