@@ -342,8 +342,7 @@ body {
   align-items: center;
   width: 920px;
   padding: 1.9em 2.2em;
-  margin-top: 110px;
-  margin-bottom: 50px;
+  margin: 110px 0 50px 0;
   border: 1px solid rgb(105, 105, 105);
   border-radius: 10px;
   background-color: #343434;
