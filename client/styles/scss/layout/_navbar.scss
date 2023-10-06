@@ -1,9 +1,9 @@
 .top-navbar {
+  position: fixed;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  top: 0;
   width: 100%;
   padding: 10px;
   background-color: $charcoal;
@@ -44,9 +44,9 @@
   }
 
   @media screen and (max-width: 1235px) {
-    font-size: 0.9em;
     padding: 7.5px 8px;
     border-radius: 4px;
+    font-size: 0.9em;
 
     &.home-button {
       width: 22px;
@@ -73,8 +73,8 @@
   }
 
   @media screen and (max-width: 315px) {
-    margin: 0 1px;
     padding: 4.5px 5.2px;
+    margin: 0 1px;
     font-size: 0.67em;
 
     &.home-button {

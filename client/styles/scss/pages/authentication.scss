@@ -6,12 +6,12 @@ body {
 
 form {
   @include flex-col;
-  gap: 20px;
   width: 500px;
   padding: 20px 80px;
-  background-color: $charcoal;
+  gap: 20px;
   border: 2px solid #444;
   border-radius: 10px;
+  background-color: $charcoal;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 
   @media screen and (max-width: 800px) {
@@ -63,14 +63,14 @@ form {
 
 .submit-button {
   text-align: center;
-  font-size: 1em;
-  font-weight: bold;
-  padding: 14px 20px;
   width: 100%;
-  color: $charcoal;
-  background-color: $white-cream;
+  padding: 14px 20px;
   border: 2px solid $charcoal;
   border-radius: 5px;
+  background-color: $white-cream;
+  font-size: 1em;
+  font-weight: bold;
+  color: $charcoal;
   transition: background-color 0.3s, color 0.3s;
   cursor: pointer;
 
@@ -96,9 +96,9 @@ input {
   width: 100%;
   padding: 12px 20px;
   margin: 0;
+  box-sizing: border-box;
   border: 3px solid $charcoal;
   border-radius: 5px;
-  box-sizing: border-box;
 
   &:hover {
     opacity: 0.9;
@@ -106,9 +106,9 @@ input {
 }
 
 .input-label {
+  margin: 0;
   font-size: 1.2em;
   color: $white-cream;
-  margin: 0;
 
   @media screen and (max-width: 800px) {
     font-size: 1em;
@@ -129,10 +129,10 @@ input {
 }
 
 .form-bottom-text {
-  color: $white-cream;
-  font-weight: 500;
-  font-size: 0.9em;
   padding: 0 8px;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: $white-cream;
 
   @media screen and (max-width: 800px) {
     font-size: 0.76em;
@@ -144,9 +144,9 @@ input {
 }
 
 .form-bottom-redirect-link {
-  color: $white-cream;
   font-size: 0.9em;
   font-weight: bold;
+  color: $white-cream;
 
   &:hover {
     opacity: 0.7;

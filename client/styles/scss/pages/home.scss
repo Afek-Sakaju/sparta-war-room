@@ -8,9 +8,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 110px;
   width: 920px;
   padding: 1.9em 2.2em;
+  margin-top: 110px;
   margin-bottom: 50px;
   border: 1px solid $dark-grey;
   border-radius: 10px;
@@ -54,18 +54,18 @@ body {
   }
 
   @media screen and (max-width: 1000px) {
-    padding: 0.8em 1.6em;
     gap: 20px;
+    padding: 0.8em 1.6em;
   }
 
   @media screen and (max-width: 700px) {
-    padding: 0.7em 1.4em;
     gap: 14px;
+    padding: 0.7em 1.4em;
   }
 
   @media screen and (max-width: 460px) {
-    padding: 0.4em 1em;
     gap: 10px;
+    padding: 0.4em 1em;
   }
 }
 
@@ -75,15 +75,15 @@ body {
 }
 
 .description-text {
+  margin: 0;
+  font-size: 1.2rem;
   color: $white-cream;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  font-size: 1.2rem;
-  margin: 0;
 
   &.description-title {
     text-align: center;
-    font-weight: bold;
     font-size: 1.35rem;
+    font-weight: bold;
   }
 
   &.description-sub-title {
@@ -92,6 +92,7 @@ body {
 
   @media screen and (max-width: 1600px) {
     font-size: 1.2rem;
+
     &.description-title {
       font-size: 1.3rem;
     }
@@ -99,6 +100,7 @@ body {
 
   @media screen and (max-width: 1235px) {
     font-size: 1.15rem;
+
     &.description-title {
       font-size: 1.25rem;
     }
@@ -106,6 +108,7 @@ body {
 
   @media screen and (max-width: 1000px) {
     font-size: 1rem;
+
     &.description-title {
       font-size: 1.1rem;
     }
@@ -113,6 +116,7 @@ body {
 
   @media screen and (max-width: 700px) {
     font-size: 0.8rem;
+
     &.description-title {
       font-size: 0.9rem;
     }
@@ -120,6 +124,7 @@ body {
 
   @media screen and (max-width: 460px) {
     font-size: 0.7rem;
+
     &.description-title {
       font-size: 0.8rem;
     }
@@ -127,6 +132,7 @@ body {
 
   @media screen and (max-width: 300px) {
     font-size: 0.6rem;
+		
     &.description-title {
       font-size: 0.7rem;
     }

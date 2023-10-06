@@ -6,10 +6,10 @@ body {
 
 .tactic-container {
   @include soft-shadow-border;
-  padding: 0.7em 1em;
   width: 100%;
-  background-color: $dark-grey;
+  padding: 0.7em 1em;
   box-sizing: border-box;
+  background-color: $dark-grey;
   white-space: pre-line;
   line-height: 1.2;
 
@@ -20,9 +20,9 @@ body {
 
 .tactic-title {
   margin-top: 0;
-  color: $white-cream;
   font-size: 1.3rem;
   font-weight: bold;
+  color: $white-cream;
 
   @media screen and (max-width: 1235px) {
     font-size: 1.1rem;
@@ -36,8 +36,8 @@ body {
 .tactic-text {
   margin: 0;
   margin-top: 0.5em;
-  color: $light-grey;
   font-size: 1.1rem;
+  color: $light-grey;
 
   @media screen and (max-width: 1235px) {
     margin-top: 0.3em;

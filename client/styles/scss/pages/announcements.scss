@@ -11,11 +11,11 @@ body {
 .announcement-container {
   @include flex-col;
   @include soft-shadow-border;
-  gap: 20px;
-  padding: 1em;
   width: 100%;
-  background-color: $dark-grey;
+  padding: 1em;
+  gap: 20px;
   box-sizing: border-box;
+  background-color: $dark-grey;
 
   @media screen and (max-width: 1235px) {
     padding: 0.6em;
@@ -35,9 +35,9 @@ body {
 .announcement-title {
   margin: 0;
   margin-bottom: 3px;
-  color: $white-cream;
   font-size: 1.2rem;
   font-weight: bold;
+  color: $white-cream;
 
   @media screen and (max-width: 1235px) {
     margin-bottom: 1px;
@@ -51,8 +51,8 @@ body {
 
 .announcement-text {
   margin: 0;
-  color: $light-grey;
   font-size: 1rem;
+  color: $light-grey;
 
   &.announcer-text {
     font-weight: bold;

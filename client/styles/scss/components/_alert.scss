@@ -1,17 +1,16 @@
 .alert-container {
   @include flex-col-align-center;
   @include soft-shadow-border;
-  text-align: center;
-  gap: 25px;
-  width: 400px;
   position: fixed;
   top: 85%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  width: 400px;
+  gap: 25px;
   padding: 1em;
+  transform: translate(-50%, -50%);
   z-index: 5;
+  text-align: center;
   background-color: rgba(255, 0, 0, 0.41);
-  user-select: none;
 
   &.access-denied-alert {
     top: 25%;
@@ -54,20 +53,20 @@
 
 .alert-button {
   padding: 10px 14px;
+  background-color: rgba(255, 0, 0, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
   font-size: 0.95em;
   font-weight: bold;
   text-decoration: none;
   color: $white-cream;
-  background-color: rgba(255, 0, 0, 0.4);
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  border-radius: 5px;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
   cursor: pointer;
 
   &:hover {
-    color: rgba(255, 0, 0, 0.7);
     background-color: rgba(255, 255, 255, 0.8);
     border-color: rgba(255, 0, 0, 0.7);
+    color: rgba(255, 0, 0, 0.7);
   }
 
   @media screen and (max-width: 800px) {
