@@ -14,8 +14,9 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  cursor: url('../../../assets/pictures/sword-cursor.png'), default;
   height: 98vh;
+  cursor: url('../../../assets/pictures/sword-cursor.png'), default;
+  user-select: none;
 
   ::-webkit-scrollbar {
     width: 15px;

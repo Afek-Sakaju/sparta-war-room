@@ -106,7 +106,6 @@
   overflow-y: auto;
   padding: 1.6em;
   position: relative;
-  user-select: none;
   white-space: pre-line;
   width: 830px;
 }
@@ -146,7 +145,6 @@
   width: 100%;
   padding: 10px;
   background-color: #343434;
-  user-select: none;
 }
 @media screen and (max-width: 1235px) {
   .top-navbar {
@@ -311,8 +309,9 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  cursor: url("../../../assets/pictures/sword-cursor.png"), default;
   height: 98vh;
+  cursor: url("../../../assets/pictures/sword-cursor.png"), default;
+  user-select: none;
 }
 body ::-webkit-scrollbar {
   width: 15px;
@@ -350,7 +349,6 @@ body {
   border-radius: 10px;
   background-color: #343434;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  user-select: none;
 }
 @media screen and (max-width: 1600px) {
   .description-container {
