@@ -1,4 +1,4 @@
-# sparta-war-room <img src="./readme-resources/sparta-icon.png" width=110px height=110px align="right">
+# Sparta War Room <img src="./readme-resources/sparta-icon.png" width=110px height=110px align="right">
 
 ### This project employs a NodeJS Express server written in TypeScript and utilizes MongoDB for server-side development.<br/> On the client side, JavaScript, HTML, and SCSS are used. <br/>The design draws inspiration from the spirit of Sparta, aiming to function as the official website of the Spartan warriors, contributing a creative and unique aspect to the project.<img src="./readme-resources/login-logo.png" width=40px height=40px align="right">
 
