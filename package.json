@@ -1,6 +1,6 @@
 {
   "name": "sparta-war-room",
-  "description": "This project is a web application that allows users to register and log in securely.",
+  "description": "This application serves as the official website for Spartan warriors, with a design inspired by the spirit of Sparta. The app allows access to classified information of the Spartan army only to registered Spartan users.",
   "author": "afek-sakaju",
   "homepage": "https://github.com/Afek-Sakaju/sparta-war-room#readme",
   "keywords": [
